@@ -4,17 +4,19 @@ import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
 import proitdevelopers.com.bloomberg.R
+import proitdevelopers.com.bloomberg.modelo.Bolsa
+import proitdevelopers.com.bloomberg.modelo.ValoresBolsa
 
 class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
