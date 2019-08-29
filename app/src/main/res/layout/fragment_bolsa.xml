@@ -8,7 +8,7 @@
                                              tools:context=".fragment.BolsaFragment">
 
     <TextView
-            android:text="Stocks Climb at End of Volatile Week; Bounds Fall: Markets Wrap"
+            android:text="@string/txt_noticia_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView9"

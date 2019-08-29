@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--TAMANHOS SP-->
+    <dimen name="tamanho_12">12sp</dimen>
+    <dimen name="tamanho_14">14sp</dimen>
+
+    <!--TAMANHOS DP-->
+    <dimen name="tamanho_16">16dp</dimen>
+    <dimen name="tamanho_20">20dp</dimen>
+    <dimen name="tamanho_90">90dp</dimen>
+    <dimen name="tamanho_130">130dp</dimen>
+    <dimen name="tamanho_135">135dp</dimen>
+    <dimen name="tamanho_140">140dp</dimen>
+    <dimen name="tamanho_150">150dp</dimen>
+    <dimen name="tamanho_200">200dp</dimen>
+</resources>

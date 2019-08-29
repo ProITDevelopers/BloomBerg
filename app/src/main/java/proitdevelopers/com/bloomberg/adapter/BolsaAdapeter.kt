@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.item_lista_fragment_bolsa_um.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.modelo.Bolsa
 
-class BolsaAdapeter(val context:Context,val bolsas:List<Bolsa >) : RecyclerView.Adapter<BolsaAdapeter.MyViewHolder>(){
+class BolsaAdapeter(private val context:Context,private val bolsas:List<Bolsa >) : RecyclerView.Adapter<BolsaAdapeter.MyViewHolder>(){
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): MyViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_lista_fragment_bolsa_um,p0,false)
@@ -22,11 +22,11 @@ class BolsaAdapeter(val context:Context,val bolsas:List<Bolsa >) : RecyclerView.
 
     override fun onBindViewHolder(holder: MyViewHolder, posicao: Int) {
         val bolsas = bolsas[posicao]
-        holder.mudarDados(bolsas,posicao)
+        holder.mudarDados(bolsas)
     }
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        fun mudarDados(bolsas:Bolsa?,posicao:Int){
+        fun mudarDados(bolsas:Bolsa?){
             itemView.servico_tv.text = bolsas!!.servico
             itemView.valor_tv.text = bolsas.valor
             itemView.variacao_tv.text = bolsas.variacao

@@ -13,4 +13,60 @@
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 
+    <style name="txt_nome_app">
+        <item name="android:textColor">@color/colorTxtBranco</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="txt_noticia_corpo">
+        <item name="android:textColor">@color/colorTxtPreta</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="txt_noticia_corpo_sub">
+        <item name="android:textColor">@color/colorTxtPreta</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="txt_noticia_titulo_sub">
+        <item name="android:textColor">@color/colorTxtPreta</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="txt_noticia_fonte">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorTxtPreta</item>
+    </style>
+
+    <style name="txt_noticia_fonte_hint">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorTxtPreta</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="txt_data">
+        <item name="android:textColor">@color/colorTxtMaterial_cat_e_data</item>
+        <item name="android:textSize">@dimen/tamanho_14</item>
+    </style>
+
+    <style name="txt_categoria">
+        <item name="android:textColor">@color/colorTxtMaterial_cat_e_data</item>
+        <item name="android:textSize">@dimen/tamanho_14</item>
+    </style>
+
+    <style name="txt_titulo_categorias">
+        <item name="android:textColor">@color/colorTxtPreta</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="icone_estilo_partilha_favorito">
+        <item name="android:width">@dimen/tamanho_16</item>
+        <item name="android:height">@dimen/tamanho_20</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
 </resources>

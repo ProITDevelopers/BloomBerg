@@ -3,4 +3,33 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nome_app">Media Rumo</string>
+    <!--IMG descricao do conteudo-->
+    <string name="img_noticia">Imagem Noticia</string>
+    <string name="img_procurar">Imagem Icone Procura</string>
+    <string name="img_pontinho">Imagem Icone Ponto</string>
+    <string name="img_favoritos">Imagem Icone Favoritos</string>
+    <string name="img_partilha">Imagem Icone Partilhar</string>
+    <string name="img_voltar_ic">Imagem Icone Voltar</string>
+
+    <!--TXTS Textos-->
+    <string name="txt_categoria">Mercado</string>
+    <string name="txt_categoria_para_si">Para Si</string>
+    <string name="txt_categoria_opinioes">Opniões</string>
+    <string name="txt_categoria_tecnologia">Tecnologia</string>
+    <string name="txt_categoria_crypto">Crypto</string>
+    <string name="txt_separador">Separador</string>
+    <string name="txt_noticia_1">IMF Warnz Zimbabwe Contra Play Boost como Viver Standards Bater</string>
+    <string name="txt_noticia_2">Novo curremcy tem erodido poder de gastos dos trabalhadores do governo</string>
+    <string name="txt_noticia_3">Ferro e fosfato angolanos serão promovidos em roadshows internacionais</string>
+    <string name="txt_data_pub">Data</string>
+    <string name="txt_manchetes">Manchetes</string>
+    <string name="txt_tendencias">Tendências</string>
+    <string name="txt_sequencia">1</string>
+    <string name="txt_fonte">Jornal Mercado</string>
+    <string name="txt_fonte_hint">Fonte - </string>
+    <string name="txt_ver_tudo">VER TUDO </string>
+    <string name="txt_valor_bolsa">S&amp;P 500</string>
+    <string name="txt_valor_bolsa_">2,847.60</string>
+    <string name="txt_valor_bolsa_porcento">+0.25%</string>
 </resources>

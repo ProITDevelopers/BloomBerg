@@ -2,16 +2,21 @@ package proitdevelopers.com.bloomberg.activitys
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentPagerAdapter
-import android.widget.Toast
-import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+import android.support.v7.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.fragment_home.recyclerTopNews
+import kotlinx.android.synthetic.main.fragment_home.viewPager
+import kotlinx.android.synthetic.main.fragment_home.worm_dots_indicator
 import kotlinx.android.synthetic.main.fragment_home.*
 import proitdevelopers.com.bloomberg.R
+import proitdevelopers.com.bloomberg.adapter.CategoriasOutrasAdapeter
+import proitdevelopers.com.bloomberg.adapter.TendenciasAdapeter
+import proitdevelopers.com.bloomberg.adapter.TopNewsAdapeter
+import proitdevelopers.com.bloomberg.adapter.ViewPagerAdapter
 import proitdevelopers.com.bloomberg.fragment.BolsaDoisFragment
 import proitdevelopers.com.bloomberg.fragment.BolsaFragment
 import proitdevelopers.com.bloomberg.fragment.BolsaTresFragment
+import proitdevelopers.com.bloomberg.modelo.Noticia
+import proitdevelopers.com.bloomberg.modelo.valoresNoticias
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,30 +24,46 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_home)
 
-        val adapter = MyViewPagerAdapter(supportFragmentManager)
+       //view pager das bolsas
+       configurarViewPagerBolsas()
+       configurarTopNews(valoresNoticias.noticias)
+       configurarTendencias(valoresNoticias.noticias)
+        configurarCategConteudo(valoresNoticias.noticias)
+
+
+
+    }
+
+    private fun configurarViewPagerBolsas() {
+        val adapter = ViewPagerAdapter(supportFragmentManager)
         adapter.addFragment(BolsaFragment())
         adapter.addFragment(BolsaDoisFragment())
         adapter.addFragment(BolsaTresFragment())
         viewPager.adapter = adapter
         worm_dots_indicator.setViewPager(viewPager)
-
     }
 
-    class MyViewPagerAdapter(manager: FragmentManager) : FragmentPagerAdapter(manager){
+    private fun configurarTopNews(noticias: List<Noticia>) {
+        val layoutManager = LinearLayoutManager(this)
+        layoutManager.orientation = LinearLayoutManager.VERTICAL
+        val adapterTopNews = TopNewsAdapeter(this@MainActivity, noticias)
+        recyclerTopNews.layoutManager = layoutManager
+        recyclerTopNews.adapter = adapterTopNews
+    }
 
-        private val fragmentList : MutableList<Fragment> = ArrayList()
+    private fun configurarTendencias(noticias: List<Noticia>) {
+        val layoutManager = LinearLayoutManager(this)
+        layoutManager.orientation = LinearLayoutManager.VERTICAL
+        val adapterConfTendencias = TendenciasAdapeter(this@MainActivity, noticias)
+        recyclerTendencias.layoutManager = layoutManager
+        recyclerTendencias.adapter = adapterConfTendencias
+    }
 
-        override fun getItem(p0: Int): Fragment {
-            return fragmentList[p0]
-        }
-
-        override fun getCount(): Int {
-            return fragmentList.size
-        }
-
-        fun addFragment(fragment: Fragment){
-            fragmentList.add(fragment)
-        }
-
+    private fun configurarCategConteudo(noticias: List<Noticia>) {
+        val layoutManager = LinearLayoutManager(this)
+        layoutManager.orientation = LinearLayoutManager.VERTICAL
+        val adapterConfTendencias = CategoriasOutrasAdapeter(this@MainActivity, noticias)
+        recyclerViewCatConteudos.layoutManager = layoutManager
+        recyclerViewCatConteudos.adapter = adapterConfTendencias
     }
 }
