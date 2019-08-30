@@ -5,8 +5,18 @@
     <dimen name="tamanho_14">14sp</dimen>
 
     <!--TAMANHOS DP-->
+    <dimen name="tamanho_0">0dp</dimen>
+    <dimen name="tamanho_1">1dp</dimen>
+    <dimen name="tamanho_2">2dp</dimen>
+    <dimen name="tamanho_4">4dp</dimen>
+    <dimen name="tamanho_8">8dp</dimen>
+    <dimen name="tamanho_10">10dp</dimen>
+    <dimen name="tamanho_15">15dp</dimen>
     <dimen name="tamanho_16">16dp</dimen>
     <dimen name="tamanho_20">20dp</dimen>
+    <dimen name="tamanho_50">50dp</dimen>
+    <dimen name="tamanho_55">55dp</dimen>
+    <dimen name="tamanho_60">60dp</dimen>
     <dimen name="tamanho_90">90dp</dimen>
     <dimen name="tamanho_130">130dp</dimen>
     <dimen name="tamanho_135">135dp</dimen>

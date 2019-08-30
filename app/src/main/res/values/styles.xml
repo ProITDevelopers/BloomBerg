@@ -1,13 +1,5 @@
 <resources>
 
-    <!--
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>-->
-
-    <!-- Base application theme for v19. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowTranslucentNavigation">false</item>
         <item name="android:windowTranslucentStatus">true</item>
@@ -25,6 +17,12 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="txt_noticia_corpo_branco">
+        <item name="android:textColor">@color/colorTxtBranco</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="txt_noticia_corpo_sub">
         <item name="android:textColor">@color/colorTxtPreta</item>
         <item name="android:textSize">14sp</item>
@@ -32,6 +30,12 @@
 
     <style name="txt_noticia_titulo_sub">
         <item name="android:textColor">@color/colorTxtPreta</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="txt_noticia_titulo_sub_branca">
+        <item name="android:textColor">@color/colorTxtBranco</item>
         <item name="android:textSize">12sp</item>
         <item name="android:textStyle">bold</item>
     </style>
@@ -52,6 +56,16 @@
         <item name="android:textSize">@dimen/tamanho_14</item>
     </style>
 
+    <style name="txt_ver_">
+        <item name="android:textColor">@color/colorTxtBranco</item>
+        <item name="android:textSize">@dimen/tamanho_14</item>
+    </style>
+
+    <style name="txt_ver">
+        <item name="android:textColor">@color/colorTxtPreta</item>
+        <item name="android:textSize">@dimen/tamanho_14</item>
+    </style>
+
     <style name="txt_categoria">
         <item name="android:textColor">@color/colorTxtMaterial_cat_e_data</item>
         <item name="android:textSize">@dimen/tamanho_14</item>
@@ -63,10 +77,41 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="txt_titulo_categorias_branco">
+        <item name="android:textColor">@color/colorTxtBranco</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="icone_estilo_partilha_favorito">
         <item name="android:width">@dimen/tamanho_16</item>
         <item name="android:height">@dimen/tamanho_20</item>
         <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="img_noticia">
+        <item name="android:height">@dimen/tamanho_200</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="img_noticia_item_video">
+        <item name="android:layout_width">@dimen/tamanho_150</item>
+        <item name="android:height">@dimen/tamanho_90</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="txt_duracao_video">
+        <item name="android:textAlignment">viewEnd</item>
+        <item name="android:width">@dimen/tamanho_50</item>
+        <item name="android:height">@dimen/tamanho_20</item>
+        <item name="android:paddingStart">@dimen/tamanho_0</item>
+        <item name="android:paddingTop">@dimen/tamanho_1</item>
+        <item name="android:paddingEnd">@dimen/tamanho_4</item>
+        <item name="android:paddingBottom">@dimen/tamanho_2</item>
+        <item name="android:textSize">@dimen/tamanho_12</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorTxtBranco</item>
+        <item name="android:background">@color/colorTxtPreta</item>
     </style>
 
 </resources>

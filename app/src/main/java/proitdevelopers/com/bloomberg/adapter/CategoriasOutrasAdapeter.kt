@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.item_categorias_conteudo.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.modelo.Noticia
 
-class CategoriasOutrasAdapeter(private val context:Context,private val noticias:List<Noticia >) :
+class CategoriasOutrasAdapeter(private val context:Context,private val noticias:List<Noticia >,private val identificador:Int) :
     RecyclerView.Adapter<CategoriasOutrasAdapeter.MyViewHolder>(){
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): MyViewHolder {
@@ -18,15 +18,23 @@ class CategoriasOutrasAdapeter(private val context:Context,private val noticias:
     }
 
     override fun getItemCount(): Int {
-        if (noticias.size>=5){
-            return 5
+        when(identificador){
+            1 -> return 1
+            4 -> return 1
+            else ->{
+                return 3
+            }
         }
-        return noticias.size
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, posicao: Int) {
         //val noticias = noticias[posicao]
-        holder.mudarDados(/*noticias,*/posicao)
+        if (identificador == 1)
+            holder.mudarDados(/*noticias,*/3)
+        else if(identificador == 4)
+            holder.mudarDados(/*noticias,*/4)
+        else
+            holder.mudarDados(/*noticias,*/posicao)
     }
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){

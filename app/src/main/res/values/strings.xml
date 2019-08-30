@@ -11,7 +11,8 @@
     <string name="img_favoritos">Imagem Icone Favoritos</string>
     <string name="img_partilha">Imagem Icone Partilhar</string>
     <string name="img_voltar_ic">Imagem Icone Voltar</string>
-
+    <string name="img_reproduzir_ic">Imagem Icone Reproduzir</string>
+    <string name="img_cir_vermelho_ic">Imagem Icone Circulo Vermelho</string>
     <!--TXTS Textos-->
     <string name="txt_categoria">Mercado</string>
     <string name="txt_categoria_para_si">Para Si</string>
@@ -27,9 +28,19 @@
     <string name="txt_tendencias">Tendências</string>
     <string name="txt_sequencia">1</string>
     <string name="txt_fonte">Jornal Mercado</string>
+    <string name="txt_oque_assistir">Oque Assistir</string>
     <string name="txt_fonte_hint">Fonte - </string>
     <string name="txt_ver_tudo">VER TUDO </string>
+    <string name="txt_ver_tudo_assistir">VER TUDO PARA ASSISTIR </string>
+    <string name="txt_ao_vivo">VIVO</string>
+    <string name="txt_televisao_mr">MEDIA RUMO TV</string>
+    <string name="txt_canal_media_rumo">Media Rumo Mercado: África</string>
+    <string name="txt_radio_media_rumo">Media Rumo Rádio</string>
+    <string name="txt_ver_video_audio">VER TODOS VIDEOS E AUDIOS</string>
+    <string name="txt_ver_renda_fixa">VER TODAS RENDAS FIXAS</string>
+    <string name="txt_renda_fixa">RENDA FIXA</string>
     <string name="txt_valor_bolsa">S&amp;P 500</string>
     <string name="txt_valor_bolsa_">2,847.60</string>
     <string name="txt_valor_bolsa_porcento">+0.25%</string>
+    <string name="txt_valor_duracao_video">7:09</string>
 </resources>

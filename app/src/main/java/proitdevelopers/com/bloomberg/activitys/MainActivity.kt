@@ -8,10 +8,7 @@ import kotlinx.android.synthetic.main.fragment_home.viewPager
 import kotlinx.android.synthetic.main.fragment_home.worm_dots_indicator
 import kotlinx.android.synthetic.main.fragment_home.*
 import proitdevelopers.com.bloomberg.R
-import proitdevelopers.com.bloomberg.adapter.CategoriasOutrasAdapeter
-import proitdevelopers.com.bloomberg.adapter.TendenciasAdapeter
-import proitdevelopers.com.bloomberg.adapter.TopNewsAdapeter
-import proitdevelopers.com.bloomberg.adapter.ViewPagerAdapter
+import proitdevelopers.com.bloomberg.adapter.*
 import proitdevelopers.com.bloomberg.fragment.BolsaDoisFragment
 import proitdevelopers.com.bloomberg.fragment.BolsaFragment
 import proitdevelopers.com.bloomberg.fragment.BolsaTresFragment
@@ -28,9 +25,12 @@ class MainActivity : AppCompatActivity() {
        configurarViewPagerBolsas()
        configurarTopNews(valoresNoticias.noticias)
        configurarTendencias(valoresNoticias.noticias)
-        configurarCategConteudo(valoresNoticias.noticias)
-
-
+       configurarCategConteudo(valoresNoticias.noticias)
+       configurarCategOQueAssistir(valoresNoticias.noticias)
+       configurarCategTecnologia(valoresNoticias.noticias)
+       configurarCategAoVivo(valoresNoticias.noticias)
+       configurarCategCrypto(valoresNoticias.noticias)
+       configurarRendaFixa(valoresNoticias.noticias)
 
     }
 
@@ -62,8 +62,48 @@ class MainActivity : AppCompatActivity() {
     private fun configurarCategConteudo(noticias: List<Noticia>) {
         val layoutManager = LinearLayoutManager(this)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
-        val adapterConfTendencias = CategoriasOutrasAdapeter(this@MainActivity, noticias)
+        val adapterConfConteudo = CategoriasOutrasAdapeter(this@MainActivity, noticias,3)
         recyclerViewCatConteudos.layoutManager = layoutManager
-        recyclerViewCatConteudos.adapter = adapterConfTendencias
+        recyclerViewCatConteudos.adapter = adapterConfConteudo
+    }
+
+    private fun configurarCategOQueAssistir(noticias: List<Noticia>) {
+        val layoutManager = LinearLayoutManager(this)
+        layoutManager.orientation = LinearLayoutManager.VERTICAL
+        val adapterConfTendencias = OqueAssisirAdapeter(this@MainActivity, noticias)
+        recyclerViewOueAssistir.layoutManager = layoutManager
+        recyclerViewOueAssistir.adapter = adapterConfTendencias
+    }
+
+    private fun configurarCategTecnologia(noticias: List<Noticia>) {
+        val layoutManager = LinearLayoutManager(this)
+        layoutManager.orientation = LinearLayoutManager.VERTICAL
+        val adapterConfTecnologia = CategoriasOutrasAdapeter(this@MainActivity, noticias,1)
+        recyclerViewTecnologia.layoutManager = layoutManager
+        recyclerViewTecnologia.adapter = adapterConfTecnologia
+    }
+
+    private fun configurarCategAoVivo(noticias: List<Noticia>) {
+        val layoutManager = LinearLayoutManager(this)
+        layoutManager.orientation = LinearLayoutManager.VERTICAL
+        val adapterConfAoVivo = AoVivoAdapeter(this@MainActivity, noticias)
+        recyclerViewAoVivo.layoutManager = layoutManager
+        recyclerViewAoVivo.adapter = adapterConfAoVivo
+    }
+
+    private fun configurarCategCrypto(noticias: List<Noticia>) {
+        val layoutManager = LinearLayoutManager(this)
+        layoutManager.orientation = LinearLayoutManager.VERTICAL
+        val adapterConfCrypto = CategoriasOutrasAdapeter(this@MainActivity, noticias,4)
+        recyclerViewCrypto.layoutManager = layoutManager
+        recyclerViewCrypto.adapter = adapterConfCrypto
+    }
+
+    private fun configurarRendaFixa(noticias: List<Noticia>) {
+        val layoutManager = LinearLayoutManager(this)
+        layoutManager.orientation = LinearLayoutManager.VERTICAL
+        val adapterConfRendaFixa = RendaFixaAdapeter(this@MainActivity, noticias)
+        recyclerViewRendaFixa.layoutManager = layoutManager
+        recyclerViewRendaFixa.adapter = adapterConfRendaFixa
     }
 }

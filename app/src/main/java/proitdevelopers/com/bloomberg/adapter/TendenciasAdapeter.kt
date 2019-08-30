@@ -10,8 +10,8 @@ import kotlinx.android.synthetic.main.item_lista_top_news.view.trading_categoria
 import kotlinx.android.synthetic.main.item_lista_top_news.view.trading_data_tv
 import kotlinx.android.synthetic.main.item_lista_top_news.view.trading_titulo_tv
 import kotlinx.android.synthetic.main.item_lista_trading.view.*
-import proitdevelopers.com.bloomberg.communs.esconderSeparador
 import proitdevelopers.com.bloomberg.R
+import proitdevelopers.com.bloomberg.communs.esconderSeparador
 import proitdevelopers.com.bloomberg.modelo.Noticia
 
 class TendenciasAdapeter(val context:Context, val noticiasL:List<Noticia >) : RecyclerView.Adapter<TendenciasAdapeter.MyViewHolder>(){
