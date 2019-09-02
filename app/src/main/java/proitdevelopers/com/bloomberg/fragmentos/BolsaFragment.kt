@@ -1,4 +1,4 @@
-package proitdevelopers.com.bloomberg.fragment
+package proitdevelopers.com.bloomberg.fragmentos
 
 
 import android.os.Bundle
