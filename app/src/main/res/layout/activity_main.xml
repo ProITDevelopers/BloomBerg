@@ -24,6 +24,6 @@
             app:itemIconTint="@color/nav_bottom_item"
             app:itemTextColor="@color/nav_bottom_item"
             app:menu="@menu/menu"/>
-    
+
 
 </RelativeLayout>
