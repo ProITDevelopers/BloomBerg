@@ -24,48 +24,6 @@
             app:itemIconTint="@color/nav_bottom_item"
             app:itemTextColor="@color/nav_bottom_item"
             app:menu="@menu/menu"/>
-
-
-    <!--<FrameLayout-->
-            <!--android:id="@+id/container"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--app:layout_constraintLeft_toLeftOf="parent"-->
-            <!--app:layout_constraintRight_toRightOf="parent"-->
-            <!--app:layout_constraintTop_toTopOf="parent"-->
-            <!--app:layout_constraintBottom_toTopOf="@+id/navigationView"-->
-            <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
-            <!--/>-->
-
-    <!--<android.support.design.widget.BottomNavigationView-->
-            <!--android:id="@+id/navigationView"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:background="?android:attr/windowBackground"-->
-            <!--app:layout_constraintLeft_toLeftOf="parent"-->
-            <!--app:layout_constraintRight_toRightOf="parent"-->
-            <!--app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--app:itemIconTint="@color/nav_bottom_item"-->
-            <!--app:itemTextColor="@color/nav_bottom_item"-->
-            <!--app:menu="@menu/menu"/>-->
-
-    <!--<RelativeLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="50dp"-->
-            <!--android:id="@+id/relLayoutBar"-->
-            <!--app:layout_constraintBottom_toBottomOf="parent">-->
-
-        <!--<android.support.design.widget.BottomNavigationView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:id="@+id/bottomNavViewBar"-->
-                <!--app:itemIconTint="@color/nav_bottom_item"-->
-                <!--app:itemTextColor="@color/nav_bottom_item"-->
-                <!--android:background="@android:color/transparent"-->
-                <!--app:menu="@menu/menu">-->
-        <!--</android.support.design.widget.BottomNavigationView>-->
-
-    <!--</RelativeLayout>-->
-
+    
 
 </RelativeLayout>
