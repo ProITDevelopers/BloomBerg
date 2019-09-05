@@ -9,9 +9,9 @@ import kotlinx.android.synthetic.main.fragment_home.worm_dots_indicator
 import kotlinx.android.synthetic.main.fragment_home.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.adapter.*
-import proitdevelopers.com.bloomberg.fragment.BolsaDoisFragment
-import proitdevelopers.com.bloomberg.fragment.BolsaFragment
-import proitdevelopers.com.bloomberg.fragment.BolsaTresFragment
+import proitdevelopers.com.bloomberg.fragmentos.BolsaDoisFragment
+import proitdevelopers.com.bloomberg.fragmentos.BolsaFragment
+import proitdevelopers.com.bloomberg.fragmentos.BolsaTresFragment
 import proitdevelopers.com.bloomberg.modelo.Noticia
 import proitdevelopers.com.bloomberg.modelo.valoresNoticias
 

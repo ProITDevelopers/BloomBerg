@@ -1,4 +1,4 @@
-package proitdevelopers.com.bloomberg.fragment
+package proitdevelopers.com.bloomberg.fragmentos
 
 
 import android.os.Bundle
@@ -9,13 +9,13 @@ import android.view.ViewGroup
 
 import proitdevelopers.com.bloomberg.R
 
-class BolsaTresFragment : Fragment() {
+class BolsaDoisFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_bolsa_tres, container, false)
+        return inflater.inflate(R.layout.fragment_bolsa_dois, container, false)
     }
 
 
