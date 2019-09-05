@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_home"
+        android:title="Home"
+        android:icon="@drawable/ic_home_black_24dp" />
+
+    <item
+        android:id="@+id/ic_markets"
+        android:title="Markets"
+        android:icon="@drawable/ic_graphic_eq_black_24dp" />
+
+    <item
+        android:id="@+id/ic_watchlist"
+        android:title="Watchlist"
+        android:icon="@drawable/ic_watchlist_black_24dp" />
+
+    <item
+        android:id="@+id/ic_media"
+        android:title="Media"
+        android:icon="@drawable/ic_live_tv_black_24dp"/>
+
+    <item
+        android:id="@+id/ic_menu"
+        android:title="Menu"
+        android:icon="@drawable/ic_menu_black_24dp" />
+
+</menu>
