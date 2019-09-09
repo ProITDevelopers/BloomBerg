@@ -5,9 +5,10 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorTxtBranco">#FFFFFF</color>
     <color name="colorTxtPreta">#000000</color>
-    <color name="colorTxtMaterial_cat_e_data">#FF615F5F</color>
-
+    <color name="colorTxtMaterial_cat_e_data">#ED868383</color>
+    <color name="color_edit_txt">#ffffff</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="menu_item_color">#008577</color>
+
 </resources>

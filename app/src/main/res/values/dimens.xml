@@ -14,9 +14,11 @@
     <dimen name="tamanho_15">15dp</dimen>
     <dimen name="tamanho_16">16dp</dimen>
     <dimen name="tamanho_20">20dp</dimen>
+    <dimen name="tamanho_30">30dp</dimen>
     <dimen name="tamanho_50">50dp</dimen>
     <dimen name="tamanho_55">55dp</dimen>
     <dimen name="tamanho_60">60dp</dimen>
+    <dimen name="tamanho_64">64dp</dimen>
     <dimen name="tamanho_70">80dp</dimen>
     <dimen name="tamanho_80">80dp</dimen>
     <dimen name="tamanho_90">90dp</dimen>

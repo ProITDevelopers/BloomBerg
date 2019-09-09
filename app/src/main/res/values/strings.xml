@@ -29,9 +29,9 @@
     <string name="txt_sequencia">1</string>
     <string name="txt_fonte">Jornal Mercado</string>
     <string name="txt_oque_assistir">Oque Assistir</string>
-    <string name="txt_fonte_hint">Fonte - </string>
-    <string name="txt_ver_tudo">VER TUDO </string>
-    <string name="txt_ver_tudo_assistir">VER TUDO PARA ASSISTIR </string>
+    <string name="txt_fonte_hint">Fonte -</string>
+    <string name="txt_ver_tudo">VER TUDO</string>
+    <string name="txt_ver_tudo_assistir">VER TUDO PARA ASSISTIR</string>
     <string name="txt_ao_vivo">VIVO</string>
     <string name="txt_televisao_mr">MEDIA RUMO TV</string>
     <string name="txt_canal_media_rumo">Media Rumo Mercado: África</string>
@@ -43,4 +43,7 @@
     <string name="txt_valor_bolsa_">2,847.60</string>
     <string name="txt_valor_bolsa_porcento">+0.25%</string>
     <string name="txt_valor_duracao_video">7:09</string>
+    <string name="txt_cancelar">CANCELAR</string>
+    <string name="txt_hint_pesquisa">Pesquisar por notícias, segurança e midia</string>
+    <string name="explorar_topicos">Explorar tópicos</string>
 </resources>

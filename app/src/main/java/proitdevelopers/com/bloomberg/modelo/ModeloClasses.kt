@@ -6,27 +6,43 @@ data class Noticia(var titulo: String, var descricao:String,var conteudo:String,
                    var foto:String,var video:String,var data:String,
                    var fonte:String,var categoria:String)
 
+data class Topico(var topico:String)
+
+object valorTopico{
+    val topicos = listOf<Topico>(
+        Topico("Hyperdrive"),
+        Topico("Crypto"),
+        Topico("Climate Changed"),
+        Topico("Wealth"),
+        Topico("Last"),
+        Topico("Personal Finance"),
+        Topico("World"),
+        Topico("Stocks")
+
+    )
+}
+
 object valoresNoticias{
     val noticias = listOf<Noticia>(
-        Noticia("Licenciaturar 2019","Universidade Metodista de Angola lança 650 licenciados",
+        Noticia("Licenciatura 2019","Universidade Metodista de Angola lança 650 licenciados",
             "xxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxx","xxxxxxxxx","xxxx","xxx","xxxx"),
-        Noticia("Licenciaturar 2019","Universidade Metodista de Angola lança 650 licenciados",
+        Noticia("Licenciatura 2019","Universidade Metodista de Angola lança 650 licenciados",
             "xxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxx","xxxxxxxxx","xxxx","xxx","xxxx"),
-        Noticia("Licenciaturar 2019","Universidade Metodista de Angola lança 650 licenciados",
+        Noticia("Licenciatura 2019","Universidade Metodista de Angola lança 650 licenciados",
             "xxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxx","xxxxxxxxx","xxxx","xxx","xxxx"),
-        Noticia("Licenciaturar 2019","Universidade Metodista de Angola lança 650 licenciados",
+        Noticia("Licenciatura 2019","Universidade Metodista de Angola lança 650 licenciados",
             "xxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxx","xxxxxxxxx","xxxx","xxx","xxxx"),
-        Noticia("Licenciaturar 2019","Universidade Metodista de Angola lança 650 licenciados",
+        Noticia("Licenciatura 2019","Universidade Metodista de Angola lança 650 licenciados",
             "xxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxx","xxxxxxxxx","xxxx","xxx","xxxx"),
-        Noticia("Licenciaturar 2019","Universidade Metodista de Angola lança 650 licenciados",
+        Noticia("Licenciatura 2019","Universidade Metodista de Angola lança 650 licenciados",
             "xxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxx","xxxxxxxxx","xxxx","xxx","xxxx"),
-        Noticia("Licenciaturar 2019","Universidade Metodista de Angola lança 650 licenciados",
+        Noticia("Licenciatura 2019","Universidade Metodista de Angola lança 650 licenciados",
             "xxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxx","xxxxxxxxx","xxxx","xxx","xxxx"),
-        Noticia("Licenciaturar 2019","Universidade Metodista de Angola lança 650 licenciados",
+        Noticia("Licenciatura 2019","Universidade Metodista de Angola lança 650 licenciados",
             "xxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxx","xxxxxxxxx","xxxx","xxx","xxxx"),
-        Noticia("Licenciaturar 2019","Universidade Metodista de Angola lança 650 licenciados",
+        Noticia("Licenciatura 2019","Universidade Metodista de Angola lança 650 licenciados",
             "xxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxx","xxxxxxxxx","xxxx","xxx","xxxx"),
-        Noticia("Licenciaturar 2019","Universidade Metodista de Angola lança 650 licenciados",
+        Noticia("Licenciatura 2019","Universidade Metodista de Angola lança 650 licenciados",
             "xxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxx","xxxxxxxxx","xxxx","xxx","xxxx")
     )
 }

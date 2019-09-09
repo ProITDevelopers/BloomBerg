@@ -9,7 +9,7 @@
 <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activitys.MainActivity" android:background="@android:color/white">
+        tools:context=".fragmentos.HomeFragment" android:background="@android:color/white">
 
     <android.support.constraint.Guideline
             android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:scaleType="fitXY"
-            android:contentDescription="@string/img_noticia"/>
+            android:contentDescription="@string/img_noticia" android:visibility="visible" tools:visibility="visible"/>
     <TextView
             android:text="@string/nome_app"
             android:layout_width="wrap_content"
@@ -41,15 +41,17 @@
             android:id="@+id/textView47"
             android:layout_marginTop="24dp"
             app:layout_constraintTop_toTopOf="@+id/imageView21"
-            app:layout_constraintStart_toStartOf="@+id/guideline_esquerda" style="@style/txt_nome_app"/>
+            app:layout_constraintStart_toStartOf="@+id/guideline_esquerda" style="@style/txt_nome_app"
+            android:visibility="visible" tools:visibility="visible"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:srcCompat="@drawable/ic_search_black_24dp"
-            android:id="@+id/imageView28"
+            android:id="@+id/btnProcurarNoticia"
             android:contentDescription="@string/img_procurar"
             app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
             app:layout_constraintTop_toTopOf="@+id/imageView21"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView21" app:layout_constraintVertical_bias="0.13"/>
+            app:layout_constraintBottom_toBottomOf="@+id/imageView21" app:layout_constraintVertical_bias="0.13"
+            android:visibility="visible" tools:visibility="visible"/>
     <TextView
             android:text="@string/txt_categoria"
             android:layout_width="wrap_content"
@@ -58,7 +60,8 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView21"
             app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
             app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
-            app:layout_constraintHorizontal_bias="0.0" android:textColor="#615F5F" style="@style/txt_categoria"/>
+            app:layout_constraintHorizontal_bias="0.0" android:textColor="#615F5F" style="@style/txt_categoria"
+            android:visibility="visible" tools:visibility="visible"/>
     <TextView
             android:text="@string/txt_noticia_1"
             android:layout_width="0dp"
@@ -67,7 +70,8 @@
             app:layout_constraintTop_toBottomOf="@+id/destaque_cat_tv"
             app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
             app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
-            app:layout_constraintHorizontal_bias="0.0" style="@style/txt_noticia_corpo"/>
+            app:layout_constraintHorizontal_bias="0.0" style="@style/txt_noticia_corpo" android:visibility="visible"
+            tools:visibility="visible"/>
     <ImageView
             android:layout_width="8dp"
             android:layout_height="8dp" app:srcCompat="@drawable/ic_fiber_manual_record_black_24dp"
@@ -78,7 +82,7 @@
             app:layout_constraintTop_toTopOf="@+id/destaque_noticia_pr_tv"
             app:layout_constraintBottom_toBottomOf="@+id/destaque_noticia_pr_tv"
             app:layout_constraintVertical_bias="0.0"
-            android:layout_marginTop="4dp"/>
+            android:layout_marginTop="4dp" android:visibility="visible" tools:visibility="visible"/>
     <TextView
             android:text="@string/txt_noticia_2"
             android:layout_width="0dp"
@@ -86,7 +90,8 @@
             android:id="@+id/destaque_noticia_pr_tv" app:layout_constraintStart_toEndOf="@+id/imageView32"
             app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
             app:layout_constraintTop_toBottomOf="@+id/destaque_noticia_tv" style="@style/txt_noticia_corpo_sub"
-            android:layout_marginTop="8dp" android:layout_marginStart="8dp"/>
+            android:layout_marginTop="8dp" android:layout_marginStart="8dp" android:visibility="visible"
+            tools:visibility="visible"/>
     <ImageView
             android:layout_width="8dp"
             android:layout_height="8dp" app:srcCompat="@drawable/ic_fiber_manual_record_black_24dp"
@@ -95,7 +100,8 @@
             app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
             app:layout_constraintBottom_toBottomOf="@+id/destaque_noticia_sc_tv"
             app:layout_constraintVertical_bias="0.0" android:layout_marginTop="4dp"
-            app:layout_constraintTop_toTopOf="@+id/destaque_noticia_sc_tv"/>
+            app:layout_constraintTop_toTopOf="@+id/destaque_noticia_sc_tv" android:visibility="visible"
+            tools:visibility="visible"/>
     <TextView
             android:text="@string/txt_noticia_2"
             android:layout_width="0dp"
@@ -103,14 +109,15 @@
             android:id="@+id/destaque_noticia_sc_tv"
             android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/destaque_noticia_pr_tv"
             app:layout_constraintStart_toEndOf="@+id/imageView43" android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/guideline_direita" style="@style/txt_noticia_corpo_sub"/>
+            app:layout_constraintEnd_toStartOf="@+id/guideline_direita" style="@style/txt_noticia_corpo_sub"
+            android:visibility="visible" tools:visibility="visible"/>
     <TextView
             android:text="@string/txt_data_pub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/destaque_data_tv" app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
             android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/destaque_noticia_sc_tv"
-            style="@style/txt_data"/>
+            style="@style/txt_data" android:visibility="visible" tools:visibility="visible"/>
     <ImageView
             android:layout_width="@dimen/tamanho_16"
             android:layout_height="@dimen/tamanho_20"
@@ -119,7 +126,8 @@
             android:id="@+id/destaque_favoritos_tv"
             android:scaleType="fitXY" app:layout_constraintStart_toEndOf="@+id/destaque_partilhar_ic"
             app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
-            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/destaque_noticia_sc_tv"/>
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/destaque_noticia_sc_tv"
+            android:visibility="visible" tools:visibility="visible"/>
 
     <ImageView
             android:layout_width="@dimen/tamanho_16"
@@ -131,7 +139,7 @@
             app:layout_constraintStart_toEndOf="@+id/destaque_data_tv" android:layout_marginStart="8dp"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintTop_toTopOf="@+id/destaque_favoritos_tv" android:layout_marginEnd="24dp"
-    />
+            android:visibility="visible" tools:visibility="visible"/>
     <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -140,7 +148,8 @@
             android:id="@+id/imageView47"
             app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
             app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
-            app:layout_constraintTop_toBottomOf="@+id/destaque_data_tv" android:layout_marginTop="16dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/destaque_data_tv" android:layout_marginTop="16dp"
+            android:visibility="visible" tools:visibility="visible"/>
     <android.support.v4.view.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="0dp"
@@ -165,7 +174,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"/>
     <android.support.constraint.Group android:layout_width="wrap_content" android:layout_height="wrap_content"
                                       android:id="@+id/groupDestaque"
-                                      app:constraint_referenced_ids="imageView43,destaque_partilhar_ic,viewPager,imageView21,destaque_noticia_sc_tv,imageView28,imageView47,guideline_direita,textView47,worm_dots_indicator,destaque_favoritos_tv,guideline_esquerda,destaque_noticia_tv,imageView32,destaque_data_tv,destaque_cat_tv,destaque_noticia_pr_tv"
+                                      app:constraint_referenced_ids="imageView43,destaque_partilhar_ic,viewPager,imageView21,destaque_noticia_sc_tv,btnProcurarNoticia,imageView47,guideline_direita,textView47,worm_dots_indicator,destaque_favoritos_tv,guideline_esquerda,destaque_noticia_tv,imageView32,destaque_data_tv,destaque_cat_tv,destaque_noticia_pr_tv"
                                       tools:visibility="visible" android:visibility="visible"/>
     <ImageView
             android:layout_width="0dp"

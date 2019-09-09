@@ -114,4 +114,12 @@
         <item name="android:background">@color/colorTxtPreta</item>
     </style>
 
+    <style name="edit_txt_pesquisa" parent="@android:style/Widget.EditText">
+        <item name="android:background">@color/color_edit_txt</item>
+        <item name="android:textSize">@dimen/tamanho_12</item>
+        <item name="android:padding">@dimen/tamanho_4</item>
+        <item name="android:textColor">@color/colorTxtPreta</item>
+        <item name="android:layout_height">@dimen/tamanho_30</item>
+    </style>
+
 </resources>

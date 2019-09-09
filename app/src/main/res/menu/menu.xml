@@ -2,27 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/ic_home"
+        android:id="@+id/menu_home"
         android:title="Home"
         android:icon="@drawable/ic_home_black_24dp" />
 
     <item
-        android:id="@+id/ic_markets"
+        android:id="@+id/menu_mercado"
         android:title="Markets"
         android:icon="@drawable/ic_graphic_eq_black_24dp" />
 
     <item
-        android:id="@+id/ic_watchlist"
+        android:id="@+id/menu_whatchlist"
         android:title="Watchlist"
         android:icon="@drawable/ic_watchlist_black_24dp" />
 
     <item
-        android:id="@+id/ic_media"
+        android:id="@+id/menu_media"
         android:title="Media"
         android:icon="@drawable/ic_live_tv_black_24dp"/>
 
     <item
-        android:id="@+id/ic_menu"
+        android:id="@+id/menu_opcoes"
         android:title="Menu"
         android:icon="@drawable/ic_menu_black_24dp" />
 
