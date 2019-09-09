@@ -1,6 +1,7 @@
 package proitdevelopers.com.bloomberg;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,6 +17,8 @@ import android.widget.TextView;
 
 public class MediaFragment extends Fragment {
 
+    private int someStateValue;
+    private final String SOME_VALUE_KEY = "someValueToSave";
 
     private Toolbar toolbar;
     private TextView mTitle;
@@ -28,6 +31,14 @@ public class MediaFragment extends Fragment {
     }
 
 
+    // Fires when a configuration change occurs and fragment needs to save state
+
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putInt(SOME_VALUE_KEY, someStateValue);
+        super.onSaveInstanceState(outState);
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,6 +52,11 @@ public class MediaFragment extends Fragment {
         // Inflate the layout for this fragment
 
         v = inflater.inflate(R.layout.fragment_media, container, false);
+
+        if (savedInstanceState != null) {
+            someStateValue = savedInstanceState.getInt(SOME_VALUE_KEY);
+            // Do something with value if needed
+        }
         toolbar = (Toolbar) v.findViewById(R.id.toolbar);
         toolbar.setTitle("");
         mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
