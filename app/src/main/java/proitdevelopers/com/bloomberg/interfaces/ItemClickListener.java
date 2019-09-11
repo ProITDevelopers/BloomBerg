@@ -1,4 +1,4 @@
-package proitdevelopers.com.bloomberg;
+package proitdevelopers.com.bloomberg.interfaces;
 
 import android.view.View;
 

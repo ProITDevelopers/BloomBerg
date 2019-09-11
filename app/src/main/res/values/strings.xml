@@ -46,4 +46,5 @@
     <string name="txt_cancelar">CANCELAR</string>
     <string name="txt_hint_pesquisa">Pesquisar por notícias, segurança e midia</string>
     <string name="explorar_topicos">Explorar tópicos</string>
+    <string name="live_tv">TV AO VIVO</string>
 </resources>

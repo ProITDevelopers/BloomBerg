@@ -1,15 +1,16 @@
-package proitdevelopers.com.bloomberg;
+package proitdevelopers.com.bloomberg.modelo;
 
 public class AudioModel {
 
-    private String title,time;
+    private String title,time,fileLink;
 
     public AudioModel() {
     }
 
-    public AudioModel(String time, String title) {
+    public AudioModel(String time, String title, String fileLink) {
         this.time = time;
         this.title = title;
+        this.fileLink = fileLink;
     }
 
 
@@ -27,5 +28,13 @@ public class AudioModel {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    public String getFileLink() {
+        return fileLink;
+    }
+
+    public void setFileLink(String fileLink) {
+        this.fileLink = fileLink;
     }
 }

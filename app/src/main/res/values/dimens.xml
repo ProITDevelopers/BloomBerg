@@ -28,4 +28,6 @@
     <dimen name="tamanho_140">140dp</dimen>
     <dimen name="tamanho_150">150dp</dimen>
     <dimen name="tamanho_200">200dp</dimen>
+
+    <dimen name="activity_horizontal_margin">10dp</dimen>
 </resources>

@@ -1,16 +1,17 @@
-package proitdevelopers.com.bloomberg;
+package proitdevelopers.com.bloomberg.modelo;
 
 public class VideoModel {
 
-    private String img,title,time;
+    private String img,title,time,fileLink;
 
     public VideoModel() {
     }
 
-    public VideoModel(String img, String time, String title) {
+    public VideoModel(String img, String time, String title,String fileLink) {
         this.img = img;
         this.time = time;
         this.title = title;
+        this.fileLink = fileLink;
     }
 
     public String getImg() {
@@ -35,5 +36,13 @@ public class VideoModel {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    public String getFileLink() {
+        return fileLink;
+    }
+
+    public void setFileLink(String fileLink) {
+        this.fileLink = fileLink;
     }
 }

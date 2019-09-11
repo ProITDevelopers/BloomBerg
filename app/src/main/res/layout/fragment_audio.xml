@@ -11,7 +11,7 @@
     <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".AudioFragment" >
+            tools:context=".fragmentos.AudioFragment" >
 
         <android.support.constraint.Guideline
                 android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
                 style="@style/icone_estilo_partilha_favorito"/>
         <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="220dp"
                 app:srcCompat="@drawable/audio_player_bg"
                 android:id="@+id/imageView21"
                 app:layout_constraintTop_toTopOf="parent"

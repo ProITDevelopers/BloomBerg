@@ -5,14 +5,8 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_home.viewPager
-import kotlinx.android.synthetic.main.fragment_home.worm_dots_indicator
-import proitdevelopers.com.bloomberg.MediaFragment
+import proitdevelopers.com.bloomberg.fragmentos.MediaFragment
 import proitdevelopers.com.bloomberg.R
-import proitdevelopers.com.bloomberg.adapter.*
-import proitdevelopers.com.bloomberg.fragmentos.BolsaDoisFragment
-import proitdevelopers.com.bloomberg.fragmentos.BolsaFragment
-import proitdevelopers.com.bloomberg.fragmentos.BolsaTresFragment
 import proitdevelopers.com.bloomberg.fragmentos.HomeFragment
 
 class MainActivity : AppCompatActivity() {

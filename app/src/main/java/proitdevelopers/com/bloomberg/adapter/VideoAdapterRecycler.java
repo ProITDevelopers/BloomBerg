@@ -1,4 +1,4 @@
-package proitdevelopers.com.bloomberg;
+package proitdevelopers.com.bloomberg.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.squareup.picasso.Picasso;
+import proitdevelopers.com.bloomberg.interfaces.ItemClickListener;
+import proitdevelopers.com.bloomberg.R;
+import proitdevelopers.com.bloomberg.modelo.VideoModel;
 
 import java.util.List;
 

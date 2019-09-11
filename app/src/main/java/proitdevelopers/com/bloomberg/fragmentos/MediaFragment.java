@@ -1,4 +1,4 @@
-package proitdevelopers.com.bloomberg;
+package proitdevelopers.com.bloomberg.fragmentos;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import proitdevelopers.com.bloomberg.R;
 
 
 public class MediaFragment extends Fragment {
