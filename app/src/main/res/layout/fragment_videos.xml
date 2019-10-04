@@ -11,7 +11,7 @@
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".VideoFragment" >
+            tools:context=".fragmentos.VideoFragment" >
 
         <androidx.constraintlayout.widget.Guideline
                 android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
                 style="@style/icone_estilo_partilha_favorito"/>
         <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="220dp"
                 app:srcCompat="@drawable/trump_news"
                 android:id="@+id/img_destaque"
                 app:layout_constraintTop_toTopOf="parent"
@@ -49,7 +49,7 @@
 
 
         <TextView
-                android:text="LIVE TV"
+                android:text="@string/live_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 

@@ -1,18 +1,19 @@
-package proitdevelopers.com.bloomberg;
+package proitdevelopers.com.bloomberg.fragmentos;
 
+import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import com.google.android.material.tabs.TabLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.support.annotation.NonNull;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.*;
 import android.widget.TextView;
+import proitdevelopers.com.bloomberg.R;
+import proitdevelopers.com.bloomberg.activitys.PesquisarNoticiaActivity;
 
 
 public class MediaFragment extends Fragment {
@@ -33,7 +34,6 @@ public class MediaFragment extends Fragment {
 
     // Fires when a configuration change occurs and fragment needs to save state
 
-
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         outState.putInt(SOME_VALUE_KEY, someStateValue);
@@ -43,6 +43,7 @@ public class MediaFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
 
     }
 
@@ -98,6 +99,26 @@ public class MediaFragment extends Fragment {
 
 
         return v;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        // TODO Add your menu entries here
+        inflater.inflate(R.menu.mediafrag_menu, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.ic_pesquisar:
+                Intent intentPesquisaNoticia = new Intent(getContext(), PesquisarNoticiaActivity.class);
+                startActivity(intentPesquisaNoticia);
+                break;
+
+        }
+        return true;
+
     }
 
 
