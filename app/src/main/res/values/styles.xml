@@ -40,20 +40,11 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="txt_noticia_fonte">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/colorTxtPreta</item>
-    </style>
 
     <style name="txt_noticia_fonte_hint">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/colorTxtPreta</item>
         <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="txt_data">
-        <item name="android:textColor">@color/colorTxtMaterial_cat_e_data</item>
-        <item name="android:textSize">@dimen/tamanho_14</item>
     </style>
 
     <style name="txt_ver_">
@@ -81,6 +72,11 @@
         <item name="android:textColor">@color/colorTxtBranco</item>
         <item name="android:textSize">30sp</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="txt_conteudo_branco">
+        <item name="android:textColor">@color/colorTxtBranco</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
     <style name="icone_estilo_partilha_favorito">
@@ -120,6 +116,63 @@
         <item name="android:padding">@dimen/tamanho_4</item>
         <item name="android:textColor">@color/colorTxtPreta</item>
         <item name="android:layout_height">@dimen/tamanho_30</item>
+    </style>
+
+    <style name="MyButtonStylePreto">
+        <item name="android:background">@color/black</item>
+        <item name="android:textColor">@color/colorTxtBranco</item>
+        <item name="android:textSize">@dimen/tamanho_14</item>
+    </style>
+
+    <style name="MyButtonStyleBranco">
+        <item name="android:textColor">@color/colorTxtPreta</item>
+        <item name="android:textSize">@dimen/tamanho_14</item>
+    </style>
+
+    <style name="EditText_fundo_preto">
+        <item name="android:background">@color/colorTxtBranco</item>
+        <item name="android:textColor">@color/colorTxtPreta</item>
+        <item name="android:height">@dimen/tamanho_50</item>
+    </style>
+
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\STYLES OFFICIAIS/////////////////////////7  -->
+
+    <style name="TituloToolbarMaisNoticias">
+        <item name="android:textColor">@color/colorTxtPreta</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="noticiaTitulo">
+        <item name="android:textColor">@color/colorTxtPreta</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="txt_noticia_descricao">
+        <item name="android:textColor">@color/colorTxtPreta</item>
+        <item name="android:textSize">12sp</item>>
+    </style>
+
+    <style name="txt_conteudo_noticia">
+        <item name="android:textColor">@color/colorTxtPreta</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="txt_data">
+        <item name="android:textColor">@color/colorTxtMaterial_cat_e_data</item>
+        <item name="android:textSize">@dimen/tamanho_14</item>
+    </style>
+
+    <style name="txt_noticia_fonte">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorTxtPreta</item>
+    </style>
+
+    <style name="IConesPartilhaFavoritos">
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:width">@dimen/tamanho_16</item>
+        <item name="android:height">@dimen/tamanho_20</item>
     </style>
 
 </resources>

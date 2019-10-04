@@ -9,10 +9,10 @@
               android:orientation="vertical"
              tools:context=".MediaFragment">
 
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
@@ -26,11 +26,11 @@
                     style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
                     android:layout_gravity="center" />
 
-        </android.support.v7.widget.Toolbar>
+        </androidx.appcompat.widget.Toolbar>
 
         <View android:layout_width="match_parent" android:layout_height="1dp"/>
 
-        <android.support.design.widget.TabLayout
+        <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="?android:attr/actionBarSize"
@@ -39,15 +39,15 @@
                 app:tabIndicatorColor="@color/black"
                 android:background="@color/white"/>
 
-    </android.support.design.widget.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
 
-    <android.support.v4.view.ViewPager
+    <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
-    </android.support.v4.view.ViewPager>
+    </androidx.viewpager.widget.ViewPager>
 
 
 </LinearLayout>

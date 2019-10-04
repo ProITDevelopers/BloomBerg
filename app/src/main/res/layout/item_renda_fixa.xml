@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:app="http://schemas.android.com/apk/res-auto"
-                                             xmlns:tools="http://schemas.android.com/tools"
-                                             android:layout_width="match_parent"
-                                             android:layout_height="wrap_content">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content">
 
-    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                          android:id="@+id/guidelineEsqerda" app:layout_constraintGuide_begin="20dp"
-                                          android:orientation="vertical"/>
-    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                          android:id="@+id/guidelineDireita"
-                                          android:orientation="vertical" app:layout_constraintGuide_end="20dp"/>
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                android:id="@+id/guidelineEsqerda" app:layout_constraintGuide_begin="20dp"
+                                                android:orientation="vertical"/>
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                android:id="@+id/guidelineDireita"
+                                                android:orientation="vertical" app:layout_constraintGuide_end="20dp"/>
     <TextView
             android:text="@string/txt_renda_fixa"
             android:layout_width="0dp"
@@ -27,7 +27,7 @@
             app:layout_constraintEnd_toEndOf="parent" style="@style/img_noticia"
             android:contentDescription="@string/img_noticia"/>
     <TextView
-            android:text="@string/txt_categoria"
+            android:text="@string/txt_categoria_destaque"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView25"
@@ -70,11 +70,11 @@
             app:layout_constraintStart_toStartOf="@+id/guidelineEsqerda"
             app:layout_constraintTop_toBottomOf="@+id/imageView31" android:layout_marginTop="8dp"
             android:contentDescription="@string/txt_separador"/>
-    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                          android:id="@+id/guideline8"
-                                          android:orientation="vertical" app:layout_constraintGuide_percent="0.5"/>
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                android:id="@+id/guideline8"
+                                                android:orientation="vertical" app:layout_constraintGuide_percent="0.5"/>
     <TextView
-            android:text="@string/txt_categoria_tecnologia"
+            android:text="@string/txt_categoria_sociedade"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView28"
@@ -90,7 +90,7 @@
             app:layout_constraintHorizontal_bias="1.0" app:layout_constraintEnd_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/textView28" style="@style/txt_noticia_titulo_sub"/>
     <TextView
-            android:text="@string/txt_categoria_opinioes"
+            android:text="@string/txt_categoria_politica"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView30" app:layout_constraintStart_toStartOf="@+id/guideline8"
@@ -106,10 +106,10 @@
             app:layout_constraintHorizontal_bias="1.0" app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
             app:layout_constraintTop_toBottomOf="@+id/textView30" android:layout_marginStart="16dp"
             style="@style/txt_noticia_titulo_sub"/>
-    <android.support.constraint.Barrier android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                        android:id="@+id/barrier2" app:barrierDirection="bottom"
-                                        app:constraint_referenced_ids="textView31,textView29"
-                                        tools:layout_editor_absoluteY="846dp"/>
+    <androidx.constraintlayout.widget.Barrier android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                              android:id="@+id/barrier2" app:barrierDirection="bottom"
+                                              app:constraint_referenced_ids="textView31,textView29"
+                                              tools:layout_editor_absoluteY="846dp"/>
     <ImageView
             android:layout_width="@dimen/tamanho_16"
             android:layout_height="@dimen/tamanho_20" app:srcCompat="@drawable/bloomberg_favoritos"
@@ -160,11 +160,11 @@
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintTop_toTopOf="@+id/imageView37" android:layout_marginEnd="16dp"
             android:contentDescription="@string/img_partilha"/>
-    <android.support.constraint.Barrier android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                        android:id="@+id/barrier3" app:barrierDirection="bottom"
-                                        app:constraint_referenced_ids="textView32,imageView37,imageView38,imageView35,textView33,imageView36"
-                                        tools:layout_editor_absoluteY="846dp"/>
-    <android.support.v7.widget.RecyclerView
+    <androidx.constraintlayout.widget.Barrier android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                              android:id="@+id/barrier3" app:barrierDirection="bottom"
+                                              app:constraint_referenced_ids="textView32,imageView37,imageView38,imageView35,textView33,imageView36"
+                                              tools:layout_editor_absoluteY="846dp"/>
+    <androidx.recyclerview.widget.RecyclerView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -204,4 +204,4 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView41" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:contentDescription="@string/txt_separador"/>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

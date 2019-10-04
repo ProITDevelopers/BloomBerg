@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
     <TextView
-            android:text="@string/txt_categoria"
+            android:text="@string/txt_categoria_destaque"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/trading_categoria_tv"
@@ -24,13 +24,13 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageView20"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/trading_categoria_tv" app:layout_constraintVertical_bias="0.0"/>
-    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                          android:id="@+id/guideline4"
-                                          android:orientation="horizontal" app:layout_constraintGuide_end="712dp"
-                                          app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
-                                          app:layout_constraintStart_toStartOf="parent"
-                                          app:layout_constraintEnd_toEndOf="parent"
-                                          app:layout_constraintGuide_begin="@dimen/tamanho_16"/>
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                android:id="@+id/guideline4"
+                                                android:orientation="horizontal" app:layout_constraintGuide_end="712dp"
+                                                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintGuide_begin="@dimen/tamanho_16"/>
     <TextView
             android:text="@string/txt_data_pub"
             android:layout_width="wrap_content"
@@ -38,13 +38,16 @@
             android:id="@+id/trading_data_tv"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_chainStyle="packed" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/trading_titulo_tv" style="@style/txt_data"/>
+            app:layout_constraintTop_toBottomOf="@+id/trading_titulo_tv" style="@style/txt_data"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="1.0"/>
     <ImageView
             android:layout_width="@dimen/tamanho_16"
             android:layout_height="@dimen/tamanho_20" app:srcCompat="@drawable/bloomberg_favoritos"
-            android:id="@+id/imageView7" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/imageView7"
             android:contentDescription="@string/img_favoritos" style="@style/icone_estilo_partilha_favorito"
-            app:layout_constraintTop_toBottomOf="@+id/imageView20" android:layout_marginTop="8dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/imageView20" android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
     <ImageView
             android:layout_width="@dimen/tamanho_16"
             android:layout_height="@dimen/tamanho_20" app:srcCompat="@drawable/bloomberg_partilhar"
@@ -66,11 +69,4 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView7"
             android:layout_marginTop="8dp" android:contentDescription="@string/txt_separador"
             app:layout_constraintBottom_toBottomOf="parent"/>
-    <TextView
-            android:text="@string/txt_data_pub"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView23" style="@style/txt_data" app:layout_constraintStart_toStartOf="@+id/imageView20"
-            app:layout_constraintTop_toTopOf="@+id/imageView11"
-    />
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

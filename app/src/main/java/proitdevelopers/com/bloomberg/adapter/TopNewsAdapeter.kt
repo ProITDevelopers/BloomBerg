@@ -1,7 +1,7 @@
 package proitdevelopers.com.bloomberg.adapter
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,9 +35,11 @@ class TopNewsAdapeter(val context:Context, val noticiasL:List<Noticia >) : Recyc
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun mudarDados(noticias:Noticia?,posicao:Int){
-            itemView.trading_categoria_tv.text = noticias!!.categoria
-            itemView.trading_titulo_tv.text = noticias.titulo
-            itemView.trading_data_tv.text = noticias.data
+            itemView.apply {
+                trading_categoria_tv.text = noticias!!.categoria
+                trading_titulo_tv.text = noticias.titulo
+                trading_data_tv.text = noticias.data
+            }
             esconderSeparador(itemView.imgSeparador,posicao,limite)
         }
     }

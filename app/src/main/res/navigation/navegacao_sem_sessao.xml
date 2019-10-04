@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navegacao_sem_sessao"
+            app:startDestination="@id/iniciarSessaoFragment">
+
+    <fragment android:id="@+id/iniciarSessaoFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.principalSemSessaoIniciada.IniciarSessaoFragment"
+              android:label="fragment_iniciar_sessao" tools:layout="@layout/fragment_iniciar_sessao">
+        <action android:id="@+id/action_iniciarSessaoFragment_to_registarSeFragment"
+                app:destination="@id/registarSeFragment"/>
+        <action android:id="@+id/action_iniciarSessaoFragment_to_homeFragment_sem_sessaoTosessao"
+                app:destination="@id/homeFragment_sem_sessaoTosessao"/>
+        <action android:id="@+id/action_iniciarSessaoFragment_to_entrarFragment" app:destination="@id/entrarFragment"/>
+    </fragment>
+    <fragment android:id="@+id/registarSeFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.principalSemSessaoIniciada.RegistarSeFragment"
+              android:label="fragment_registar" tools:layout="@layout/fragment_registar">
+        <action android:id="@+id/action_registarSeFragment_to_homeFragment_sem_sessaoTosessao"
+                app:destination="@id/homeFragment_sem_sessaoTosessao"/>
+    </fragment>
+    <fragment android:id="@+id/homeFragment_sem_sessaoTosessao"
+              android:name="proitdevelopers.com.bloomberg.fragmentos.principalSemSessaoIniciada.HomeFragment_sem_sessaoTosessao"
+              android:label="fragment_home_fragment_sem_sessao_tosessao"
+              tools:layout="@layout/fragment_home_fragment_sem_sessao_tosessao"/>
+    <fragment android:id="@+id/entrarFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.principalSemSessaoIniciada.EntrarFragment"
+              android:label="fragment_entrar" tools:layout="@layout/fragment_entrar">
+        <action android:id="@+id/action_entrarFragment_to_homeFragment_sem_sessaoTosessao"
+                app:destination="@id/homeFragment_sem_sessaoTosessao"/>
+    </fragment>
+</navigation>

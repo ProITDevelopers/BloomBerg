@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:background="@android:color/black"
+                                                   android:layout_marginBottom="@dimen/tamanho_16">
+
+    <TextView
+            android:text="@string/txt_a_seguir"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            style="@style/txt_titulo_categorias_branco"
+            app:layout_constraintTop_toBottomOf="@+id/imageView53"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+            app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="8dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_favorite_para_fundo_preto"
+            android:id="@+id/imageView50"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+            app:layout_constraintTop_toTopOf="@+id/imageView" android:contentDescription="@string/img_favoritos"
+    />
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_partilha_fundo_preto"
+            android:id="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/txt_data_video_noticia"
+            android:contentDescription="@string/img_partilha"
+            app:layout_constraintEnd_toStartOf="@+id/imageView50" android:layout_marginEnd="16dp"/>
+    <TextView
+            android:text="@string/txt_data_pub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_data_video_noticia"
+            app:layout_constraintTop_toTopOf="@+id/barrier9"
+            app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+            style="@style/txt_data"
+            android:layout_marginTop="16dp"/>
+    <TextView
+            android:text="@string/txt_noticia_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_descricao_dec" style="@style/txt_conteudo_branco"
+            app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txvTitulo_video"
+            android:textAlignment="viewStart" android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+            app:layout_constraintHorizontal_bias="0.0"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvTitulo_video"
+            app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+            app:layout_constraintTop_toBottomOf="@+id/video_content" android:layout_marginTop="16dp"
+            android:text="@string/txt_noticia_1" style="@style/txt_noticia_titulo_sub_branca" android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/ic_mais_info"
+            app:layout_constraintHorizontal_bias="0.0"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp" app:srcCompat="@drawable/ic_arrow_down_24dp_white"
+            android:id="@+id/ic_mais_info"
+            android:contentDescription="@string/img_mais_info"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+            app:layout_constraintTop_toTopOf="@+id/txvTitulo_video"
+            app:layout_constraintBottom_toBottomOf="@+id/txvTitulo_video"/>
+    <ImageView
+            android:layout_width="@dimen/tamanho_150"
+            android:layout_height="@dimen/tamanho_90" app:srcCompat="@drawable/noticia_img"
+            android:id="@+id/img_noticia_video"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/img_noticia_item_video"
+            android:contentDescription="@string/img_noticia"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+    <TextView
+            android:text="@string/txt_noticia_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_titulo"
+            app:layout_constraintStart_toEndOf="@+id/img_noticia_video" android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+            app:layout_constraintHorizontal_bias="0.0" android:textAlignment="viewStart"
+            app:layout_constraintTop_toTopOf="@+id/img_noticia_video" style="@style/txt_noticia_titulo_sub_branca"
+            app:layout_constraintBottom_toTopOf="@+id/barrier"/>
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                android:id="@+id/guidelineDireita"
+                                                android:orientation="vertical" app:layout_constraintGuide_end="20dp"
+                                                android:layout_marginEnd="20dp"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                android:layout_marginBottom="90dp"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos_branco"
+            android:id="@+id/imageView14"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+            app:layout_constraintStart_toEndOf="@+id/img_noticia_video" android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_noticia_video"
+            android:contentDescription="@string/txt_separador"/>
+    <androidx.constraintlayout.widget.Barrier android:layout_width="0dp" android:layout_height="wrap_content"
+                                              android:id="@+id/barrier" app:barrierDirection="bottom"
+                                              app:constraint_referenced_ids="txt_titulo"
+                                              tools:layout_editor_absoluteY="90dp"/>
+    <ImageView
+            android:layout_height="@dimen/tamanho_20" app:srcCompat="@drawable/ic_favorite_para_fundo_preto"
+            android:id="@+id/imageView15"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+            app:layout_constraintBottom_toTopOf="@+id/imageView14"
+            app:layout_constraintTop_toTopOf="@+id/barrier" app:layout_constraintVertical_bias="1.0"
+            style="@style/icone_estilo_partilha_favorito" android:layout_width="@dimen/tamanho_16"
+            android:contentDescription="@string/img_favoritos" android:layout_marginBottom="8dp"/>
+    <ImageView
+            android:layout_width="@dimen/tamanho_16"
+            android:layout_height="@dimen/tamanho_20" app:srcCompat="@drawable/ic_partilha_fundo_preto"
+            android:id="@+id/imageView16"
+            app:layout_constraintEnd_toStartOf="@+id/imageView15" android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView14" android:contentDescription="@string/img_partilha"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toTopOf="@+id/txt_data_video"/>
+    <TextView
+            android:text="@string/txt_data_pub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_data_video" style="@style/txt_data"
+            app:layout_constraintBottom_toTopOf="@+id/imageView14"
+            app:layout_constraintStart_toEndOf="@+id/img_noticia_video" android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp" app:layout_constraintTop_toTopOf="@+id/barrier"
+            app:layout_constraintVertical_bias="0.89"/>
+    <TextView
+            android:text="@string/txt_valor_duracao_video"
+            android:layout_width="@dimen/tamanho_50"
+            android:layout_height="@dimen/tamanho_20"
+            android:id="@+id/txt_duracao_video"
+            app:layout_constraintStart_toStartOf="@+id/img_noticia_video"
+            app:layout_constraintBottom_toBottomOf="@+id/img_noticia_video"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="@+id/img_noticia_video"
+            app:layout_constraintVertical_bias="1.0"
+            style="@style/txt_duracao_video" android:textAlignment="viewEnd"/>
+    <ImageView
+            android:layout_width="@dimen/tamanho_15"
+            android:layout_height="@dimen/tamanho_15" app:srcCompat="@drawable/ic_play_arrow"
+            android:id="@+id/imageView13"
+            app:layout_constraintStart_toStartOf="@+id/txt_duracao_video"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_duracao_video"
+            app:layout_constraintTop_toTopOf="@+id/txt_duracao_video"
+            app:layout_constraintEnd_toEndOf="@+id/txt_duracao_video"
+            app:layout_constraintHorizontal_bias="0.02" android:layout_marginStart="4dp"
+            android:contentDescription="@string/img_reproduzir_ic"/>
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                android:id="@+id/guidelineEsquerda"
+                                                app:layout_constraintGuide_begin="20dp"
+                                                android:orientation="vertical"/>
+    <androidx.constraintlayout.widget.Barrier android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                              android:id="@+id/barrier9" app:barrierDirection="bottom"
+                                              app:constraint_referenced_ids="tv_descricao_dec"
+                                              tools:layout_editor_absoluteY="830dp"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos_white"
+            android:id="@+id/imageView51"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+            app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+            app:layout_constraintTop_toBottomOf="@+id/imageView50" android:layout_marginTop="8dp"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos_white"
+            android:id="@+id/imageView52"
+            app:layout_constraintTop_toBottomOf="@+id/imageView51" app:layout_constraintEnd_toEndOf="@+id/imageView51"
+            app:layout_constraintStart_toStartOf="@+id/imageView51"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos_white"
+            android:id="@+id/imageView53"
+            app:layout_constraintEnd_toEndOf="@+id/imageView52" app:layout_constraintStart_toStartOf="@+id/imageView52"
+            app:layout_constraintTop_toBottomOf="@+id/imageView52"/>
+    <androidx.constraintlayout.widget.Group android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                            android:id="@+id/groupInfoVideo"
+                                            app:constraint_referenced_ids="textView4,txt_data_video_noticia,imageView51,imageView53,tv_descricao_dec,imageView,imageView52,imageView50,txvTitulo_video,ic_mais_info"
+                                            tools:visibility="visible"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

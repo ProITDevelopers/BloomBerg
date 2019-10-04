@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navegacao" app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment"
+              android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.HomeFragment"
+              android:label="HomeFragment">
+        <action android:id="@+id/action_homeFragment_to_detalheNoticiaFragment"
+                app:destination="@id/detalheNoticiaFragment"/>
+        <action android:id="@+id/action_homeFragment_to_maisNoticiasFragment"
+                app:destination="@id/maisNoticiasFragment"/>
+    </fragment>
+    <fragment android:id="@+id/audioFragment" android:name="proitdevelopers.com.bloomberg.AudioFragment"
+              android:label="fragment_audio" tools:layout="@layout/fragment_audio"/>
+    <fragment android:id="@+id/detalheNoticiaFragment"
+              android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.DetalheNoticiaFragment"
+              android:label="fragment_detalhe_noticia" tools:layout="@layout/fragment_detalhe_noticia"/>
+    <fragment android:id="@+id/maisNoticiasFragment"
+              android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.MaisNoticiasFragment"
+              android:label="fragment_mais_noticias" tools:layout="@layout/fragment_mais_noticias"/>
+</navigation>

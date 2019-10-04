@@ -1,7 +1,7 @@
 package proitdevelopers.com.bloomberg.adapter
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +14,7 @@ import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.communs.esconderSeparador
 import proitdevelopers.com.bloomberg.modelo.Noticia
 
-class TendenciasAdapeter(val context:Context, val noticiasL:List<Noticia >) : RecyclerView.Adapter<TendenciasAdapeter.MyViewHolder>(){
+class MercadoAdapeter(val context:Context, val noticiasL:List<Noticia >) : RecyclerView.Adapter<MercadoAdapeter.MyViewHolder>(){
 
     var limite = 0
 

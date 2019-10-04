@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:background="#3F51B5"
-             tools:context=".fragmentos.BolsaDoisFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tamanho_135"
+        tools:context=".fragmentos.principalSessaoIniciada.BolsaDoisFragment">
 
-</android.support.constraint.ConstraintLayout>
+        <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/mpLineCgart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

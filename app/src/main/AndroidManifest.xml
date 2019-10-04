@@ -3,6 +3,7 @@
           package="proitdevelopers.com.bloomberg">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
     <application
             android:allowBackup="false"
@@ -11,14 +12,19 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".activitys.PesquisarNoticiaActivity">
-        </activity>
-        <activity android:name=".activitys.MainActivity">
+        <activity android:name=".activitys.SemSessaoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".activitys.ComSessaoActivity">
+
+        </activity>
+        <activity android:name=".activitys.ReproducaoVideoActivity">
+        </activity>
+        <activity android:name=".activitys.MainActivity">
         </activity>
     </application>
 

@@ -10,28 +10,37 @@
     <string name="img_pontinho">Imagem Icone Ponto</string>
     <string name="img_favoritos">Imagem Icone Favoritos</string>
     <string name="img_partilha">Imagem Icone Partilhar</string>
+    <string name="img_mais_info">Imagem Icone Mais informação</string>
     <string name="img_voltar_ic">Imagem Icone Voltar</string>
     <string name="img_reproduzir_ic">Imagem Icone Reproduzir</string>
     <string name="img_cir_vermelho_ic">Imagem Icone Circulo Vermelho</string>
     <!--TXTS Textos-->
-    <string name="txt_categoria">Mercado</string>
-    <string name="txt_categoria_para_si">Para Si</string>
-    <string name="txt_categoria_opinioes">Opniões</string>
-    <string name="txt_categoria_tecnologia">Tecnologia</string>
-    <string name="txt_categoria_crypto">Crypto</string>
+    <string name="txt_categoria_destaque">Destaques</string>
+    <string name="txt_categoria_manchete">Manchetes</string>
+    <string name="txt_categoria_internacional">Internacional</string>
+    <string name="txt_categoria_politica">Politica</string>
+    <string name="txt_categoria_sociedade">Sociedade</string>
+    <string name="txt_categoria_opniao">Opnião</string>
     <string name="txt_separador">Separador</string>
     <string name="txt_noticia_1">IMF Warnz Zimbabwe Contra Play Boost como Viver Standards Bater</string>
     <string name="txt_noticia_2">Novo curremcy tem erodido poder de gastos dos trabalhadores do governo</string>
     <string name="txt_noticia_3">Ferro e fosfato angolanos serão promovidos em roadshows internacionais</string>
+    <string name="txt_noticia_4">A África do Sul facilitou o controle sobre empréstimos não garantidos em 2007 para
+        aumentar a inclusão financeira em um dos países mais desiguais do mundo. Diante de críticas crescentes, a
+        indústria lutou para melhorar sua reputação, mesmo com a regulamentação melhorando. Em vez de ajudar os mais
+        necessitados, a prática liderou um boom de dívidas impulsionado pelo consumo dos menos capazes de pagar
+        empréstimos, de acordo com o Capital Diferencial.
+    </string>
     <string name="txt_data_pub">Data</string>
+    <string name="txt_a_seguir">A seguir</string>
     <string name="txt_manchetes">Manchetes</string>
     <string name="txt_tendencias">Tendências</string>
     <string name="txt_sequencia">1</string>
-    <string name="txt_fonte">Jornal Mercado</string>
-    <string name="txt_oque_assistir">Oque Assistir</string>
+    <string name="txt_fonte">Fonte - Jornal Mercado</string>
+    <string name="txt_media">Media</string>
     <string name="txt_fonte_hint">Fonte -</string>
     <string name="txt_ver_tudo">VER TUDO</string>
-    <string name="txt_ver_tudo_assistir">VER TUDO PARA ASSISTIR</string>
+    <string name="txt_ver_tudo_assistir">VER MAIS</string>
     <string name="txt_ao_vivo">VIVO</string>
     <string name="txt_televisao_mr">MEDIA RUMO TV</string>
     <string name="txt_canal_media_rumo">Media Rumo Mercado: África</string>
@@ -44,6 +53,33 @@
     <string name="txt_valor_bolsa_porcento">+0.25%</string>
     <string name="txt_valor_duracao_video">7:09</string>
     <string name="txt_cancelar">CANCELAR</string>
+    <string name="txt_entrar_criar_conta">Entre ou crie uma Conta</string>
+    <string name="txt_entrar_desfrutar">Entre ou crie uma conta para acessar todas as melhores mídias que a Rumo tem
+        a oferecer
+    </string>
+    <string name="txt_criar_conta">Criar uma Conta</string>
+    <string name="txt_mais_formas">
+        Mais maneiras de fazer login
+    </string>
+    <string name="txt_entrar_email">CONTINUE COM EMAIL</string>
+    <string name="txt_entrar_">Entrar</string>
     <string name="txt_hint_pesquisa">Pesquisar por notícias, segurança e midia</string>
     <string name="explorar_topicos">Explorar tópicos</string>
+    <string name="txt_fscebook">Facebook</string>
+    <string name="txt_google">Google</string>
+    <string name="txt_nome">Nome</string>
+    <string name="txt_email">E-mail</string>
+    <string name="txt_senha">Senha</string>
+    <string name="txt_pol_1">Ao te registares estás a concordar com os</string>
+    <string name="txt_pol_2">Termos de utilização</string>
+    <string name="txt_pol_3">e</string>
+    <string name="txt_pol_4">Politica de privacidade</string>
+    <string name="txt_rep_senha">Repita a senha</string>
+    <string name="txt_usuario">Usuário ou E-mail</string>
+    <string name="txt_mostrar_senha">Mostrar Senha</string>
+    <string name="menu_inicio">Inicio</string>
+    <string name="menu_mercado">Mercado</string>
+    <string name="menu_nossos_meios">Nossos Meios</string>
+    <string name="menu_media">Media</string>
+    <string name="menu_menu">Menu</string>
 </resources>
