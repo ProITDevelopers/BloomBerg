@@ -1,7 +1,6 @@
 package proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,7 +11,6 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
-
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.activitys.ReproducaoVideoActivity
 import proitdevelopers.com.bloomberg.adapter.*
@@ -24,7 +22,8 @@ import proitdevelopers.com.bloomberg.modelo.valoresNoticias
 
 class HomeFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
         val view: View
         view = inflater.inflate(R.layout.fragment_home, container, false)
 
@@ -42,13 +41,10 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         TAG = "HomeFragmentDebug"
-
         img_destaque.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_detalheNoticiaFragment)
         )
-
         //view pager das bolsas
         configurarViewPagerBolsas()
 
@@ -70,7 +66,8 @@ class HomeFragment : Fragment() {
     ) {
         val layoutManager = LinearLayoutManager(context)
         layoutManager.orientation = RecyclerView.VERTICAL
-        val adapterConfDestaque = CategoriasOutrasAdapeter(context, noticias,0,gerarNumRand(0,noticias.size))
+        val adapterConfDestaque = CategoriasOutrasAdapeter(context,
+            noticias,0,gerarNumRand(0,noticias.size))
         view.recyclerDestaque.layoutManager = layoutManager
         view.recyclerDestaque.adapter = adapterConfDestaque
     }
@@ -94,7 +91,8 @@ class HomeFragment : Fragment() {
     ) {
         val layoutManager = LinearLayoutManager(context)
         layoutManager.orientation = RecyclerView.VERTICAL
-        val adapterConfInternacional = CategoriasOutrasAdapeter(context, noticias,1,gerarNumRand(0,noticias.size))
+        val adapterConfInternacional = CategoriasOutrasAdapeter(context,
+            noticias,1,gerarNumRand(0,noticias.size))
         view.recyclerViewCatInternacional.layoutManager = layoutManager
         view.recyclerViewCatInternacional.adapter = adapterConfInternacional
     }
@@ -106,7 +104,8 @@ class HomeFragment : Fragment() {
     ) {
         val layoutManager = LinearLayoutManager(context)
         layoutManager.orientation = RecyclerView.VERTICAL
-        val adapterConfPolitica = CategoriasOutrasAdapeter(context, noticias,2,gerarNumRand(0,noticias.size))
+        val adapterConfPolitica = CategoriasOutrasAdapeter(context,
+            noticias,2,gerarNumRand(0,noticias.size))
         view.recyclerViewPolitica.layoutManager = layoutManager
         view.recyclerViewPolitica.adapter = adapterConfPolitica
     }
@@ -119,7 +118,8 @@ class HomeFragment : Fragment() {
         val layoutManager = LinearLayoutManager(context)
         layoutManager.orientation = RecyclerView.VERTICAL
         //val adapterConfAoVivo = AoVivoAdapeter(context, noticias)
-        val adapterConfSociedade = CategoriasOutrasAdapeter(context, noticias,3,gerarNumRand(0,noticias.size))
+        val adapterConfSociedade = CategoriasOutrasAdapeter(context,
+            noticias,3,gerarNumRand(0,noticias.size))
         view.recyclerViewSociedade.layoutManager = layoutManager
         view.recyclerViewSociedade.adapter = adapterConfSociedade
     }
@@ -131,7 +131,8 @@ class HomeFragment : Fragment() {
     ) {
         val layoutManager = LinearLayoutManager(context)
         layoutManager.orientation = RecyclerView.VERTICAL
-        val adapterConfCrypto = CategoriasOutrasAdapeter(context, noticias,4,gerarNumRand(0,noticias.size))
+        val adapterConfCrypto = CategoriasOutrasAdapeter(context,
+            noticias,4,gerarNumRand(0,noticias.size))
         view.recyclerViewOpniao.layoutManager = layoutManager
         view.recyclerViewOpniao.adapter = adapterConfCrypto
     }
