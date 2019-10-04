@@ -145,7 +145,7 @@
                 app:layout_constraintEnd_toStartOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/textView74" android:id="@+id/recyclerMercado">
+                app:layout_constraintTop_toBottomOf="@+id/textView74" android:id="@+id/recyclerTendencias">
         </androidx.recyclerview.widget.RecyclerView>
 
 
