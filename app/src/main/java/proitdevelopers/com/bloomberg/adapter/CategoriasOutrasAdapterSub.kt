@@ -16,40 +16,51 @@ class CategoriasOutrasAdapterSub(
     private val context: Context,
     private val noticias: MutableList<Noticia>,
     private val qtdRetornados: Int
-):RecyclerView.Adapter
-    <CategoriasOutrasAdapterSub.MyVilHolder>(){
+) : RecyclerView.Adapter
+<CategoriasOutrasAdapterSub.MyVilHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyVilHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_lista_top_news,parent,false)
+        val view = LayoutInflater.from(context).inflate(R.layout.item_lista_top_news, parent, false)
         return MyVilHolder(view)
     }
 
     override fun getItemCount(): Int = qtdRetornados
 
     override fun onBindViewHolder(holder: MyVilHolder, position: Int) {
-            try {
-                val noticia = noticias[position+3]
-                holder.mudarDados(noticia)
-            }finally {
 
-            }
+        if (3<  noticias.size){
+            val noticia = noticias[position + 3]
+            holder.mudarDados(noticia)
+        }
     }
 
-    inner class MyVilHolder(itemView:View) : RecyclerView.ViewHolder(itemView){
+    inner class MyVilHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun mudarDados(noticia: Noticia){
+        fun mudarDados(noticia: Noticia) {
             Glide.with(context)
                 .load(noticia.foto)
                 .into(itemView.item_sub_not_img)
             itemView.item_tendencias_categoria.text = noticia.categoria
             itemView.item_tendencias_titulo.text = noticia.titulo
             itemView.item_tendencias_data_pub.text = noticia.data
-            itemView.item_sub_not_ic_partilha.setOnClickListener { Toast.makeText(context, "Partilhar", Toast.LENGTH_SHORT).show() }
-            itemView.item_sub_not_ic_favorito.setOnClickListener { Toast.makeText(context, "Favoritos", Toast.LENGTH_SHORT).show() }
+            itemView.item_sub_not_ic_partilha.setOnClickListener {
+                Toast.makeText(
+                    context,
+                    "Partilhar",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+            itemView.item_sub_not_ic_favorito.setOnClickListener {
+                Toast.makeText(
+                    context,
+                    "Favoritos",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
             click()
         }
 
-        fun click(){
+        fun click() {
             itemView.setOnClickListener(
                 Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_detalheNoticiaFragment)
             )

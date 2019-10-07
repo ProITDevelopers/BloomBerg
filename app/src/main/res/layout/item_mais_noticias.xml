@@ -5,7 +5,7 @@
                                                    android:orientation="vertical"
                                                    android:layout_width="match_parent"
                                                    android:layout_height="wrap_content"
-                                                   android:layout_marginTop="@dimen/tamanho_8">
+                                                   android:layout_marginTop="@dimen/tamanho_15">
 
     <ImageView
             android:layout_width="0dp"
@@ -74,7 +74,7 @@
              app:layout_constraintEnd_toEndOf="parent"
              app:layout_constraintTop_toBottomOf="@+id/include" android:layout_marginTop="8dp"
              app:layout_constraintBottom_toBottomOf="parent"
-             android:id="@+id/include2"/>
+             android:id="@+id/include2" android:layout_marginBottom="24dp"/>
     <androidx.constraintlayout.widget.Group android:layout_width="wrap_content" android:layout_height="wrap_content"
                                             android:id="@+id/groupItensNoticias"
                                             app:constraint_referenced_ids="guidelineDireita,include2,mais_not_partilha_dest,guidelineEsquerda,mais_not_titulo_dest,imageView59,mais_not_data_dest,include,mais_not_img_dest,mais_not_favorito_dest"/>
