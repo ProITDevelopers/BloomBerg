@@ -18,7 +18,7 @@
               app:defaultNavHost="false"
               app:layout_constraintStart_toStartOf="parent"
               app:layout_constraintEnd_toEndOf="parent"
-              android:id="@+id/fragmentConteinerSessao" tools:layout="@layout/fragment_home"/>
+              android:id="@+id/fragmentConteinerSessao"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"

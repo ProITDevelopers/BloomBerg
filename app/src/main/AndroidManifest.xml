@@ -16,8 +16,7 @@
                 android:name=".audio_video.MediaPlayerActivity">
         </activity>
         <activity android:name=".activitys.ReproducaoVideoActivity" />
-        <activity android:name=".activitys.MainActivity">
-        </activity>
+        <activity android:name=".activitys.ComSessaoActivity" />
         <activity android:name=".activitys.SemSessaoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

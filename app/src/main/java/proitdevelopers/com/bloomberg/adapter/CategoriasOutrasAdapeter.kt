@@ -1,12 +1,15 @@
 package proitdevelopers.com.bloomberg.adapter
 
 import android.content.Context
+import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_categorias_conteudo.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.modelo.Noticia
@@ -37,40 +40,83 @@ class CategoriasOutrasAdapeter(private val context:Context,
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, posicao: Int) {
-        //val noticias = noticias[posicao]
         if (identificador == 0)
-            holder.mudarDados(/*noticias,*/0)
+            holder.mudarDados(0,posicao)
         else if(identificador == 1)
-            holder.mudarDados(/*noticias,*/1)
+            holder.mudarDados(1,posicao)
         else if(identificador == 2)
-            holder.mudarDados(/*noticias,*/2)
+            holder.mudarDados(2,posicao)
         else if(identificador == 3)
-            holder.mudarDados(/*noticias,*/3)
+            holder.mudarDados(3,posicao)
         else if (identificador == 4)
-            holder.mudarDados(/*noticias,*/4)
+            holder.mudarDados(4,posicao)
         else
-            holder.mudarDados(/*noticias,*/posicao)
+            holder.mudarDados(posicao,posicao)
     }
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        fun mudarDados(/*noticias:Noticia?,*/posicao:Int){
+        fun mudarDados(posicao:Int,indexLista:Int){
             when(posicao){
-                0 ->itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_destaque)
-                1 ->itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_internacional)
-                2 ->itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_politica)
-                3 ->itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_sociedade)
-                4 ->itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_opniao)
-                5 ->itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_manchete)
-                6 ->itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_renda_fixa)
+                0 ->{
+                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_destaque)
+                    substituirDadosUI(noticias,indexLista)
+                }
+                1 ->{
+                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_internacional)
+                    substituirDadosUI(noticias,indexLista)
+                }
+                2 ->{
+                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_politica)
+                    substituirDadosUI(noticias,indexLista)
+                }
+                3 ->{
+                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_sociedade)
+                    substituirDadosUI(noticias,indexLista)
+                }
+                4 ->{
+                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_opniao)
+                    substituirDadosUI(noticias,indexLista)
+                }
+                5 ->{
+                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_manchete)
+                    substituirDadosUI(noticias,indexLista)
+                }
+                6 ->{
+                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_renda_fixa)
+                    substituirDadosUI(noticias,indexLista)
+                }
             }
             clickMaisNoticias()
             OqueAssisirItemSubTercQuartAdapet(noticias,itemView.recyclerViewItensNoticias,qtdRetornados)
+        }
+
+        fun substituirDadosUI(noticias: MutableList<Noticia>,indexList:Int){
+            if (noticias.size >2){
+                Glide.with(context)
+                    .load(noticias[indexList].foto)
+                    .into(itemView.cat_cont_imagem_noticia)
+                itemView.cat_cont_categoria_sub.text = noticias[indexList].categoria
+                itemView.cat_cont_noticia_sub.text = noticias[indexList].titulo
+                itemView.cat_cont_data_pub.text = noticias[indexList].data
+
+                itemView.cat_cont_cat_1.text = noticias[indexList+1].categoria
+                itemView.cat_cont_titulo_1.text = noticias[indexList+1].titulo
+                itemView.cat_cont_font_1.text = noticias[indexList+1].data
+
+                itemView.cat_cont_cat_2.text = noticias[indexList+2].categoria
+                itemView.cat_cont_titulo_2.text = noticias[indexList+2].titulo
+                itemView.cat_cont_font_2.text = noticias[indexList+2].data
+            }
         }
 
         fun clickMaisNoticias(){
             itemView.btnMaisNoticias.setOnClickListener(
                     Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_maisNoticiasFragment)
             )
+            itemView.setOnClickListener ( Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_detalheNoticiaFragment) )
+            itemView.ic_partilhar_noticia.setOnClickListener { Toast.makeText(context, "Partilhar", Toast.LENGTH_SHORT).show() }
+            itemView.ic_favoritas_noticia.setOnClickListener { Toast.makeText(context, "Favoritos", Toast.LENGTH_SHORT).show() }
+
         }
     }
 
@@ -81,7 +127,7 @@ class CategoriasOutrasAdapeter(private val context:Context,
     ) {
         val layoutManager = LinearLayoutManager(context)
         layoutManager.orientation = RecyclerView.VERTICAL
-        val adapterConfQueAssistir = CategoriasOutrasAdapterSub(context,recyclerView,noticias,qtdRetornados)
+        val adapterConfQueAssistir = CategoriasOutrasAdapterSub(context,noticias,qtdRetornados)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapterConfQueAssistir
     }

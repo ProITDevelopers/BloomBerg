@@ -10,7 +10,7 @@
     <ImageView
             android:layout_width="0dp"
             app:srcCompat="@drawable/noticia_bloomberg"
-            android:id="@+id/imageView56"
+            android:id="@+id/mais_not_img_dest"
             android:contentDescription="@string/img_noticia"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,39 +27,39 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             style="@style/noticiaTitulo"
-            android:id="@+id/textView2" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/imageView56"
+            android:id="@+id/mais_not_titulo_dest" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/mais_not_img_dest"
             app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
             app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"/>
     <TextView
             android:text="@string/txt_data_pub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView46" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintStart_toStartOf="@+id/textView2"/>
+            android:id="@+id/mais_not_data_dest" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/mais_not_titulo_dest"
+            app:layout_constraintStart_toStartOf="@+id/mais_not_titulo_dest"/>
     <ImageView
             android:layout_width="@dimen/tamanho_16"
             android:layout_height="@dimen/tamanho_20" app:srcCompat="@drawable/bloomberg_favoritos"
-            android:id="@+id/imageView57"
+            android:id="@+id/mais_not_favorito_dest"
             android:contentDescription="@string/img_favoritos"
             style="@style/IConesPartilhaFavoritos"
-            app:layout_constraintEnd_toEndOf="@+id/textView2"
-            app:layout_constraintTop_toTopOf="@+id/textView46"/>
+            app:layout_constraintEnd_toEndOf="@+id/mais_not_titulo_dest"
+            app:layout_constraintTop_toTopOf="@+id/mais_not_data_dest"/>
     <ImageView
             android:layout_width="@dimen/tamanho_16"
             android:layout_height="@dimen/tamanho_20" app:srcCompat="@drawable/bloomberg_partilhar"
-            android:id="@+id/imageView58"
+            android:id="@+id/mais_not_partilha_dest"
             android:contentDescription="@string/img_partilha"
             style="@style/IConesPartilhaFavoritos"
-            app:layout_constraintEnd_toStartOf="@+id/imageView57" android:layout_marginEnd="16dp"
-            app:layout_constraintTop_toTopOf="@+id/imageView57" android:scaleType="fitXY"/>
+            app:layout_constraintEnd_toStartOf="@+id/mais_not_favorito_dest" android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="@+id/mais_not_favorito_dest" android:scaleType="fitXY"/>
     <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos"
             android:id="@+id/imageView59"
             android:contentDescription="@string/txt_separador"
-            app:layout_constraintTop_toBottomOf="@+id/imageView57"
+            app:layout_constraintTop_toBottomOf="@+id/mais_not_favorito_dest"
             app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
             android:layout_marginTop="8dp"
             app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"/>
@@ -73,5 +73,9 @@
              app:layout_constraintStart_toStartOf="parent"
              app:layout_constraintEnd_toEndOf="parent"
              app:layout_constraintTop_toBottomOf="@+id/include" android:layout_marginTop="8dp"
-             android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+             app:layout_constraintBottom_toBottomOf="parent"
+             android:id="@+id/include2"/>
+    <androidx.constraintlayout.widget.Group android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                            android:id="@+id/groupItensNoticias"
+                                            app:constraint_referenced_ids="guidelineDireita,include2,mais_not_partilha_dest,guidelineEsquerda,mais_not_titulo_dest,imageView59,mais_not_data_dest,include,mais_not_img_dest,mais_not_favorito_dest"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

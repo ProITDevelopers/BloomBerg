@@ -1,6 +1,5 @@
-package proitdevelopers.com.bloomberg.fragmentos;
+package proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.*;
 import android.widget.TextView;

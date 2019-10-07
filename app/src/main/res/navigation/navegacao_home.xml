@@ -11,7 +11,7 @@
         <action android:id="@+id/action_homeFragment_to_maisNoticiasFragment"
                 app:destination="@id/maisNoticiasFragment"/>
     </fragment>
-    <fragment android:id="@+id/audioFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.AudioFragment"
+    <fragment android:id="@+id/audioFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.AudioFragment"
               android:label="fragment_audio" tools:layout="@layout/fragment_audio"/>
     <fragment android:id="@+id/detalheNoticiaFragment"
               android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.DetalheNoticiaFragment"
@@ -19,4 +19,10 @@
     <fragment android:id="@+id/maisNoticiasFragment"
               android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.MaisNoticiasFragment"
               android:label="fragment_mais_noticias" tools:layout="@layout/fragment_mais_noticias"/>
+    <fragment android:id="@+id/mercadoFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.MercadoFragment"
+              android:label="fragment_mercado" tools:layout="@layout/fragment_mercado"/>
+    <fragment android:id="@+id/nossosMeiosFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.NossosMeiosFragment"
+              android:label="fragment_nossos_meios" tools:layout="@layout/fragment_nossos_meios"/>
+    <fragment android:id="@+id/menuFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.MenuFragment"
+              android:label="fragment_menu" tools:layout="@layout/fragment_menu"/>
 </navigation>

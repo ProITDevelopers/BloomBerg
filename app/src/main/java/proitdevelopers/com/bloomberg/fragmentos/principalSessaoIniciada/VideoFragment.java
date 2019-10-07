@@ -1,4 +1,4 @@
-package proitdevelopers.com.bloomberg.fragmentos;
+package proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada;
 
 
 import android.content.Intent;

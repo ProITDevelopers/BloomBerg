@@ -36,9 +36,9 @@ class TopNewsAdapeter(val context:Context, val noticiasL:List<Noticia >) : Recyc
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun mudarDados(noticias:Noticia?,posicao:Int){
             itemView.apply {
-                trading_categoria_tv.text = noticias!!.categoria
-                trading_titulo_tv.text = noticias.titulo
-                trading_data_tv.text = noticias.data
+                item_tendencias_categoria.text = noticias!!.categoria
+                item_tendencias_titulo.text = noticias.titulo
+                item_tendencias_data_pub.text = noticias.data
             }
             esconderSeparador(itemView.imgSeparador,posicao,limite)
         }
