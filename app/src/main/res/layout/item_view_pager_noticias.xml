@@ -20,7 +20,7 @@
             android:text="@string/txt_noticia_1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/textView35"
+            android:id="@+id/view_pager_titulo"
             style="@style/noticiaTitulo"
             app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
             app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
@@ -30,30 +30,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/txt_noticia_fonte"
-            android:id="@+id/textView49" app:layout_constraintStart_toStartOf="@+id/textView35"
-            app:layout_constraintTop_toBottomOf="@+id/textView35" android:layout_marginTop="8dp"/>
+            android:id="@+id/view_pager_fonte" app:layout_constraintStart_toStartOf="@+id/view_pager_titulo"
+            app:layout_constraintTop_toBottomOf="@+id/view_pager_titulo" android:layout_marginTop="8dp"/>
     <TextView
             android:text="@string/txt_data_pub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/txt_data"
-            android:id="@+id/textView50" app:layout_constraintStart_toStartOf="@+id/textView49"
-            app:layout_constraintTop_toBottomOf="@+id/textView49" android:layout_marginTop="4dp"/>
+            android:id="@+id/view_pager_data_pub" app:layout_constraintStart_toStartOf="@+id/view_pager_fonte"
+            app:layout_constraintTop_toBottomOf="@+id/view_pager_fonte" android:layout_marginTop="4dp"/>
     <ImageView
             android:layout_width="match_parent"
             android:layout_height="@dimen/tamanho_300"
             android:contentDescription="@string/img_noticia"
             app:srcCompat="@drawable/noticia_bloomberg"
-            android:id="@+id/imageView62" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView50" app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/view_pager_img" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/view_pager_data_pub" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:scaleType="centerCrop"/>
     <TextView
             android:text="@string/txt_noticia_1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             style="@style/txt_noticia_descricao"
-            android:id="@+id/textView51" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/imageView62"
+            android:id="@+id/view_pager_descricao" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/view_pager_img"
             app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
             app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"/>
     <View
@@ -61,14 +61,14 @@
             android:layout_height="1dp"
             android:background="@color/black"
             android:id="@+id/view2" app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
-            app:layout_constraintTop_toBottomOf="@+id/textView51"
+            app:layout_constraintTop_toBottomOf="@+id/view_pager_descricao"
             android:layout_marginTop="16dp" app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
     />
     <TextView
             android:text="@string/txt_noticia_4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/textView52"
+            android:id="@+id/view_pager_conteudo"
             style="@style/txt_conteudo_noticia"
             app:layout_constraintTop_toBottomOf="@+id/view2" app:layout_constraintStart_toStartOf="@+id/view2"
             app:layout_constraintEnd_toEndOf="@+id/view2" android:layout_marginEnd="8dp"

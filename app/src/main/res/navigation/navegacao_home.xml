@@ -18,7 +18,10 @@
               android:label="fragment_detalhe_noticia" tools:layout="@layout/fragment_detalhe_noticia"/>
     <fragment android:id="@+id/maisNoticiasFragment"
               android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.MaisNoticiasFragment"
-              android:label="fragment_mais_noticias" tools:layout="@layout/fragment_mais_noticias"/>
+              android:label="fragment_mais_noticias" tools:layout="@layout/fragment_mais_noticias">
+        <action android:id="@+id/action_maisNoticiasFragment_to_detalheNoticiaFragment"
+                app:destination="@id/detalheNoticiaFragment"/>
+    </fragment>
     <fragment android:id="@+id/mercadoFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.MercadoFragment"
               android:label="fragment_mercado" tools:layout="@layout/fragment_mercado"/>
     <fragment android:id="@+id/nossosMeiosFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.NossosMeiosFragment"

@@ -50,7 +50,7 @@ class HomeFragment : Fragment() {
         )
         //view pager das bolsas
         configurarViewPagerBolsas()
-
+                //Travis Scott - HIGHEST IN THE ROOM
     }
 
     private fun configurarViewPagerBolsas() {

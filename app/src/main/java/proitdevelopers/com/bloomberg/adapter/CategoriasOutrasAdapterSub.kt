@@ -15,7 +15,8 @@ import proitdevelopers.com.bloomberg.modelo.Noticia
 class CategoriasOutrasAdapterSub(
     private val context: Context,
     private val noticias: MutableList<Noticia>,
-    private val qtdRetornados: Int
+    private val qtdRetornados: Int,
+    private val verMaisId: Int
 ) : RecyclerView.Adapter
 <CategoriasOutrasAdapterSub.MyVilHolder>() {
 
@@ -24,13 +25,19 @@ class CategoriasOutrasAdapterSub(
         return MyVilHolder(view)
     }
 
-    override fun getItemCount(): Int = qtdRetornados
+    override fun getItemCount(): Int = if (verMaisId==0 && noticias.size>0) qtdRetornados-1 else qtdRetornados
 
     override fun onBindViewHolder(holder: MyVilHolder, position: Int) {
-
-        if (3<  noticias.size){
-            val noticia = noticias[position + 3]
-            holder.mudarDados(noticia)
+        if (verMaisId == 0) {
+            if (position+1<noticias.size){
+                val noticia = noticias[position+1]
+                holder.mudarDados(noticia)
+            }
+        } else if (verMaisId == 1) {
+            if (position + 3 < noticias.size) {
+                val noticia = noticias[position + 3]
+                holder.mudarDados(noticia)
+            }
         }
     }
 
@@ -61,9 +68,16 @@ class CategoriasOutrasAdapterSub(
         }
 
         fun click() {
-            itemView.setOnClickListener(
-                Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_detalheNoticiaFragment)
-            )
+
+            if (verMaisId==0){
+                itemView.setOnClickListener(
+                    Navigation.createNavigateOnClickListener(R.id.action_maisNoticiasFragment_to_detalheNoticiaFragment)
+                )
+            }else{
+                itemView.setOnClickListener(
+                    Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_detalheNoticiaFragment)
+                )
+            }
         }
 
     }

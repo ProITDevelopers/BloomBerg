@@ -127,7 +127,7 @@ class CategoriasOutrasAdapeter(private val context:Context,
     ) {
         val layoutManager = LinearLayoutManager(context)
         layoutManager.orientation = RecyclerView.VERTICAL
-        val adapterConfQueAssistir = CategoriasOutrasAdapterSub(context,noticias,qtdRetornados)
+        val adapterConfQueAssistir = CategoriasOutrasAdapterSub(context,noticias,qtdRetornados,1)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapterConfQueAssistir
     }
