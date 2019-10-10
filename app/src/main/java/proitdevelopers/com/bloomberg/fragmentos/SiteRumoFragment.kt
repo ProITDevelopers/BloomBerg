@@ -1,4 +1,4 @@
-package proitdevelopers.com.bloomberg
+package proitdevelopers.com.bloomberg.fragmentos
 
 
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebViewClient
 import kotlinx.android.synthetic.main.fragment_site_rumo.view.*
+import proitdevelopers.com.bloomberg.R
 
 class SiteRumoFragment : Fragment() {
 

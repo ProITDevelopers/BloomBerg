@@ -7,9 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_nossos_meios.view.*
 import proitdevelopers.com.bloomberg.R
-import proitdevelopers.com.bloomberg.SiteMercadoFragment
-import proitdevelopers.com.bloomberg.SiteRumoFragment
-import proitdevelopers.com.bloomberg.SiteVanguardaFragment
+import proitdevelopers.com.bloomberg.fragmentos.SiteMercadoFragment
+import proitdevelopers.com.bloomberg.fragmentos.SiteRumoFragment
+import proitdevelopers.com.bloomberg.fragmentos.SiteVanguardaFragment
 import proitdevelopers.com.bloomberg.adapter.nossosMeios.NossosMeiosAdapter
 
 class NossosMeiosFragment : Fragment() {

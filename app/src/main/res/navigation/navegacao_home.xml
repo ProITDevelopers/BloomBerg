@@ -42,10 +42,10 @@
         <action android:id="@+id/action_menuFragment_to_homeFragment" app:destination="@id/homeFragment"
                 app:popUpToInclusive="true" app:popUpTo="@+id/menuFragment"/>
     </fragment>
-    <fragment android:id="@+id/siteRumoFragment" android:name="proitdevelopers.com.bloomberg.SiteRumoFragment"
+    <fragment android:id="@+id/siteRumoFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.SiteRumoFragment"
               android:label="fragment_site_rumo" tools:layout="@layout/fragment_site_rumo"/>
-    <fragment android:id="@+id/siteMercadoFragment" android:name="proitdevelopers.com.bloomberg.SiteMercadoFragment"
+    <fragment android:id="@+id/siteMercadoFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.SiteMercadoFragment"
               android:label="fragment_site_mercado" tools:layout="@layout/fragment_site_mercado"/>
-    <fragment android:id="@+id/siteVanguardaFragment" android:name="proitdevelopers.com.bloomberg.SiteVanguardaFragment"
+    <fragment android:id="@+id/siteVanguardaFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.SiteVanguardaFragment"
               android:label="fragment_site_vanguarda" tools:layout="@layout/fragment_site_vanguarda"/>
 </navigation>
