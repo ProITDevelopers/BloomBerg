@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navegacao"
-            app:startDestination="@+id/homeFragment">
+            app:startDestination="@id/nossosMeiosFragment">
 
     <fragment android:id="@+id/homeFragment"
               android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.HomeFragment"
@@ -42,4 +42,10 @@
         <action android:id="@+id/action_menuFragment_to_homeFragment" app:destination="@id/homeFragment"
                 app:popUpToInclusive="true" app:popUpTo="@+id/menuFragment"/>
     </fragment>
+    <fragment android:id="@+id/siteRumoFragment" android:name="proitdevelopers.com.bloomberg.SiteRumoFragment"
+              android:label="fragment_site_rumo" tools:layout="@layout/fragment_site_rumo"/>
+    <fragment android:id="@+id/siteMercadoFragment" android:name="proitdevelopers.com.bloomberg.SiteMercadoFragment"
+              android:label="fragment_site_mercado" tools:layout="@layout/fragment_site_mercado"/>
+    <fragment android:id="@+id/siteVanguardaFragment" android:name="proitdevelopers.com.bloomberg.SiteVanguardaFragment"
+              android:label="fragment_site_vanguarda" tools:layout="@layout/fragment_site_vanguarda"/>
 </navigation>

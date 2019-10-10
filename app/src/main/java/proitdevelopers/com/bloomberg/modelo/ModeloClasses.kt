@@ -10,6 +10,8 @@ data class Noticia(var titulo: String, var descricao:String,var conteudo:String,
 
 data class ItemMenu(var itemMenu: String)
 
+data class Site(var site:String, var tab_nome:String)
+
 data class Menu(var img:Int,var tituloMenu:String,var itemMeu: List<ItemMenu>)
 
 object valoresMenu{

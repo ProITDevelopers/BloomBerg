@@ -1,31 +1,35 @@
 package proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada
 
-
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_nossos_meios.view.*
 import proitdevelopers.com.bloomberg.R
+import proitdevelopers.com.bloomberg.SiteMercadoFragment
+import proitdevelopers.com.bloomberg.SiteRumoFragment
+import proitdevelopers.com.bloomberg.SiteVanguardaFragment
+import proitdevelopers.com.bloomberg.adapter.nossosMeios.NossosMeiosAdapter
 
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- *
- */
 class NossosMeiosFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nossos_meios, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val view = inflater.inflate(R.layout.fragment_nossos_meios, container, false)
+        viewPagesSites(view)
+        return view
+    }
+
+
+    private fun viewPagesSites(view: View) {
+
+        val adapter = NossosMeiosAdapter(childFragmentManager)
+        adapter.addFragment(SiteRumoFragment(),"Rumo")
+        adapter.addFragment(SiteVanguardaFragment(),"Vanguarda")
+        adapter.addFragment(SiteMercadoFragment(),"Mercado")
+        view.view_pager_sites.adapter = adapter
+        view.tabs.setupWithViewPager(view.view_pager_sites)
+
     }
 
 

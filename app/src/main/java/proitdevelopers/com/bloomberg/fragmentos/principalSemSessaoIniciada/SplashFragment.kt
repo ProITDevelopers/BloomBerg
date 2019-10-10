@@ -1,4 +1,4 @@
-package proitdevelopers.com.bloomberg
+package proitdevelopers.com.bloomberg.fragmentos.principalSemSessaoIniciada
 
 
 import android.os.Bundle
@@ -7,8 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
+import proitdevelopers.com.bloomberg.R
 
 class SplashFragment : Fragment() {
 

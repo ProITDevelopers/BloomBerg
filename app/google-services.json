@@ -1,0 +1,231 @@
+{
+  "project_info": {
+    "project_number": "850306275089",
+    "firebase_url": "https://projetosmobilebacar.firebaseio.com",
+    "project_id": "projetosmobilebacar",
+    "storage_bucket": "projetosmobilebacar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850306275089:android:5a0971b26d037378",
+        "android_client_info": {
+          "package_name": "androidnotification.com.adroidnotification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850306275089-jj3g6hsepqnka4svn03mjoe7pku0bocj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "androidnotification.com.adroidnotification",
+            "certificate_hash": "0cb9820c1f074fc440d0807e1974f7aed44513bc"
+          }
+        },
+        {
+          "client_id": "850306275089-6inronbh1amd78khegvmvu1459e6fjb5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOs7uXce1-Nta_0tX0L9Gdj0vvJNfAkkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850306275089-6inronbh1amd78khegvmvu1459e6fjb5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "850306275089-v8dpdktefrjic3bbungfl8ohmq0r7v5h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.RumoStore"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850306275089:android:38f34a05d35cc7f1",
+        "android_client_info": {
+          "package_name": "chegueiprimeiro.com.chegueiprimeiro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850306275089-tp8rfae1iqt5ub13hm4vev6sebqe7kds.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "chegueiprimeiro.com.chegueiprimeiro",
+            "certificate_hash": "0cb9820c1f074fc440d0807e1974f7aed44513bc"
+          }
+        },
+        {
+          "client_id": "850306275089-6inronbh1amd78khegvmvu1459e6fjb5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOs7uXce1-Nta_0tX0L9Gdj0vvJNfAkkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850306275089-6inronbh1amd78khegvmvu1459e6fjb5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "850306275089-v8dpdktefrjic3bbungfl8ohmq0r7v5h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.RumoStore"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850306275089:android:53c5e8af504d9f00",
+        "android_client_info": {
+          "package_name": "proitappsolutions.com.rumosstore.QUIZ"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850306275089-h8vkjemkh95f86imqt53u0r3n7gjoujk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "proitappsolutions.com.rumosstore.QUIZ",
+            "certificate_hash": "0cb9820c1f074fc440d0807e1974f7aed44513bc"
+          }
+        },
+        {
+          "client_id": "850306275089-6inronbh1amd78khegvmvu1459e6fjb5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOs7uXce1-Nta_0tX0L9Gdj0vvJNfAkkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850306275089-6inronbh1amd78khegvmvu1459e6fjb5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "850306275089-v8dpdktefrjic3bbungfl8ohmq0r7v5h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.RumoStore"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850306275089:android:3e25fdd950d480ff",
+        "android_client_info": {
+          "package_name": "proitdevelopers.com.androidquizfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850306275089-u54resr8dthgam3afrvqeh3qi4gcdbou.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "proitdevelopers.com.androidquizfirebase",
+            "certificate_hash": "0cb9820c1f074fc440d0807e1974f7aed44513bc"
+          }
+        },
+        {
+          "client_id": "850306275089-6inronbh1amd78khegvmvu1459e6fjb5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOs7uXce1-Nta_0tX0L9Gdj0vvJNfAkkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850306275089-6inronbh1amd78khegvmvu1459e6fjb5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "850306275089-v8dpdktefrjic3bbungfl8ohmq0r7v5h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.RumoStore"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850306275089:android:4ef1c94a6a6474a749deb0",
+        "android_client_info": {
+          "package_name": "proitdevelopers.com.bloomberg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850306275089-b1aglpgmdvr6p3lj0cqbjd84fcbrpevb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "proitdevelopers.com.bloomberg",
+            "certificate_hash": "0cb9820c1f074fc440d0807e1974f7aed44513bc"
+          }
+        },
+        {
+          "client_id": "850306275089-6inronbh1amd78khegvmvu1459e6fjb5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOs7uXce1-Nta_0tX0L9Gdj0vvJNfAkkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850306275089-6inronbh1amd78khegvmvu1459e6fjb5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "850306275089-v8dpdktefrjic3bbungfl8ohmq0r7v5h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.RumoStore"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -31,13 +31,13 @@ import com.google.android.gms.common.api.GoogleApiClient
 
 class IniciarSessaoFragment : Fragment(), GoogleApiClient.OnConnectionFailedListener {
     override fun onConnectionFailed(p0: ConnectionResult) {
-        Toast.makeText(context,""+p0.errorMessage,Toast.LENGTH_SHORT).show()
+        Toast.makeText(context,""+p0,Toast.LENGTH_SHORT).show()
     }
 
 
     //Google
     companion object{
-        private val PERMISSAO_CODE = 9999
+        private val RC_SIGIN_IN = 9991
     }
 
     lateinit var mGoogleApiClient: GoogleApiClient
@@ -59,7 +59,7 @@ class IniciarSessaoFragment : Fragment(), GoogleApiClient.OnConnectionFailedList
             Navigation.createNavigateOnClickListener(R.id.action_iniciarSessaoFragment_to_registarSeFragment)
         )
 
-       // configureGoogleClient(view)
+        //configureGoogleClient(view)
 
         facebookInit(view)
 
@@ -67,14 +67,14 @@ class IniciarSessaoFragment : Fragment(), GoogleApiClient.OnConnectionFailedList
     }
 
     private fun configureGoogleClient(context: View){
-        val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken("850306275089-qak91c7avv447sl8abq74p1s60vqvu4h.apps.googleusercontent.com")
             .requestEmail()
             .build()
 
         mGoogleApiClient = GoogleApiClient.Builder(context.context)
                 .enableAutoManage(getContext() as FragmentActivity,this)
-            .addApi(Auth.GOOGLE_SIGN_IN_API,options)
+            .addApi(Auth.GOOGLE_SIGN_IN_API,gso)
             .build()
         mGoogleApiClient.connect()
 
@@ -86,7 +86,7 @@ class IniciarSessaoFragment : Fragment(), GoogleApiClient.OnConnectionFailedList
 
     private fun entrarGoogle(){
         val intent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient)
-        startActivityForResult(intent,PERMISSAO_CODE)
+        startActivityForResult(intent, RC_SIGIN_IN)
     }
 
     private fun facebookInit(view: View) {
@@ -132,7 +132,7 @@ class IniciarSessaoFragment : Fragment(), GoogleApiClient.OnConnectionFailedList
         if (requestCode ==64206)
             callbackManager.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == PERMISSAO_CODE ){
+        if (requestCode == RC_SIGIN_IN ){
             val result = Auth.GoogleSignInApi.getSignInResultFromIntent(data!!)
             if(result.isSuccess){
                 val account = result.signInAccount
