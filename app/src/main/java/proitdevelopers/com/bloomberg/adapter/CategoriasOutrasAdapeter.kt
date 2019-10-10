@@ -116,7 +116,10 @@ class CategoriasOutrasAdapeter(private val context:Context,
             itemView.setOnClickListener ( Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_detalheNoticiaFragment) )
             itemView.ic_partilhar_noticia.setOnClickListener { Toast.makeText(context, "Partilhar", Toast.LENGTH_SHORT).show() }
             itemView.ic_favoritas_noticia.setOnClickListener { Toast.makeText(context, "Favoritos", Toast.LENGTH_SHORT).show() }
-
+            itemView.ic_partilha_no_card_1.setOnClickListener { Toast.makeText(context, "Partilhar", Toast.LENGTH_SHORT).show() }
+            itemView.ic_partilha_no_card_2.setOnClickListener { Toast.makeText(context, "Partilhar", Toast.LENGTH_SHORT).show() }
+            itemView.ic_fav_no_card_1.setOnClickListener { Toast.makeText(context, "Favoritos", Toast.LENGTH_SHORT).show() }
+            itemView.ic_fav_no_card_2.setOnClickListener { Toast.makeText(context, "Favoritos", Toast.LENGTH_SHORT).show() }
         }
     }
 

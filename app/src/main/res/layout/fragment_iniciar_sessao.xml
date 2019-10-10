@@ -47,13 +47,14 @@
             android:text="@string/txt_entrar_"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btnEntrar"
+            android:id="@+id/frag_reg_btnEntrar"
             style="@style/MyButtonStylePreto"
             android:clickable="true"
             app:layout_constraintStart_toStartOf="@+id/textView8"
             app:layout_constraintEnd_toEndOf="@+id/textView8"
             app:layout_constraintTop_toBottomOf="@+id/textView8" android:layout_marginTop="8dp"
             android:focusable="true"/>
+
     <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -62,7 +63,7 @@
             android:focusable="true"
             style="@style/MyButtonStyleBranco"
             android:background="@drawable/borda_preta"
-            app:layout_constraintTop_toBottomOf="@+id/btnEntrar"
+            app:layout_constraintTop_toBottomOf="@+id/frag_reg_btnEntrar"
             app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
             app:layout_constraintEnd_toStartOf="@+id/guidelineDireita" android:text="@string/txt_criar_conta"/>
     <TextView
@@ -74,27 +75,44 @@
             app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
             app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
             android:layout_marginTop="8dp"/>
-    <Button
+
+    <!--<com.facebook.login.widget.LoginButton
+    android:id="@+id/login_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="30dp"
+    android:layout_marginBottom="30dp" /> -->
+
+    <com.facebook.login.widget.LoginButton
             android:text="@string/txt_fscebook"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/borda_preta"
-            style="@style/MyButtonStyleBranco"
-            android:id="@+id/button5"
+            android:textSize="@dimen/tamanho_14"
+            android:id="@+id/loginBtnFacebook"
             app:layout_constraintTop_toBottomOf="@+id/textView10" app:layout_constraintStart_toStartOf="@+id/textView10"
             app:layout_constraintEnd_toEndOf="@+id/textView10"
-            android:layout_marginTop="8dp"/>
-    <Button
+            android:layout_marginTop="8dp" android:layout_marginBottom="9dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnGoogleEntrar"/>
+
+    <com.google.android.gms.common.SignInButton
             android:text="@string/txt_google"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/button6"
-            android:background="@drawable/borda_preta"
+            android:id="@+id/btnGoogleEntrar"
             style="@style/MyButtonStyleBranco"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/button5"
+            app:layout_constraintTop_toBottomOf="@+id/loginBtnFacebook"
             app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
             app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
     />
+    <Button
+            android:text="Sair Facebook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSairFacebook" app:layout_constraintStart_toStartOf="@+id/btnGoogleEntrar"
+            app:layout_constraintEnd_toEndOf="@+id/btnGoogleEntrar" android:layout_marginEnd="8dp"
+            android:background="#ffffff" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnGoogleEntrar"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

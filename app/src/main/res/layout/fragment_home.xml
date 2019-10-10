@@ -48,7 +48,7 @@
         <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" app:srcCompat="@drawable/ic_search_black_24dp"
-                android:id="@+id/btnProcurarNoticia"
+                android:id="@+id/frag_home_btn_proc_noticia"
                 android:contentDescription="@string/img_procurar"
                 app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
                 app:layout_constraintTop_toTopOf="@+id/img_destaque"
@@ -177,7 +177,7 @@
                 app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"/>
         <androidx.constraintlayout.widget.Group android:layout_width="wrap_content" android:layout_height="wrap_content"
                                                 android:id="@+id/groupDestaque"
-                                                app:constraint_referenced_ids="imageView43,destaque_partilhar_ic,viewPager,img_destaque,destaque_noticia_sc_tv,btnProcurarNoticia,imageView47,guideline_direita,textView47,worm_dots_indicator,destaque_favoritos_tv,guideline_esquerda,destaque_noticia_tv,imageView32,destaque_data_tv,destaque_cat_tv,destaque_noticia_pr_tv"
+                                                app:constraint_referenced_ids="imageView43,destaque_partilhar_ic,viewPager,img_destaque,destaque_noticia_sc_tv,frag_home_btn_proc_noticia,imageView47,guideline_direita,textView47,worm_dots_indicator,destaque_favoritos_tv,guideline_esquerda,destaque_noticia_tv,imageView32,destaque_data_tv,destaque_cat_tv,destaque_noticia_pr_tv"
                                                 tools:visibility="visible" android:visibility="visible"/>
         <ImageView
                 android:layout_width="0dp"

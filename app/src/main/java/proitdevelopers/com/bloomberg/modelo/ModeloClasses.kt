@@ -1,8 +1,6 @@
 package proitdevelopers.com.bloomberg.modelo
 
-import android.os.Parcel
-import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import proitdevelopers.com.bloomberg.R
 
 data class Bolsa(var servico: String,var valor:String, var estado: String,var variacao:String)
 
@@ -10,13 +8,66 @@ data class Noticia(var titulo: String, var descricao:String,var conteudo:String,
                    var foto:String,var video:String,var data:String,
                    var fonte:String,var categoria:String,var duracao: String)
 
-/*@Parcelize
-data class Noticias(var titulo: String, var descricao:String,var conteudo:String,
-                    var foto:String,var video:String,var data:String,
-                    var fonte:String,var categoria:String,var duracao: String): Parcelable
+data class ItemMenu(var itemMenu: String)
 
-@Parcelize
-class NoticiasArray: ArrayList<Noticias>(), Parcelable*/
+data class Menu(var img:Int,var tituloMenu:String,var itemMeu: List<ItemMenu>)
+
+object valoresMenu{
+    val valoresMenu = mutableListOf(
+        Menu(R.drawable.ic_home_black_24dp,"Inicio",valoresHome.itensMenuHome),
+        Menu(R.drawable.ic_home_black_24dp,"Mercados Financeiros",valoresHome.itensMenuMercadosFinanceiros),
+        Menu(R.drawable.ic_home_black_24dp,"Nossos Meios",valoresHome.itensMenuNossosMeios),
+        Menu(R.drawable.ic_home_black_24dp,"Media",valoresHome.itensMenuMedia),
+        Menu(R.drawable.ic_home_black_24dp,"Redes Sociais",valoresHome.itensRedesSociais),
+        Menu(R.drawable.ic_home_black_24dp,"Perfil",valoresHome.itensPerfil)
+    )
+}
+
+object valoresHome{
+    val itensMenuHome = mutableListOf(
+        ItemMenu("Actualidade"),
+        ItemMenu("Destaques"),
+        ItemMenu("Mercados Financeiros"),
+        ItemMenu("Para Si"),
+        ItemMenu("Internacional"),
+        ItemMenu("Politica"),
+        ItemMenu("Sociedade"),
+        ItemMenu("Opnião"),
+        ItemMenu("Media")
+    )
+
+    val itensMenuMercadosFinanceiros = mutableListOf(
+        ItemMenu("Índices"),
+        ItemMenu("Títulos do Tesouro"),
+        ItemMenu("Acções"),
+        ItemMenu("Câmbios")
+    )
+
+    val itensMenuNossosMeios = mutableListOf(
+        ItemMenu("Mercado"),
+        ItemMenu("Vanguarda"),
+        ItemMenu("Rumo")
+    )
+
+    val itensMenuMedia = mutableListOf(
+        ItemMenu("Directo"),
+        ItemMenu("Videos"),
+        ItemMenu("Áudios"),
+        ItemMenu("Streaming")
+    )
+
+    val itensRedesSociais = mutableListOf(
+        ItemMenu("Quizz"),
+        ItemMenu("Quiosque"),
+        ItemMenu("Subscrição"),
+        ItemMenu("Sorteio Media Rumo")
+    )
+
+    val itensPerfil = mutableListOf(
+        ItemMenu("Sobre Nos")
+    )
+
+}
 
 data class Topico(var topico:String)
 
@@ -46,7 +97,7 @@ object valoresNoticias{
 }
 
 object ValoresBolsa{
-    val bolsas = listOf<Bolsa>(
+    val bolsas = listOf(
         Bolsa("AOA","2.900.51","SUBIU","-0.79"),
         Bolsa("USD","900.1","DESCEU","-2.79"),
         Bolsa("UAD","7.900.51","SUBIU","-0.129"),

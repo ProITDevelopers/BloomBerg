@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -48,16 +49,27 @@ class HomeFragment : Fragment() {
         img_destaque.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_detalheNoticiaFragment)
         )
+
+        frag_home_btn_proc_noticia.setOnClickListener {
+            Toast.makeText(view.context,"Tela pesquisa noticia",Toast.LENGTH_SHORT).show()
+        }
+
+        destaque_partilhar_ic.setOnClickListener {
+            Toast.makeText(view.context,"Partilha",Toast.LENGTH_SHORT).show()
+        }
+
+        destaque_favoritos_tv.setOnClickListener { Toast.makeText(view.context,"Favoritos",Toast.LENGTH_SHORT).show() }
+
         //view pager das bolsas
         configurarViewPagerBolsas()
-                //Travis Scott - HIGHEST IN THE ROOM
+       //Travis Scott - HIGHEST IN THE ROOM
     }
 
     private fun configurarViewPagerBolsas() {
         val adapter = ViewPagerAdapter(childFragmentManager)
         adapter.addFragment(BolsaFragment())
         adapter.addFragment(BolsaDoisFragment())
-        adapter.addFragment(BolsaTresFragment())
+        //adapter.addFragment(BolsaTresFragment())
         viewPager.adapter = adapter
         worm_dots_indicator.setViewPager(viewPager)
     }

@@ -23,7 +23,7 @@ android:id="@+id/conteiner_root">
         android:id="@+id/bottom_navigation_"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/corlorMostarda"
         android:layout_alignParentBottom="true"
         app:itemIconTint="@color/nav_bottom_item"
         app:itemTextColor="@color/nav_bottom_item"
@@ -32,7 +32,7 @@ android:id="@+id/conteiner_root">
         app:layout_constraintStart_toStartOf="parent"
 />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <!-- <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true" android:focusable="true" app:srcCompat="@drawable/ic_mais_opcoes"
@@ -42,7 +42,7 @@ android:id="@+id/conteiner_root">
             app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="1.0"
             android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="@+id/fragmentConteinerSessao_"
-            app:layout_constraintVertical_bias="1.0" android:layout_marginBottom="8dp"/>
+            app:layout_constraintVertical_bias="1.0" android:layout_marginBottom="8dp"/>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

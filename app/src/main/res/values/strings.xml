@@ -14,6 +14,8 @@
     <string name="img_voltar_ic">Imagem Icone Voltar</string>
     <string name="img_reproduzir_ic">Imagem Icone Reproduzir</string>
     <string name="img_cir_vermelho_ic">Imagem Icone Circulo Vermelho</string>
+    <string name="facebook_app_id">2335117853474777</string>
+    <string name="fb_login_protocol_scheme">fb2335117853474777</string>
     <!--TXTS Textos-->
     <string name="txt_categoria_destaque">Destaques</string>
     <string name="txt_categoria_manchete">Manchetes</string>
@@ -78,9 +80,56 @@
     <string name="txt_usuario">Usuário ou E-mail</string>
     <string name="txt_mostrar_senha">Mostrar Senha</string>
     <string name="menu_inicio">Inicio</string>
+    <string name="menu_mercado_financeiro">Mercados Financeiros</string>
     <string name="menu_mercado">Mercado</string>
     <string name="menu_nossos_meios">Nossos Meios</string>
+    <string name="menu_nossos_meios_online">Nossos Meios Online</string>
+    <string name="menu_media_redes_sociais">Redes Sociais</string>
+    <string name="menu_perfil">Perfil</string>
     <string name="menu_media">Media</string>
     <string name="menu_menu">Menu</string>
     <string name="live_tv">Live Tv</string>
+
+
+    <!--MENU VALORES-->
+
+    <!--HOME-->
+    <string name="txt_atualidade">Actualidade</string>
+    <string name="txt_destaque">Destaques</string>
+    <string name="txt_merc_financeiros">Mercados financeiros</string>
+    <string name="txt_para_Si">Para si</string>
+    <string name="txt_internacional">Internacional</string>
+    <string name="txt_politica">Política</string>
+    <string name="txt_sociedade">Sociedade</string>
+    <string name="txt_opniao">Opinião</string>
+    <string name="txt_media_">Media</string>
+
+
+    <!--Mercados Financeiros-->
+    <string name="txt_Índices">Índices</string>
+    <string name="txt_titulo_tesouro">Títulos do tesouro</string>
+    <string name="txt_acoes">Ações</string>
+    <string name="txt_cambios">Câmbios</string>
+
+    <!--Nossos meios-->
+    <string name="txt_nossos_meios_mercado">Mercado</string>
+    <string name="txt_nossos_meios_vanguarda">Vanguarda</string>
+    <string name="txt_nossos_meios_rumo">Rumo</string>
+    <string name="txt_nossos_meios_media_rumo">Media Rumo</string>
+    <string name="txt_nossos_meios_goldenGeneration">Golden Generation</string>
+
+    <!--MEDIA-->
+    <string name="txt_media_directo">Directo</string>
+    <string name="txt_media_videos">Vídeos</string>
+    <string name="txt_media_audios">Áudios</string>
+    <string name="txt_media_streaming">Streaming</string>
+
+    <string name="txt_redes_sociais_quiz">Quizz</string>
+    <string name="txt_redes_quiosque">Quiosque</string>
+    <string name="txt_subscricao">Subscrição</string>
+    <string name="txt_subscricao_sorteio">Sorteio Media Rumo</string>
+
+    <string name="txt_perfil_">Sobre Nós</string>
+
+
 </resources>

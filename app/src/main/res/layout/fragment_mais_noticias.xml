@@ -24,13 +24,13 @@
             android:id="@+id/textView48"
             app:layout_constraintTop_toTopOf="@+id/guideline6"
             android:text="@string/txt_categoria_opniao"
-            app:layout_constraintStart_toEndOf="@+id/imageView21"
-            app:layout_constraintEnd_toStartOf="@+id/imageView49"/>
+            app:layout_constraintStart_toEndOf="@+id/frag_mais_btn_voltar"
+            app:layout_constraintEnd_toStartOf="@+id/frag_mais_btn_pesquisar"/>
     <ImageView
             app:srcCompat="@drawable/ic_voltar_backpress_46dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:id="@+id/imageView21"
+            android:id="@+id/frag_mais_btn_voltar"
             android:contentDescription="@string/img_voltar_ic"
             app:layout_constraintTop_toTopOf="@+id/textView48"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
@@ -40,7 +40,7 @@
             android:layout_width="40dp"
             android:layout_height="30dp"
             android:contentDescription="@string/txt_hint_pesquisa"
-            android:id="@+id/imageView49" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/frag_mais_btn_pesquisar" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline6"
             app:layout_constraintBottom_toBottomOf="@+id/textView48" android:layout_marginEnd="8dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -58,7 +58,7 @@ public class AudioFragment extends Fragment {
         v = inflater.inflate(R.layout.fragment_audio, container, false);
 
 
-        img = (ImageView) v.findViewById(R.id.imageView21);
+        img = (ImageView) v.findViewById(R.id.frag_mais_btn_voltar);
         title = (TextView) v.findViewById(R.id.destaque_noticia_tv);
         recyclerView = v.findViewById(R.id.recyclerTendencias);
         loadNews();

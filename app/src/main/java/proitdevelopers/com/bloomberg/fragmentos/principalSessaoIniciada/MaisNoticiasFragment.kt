@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_mais_noticias.view.*
@@ -25,6 +27,8 @@ class MaisNoticiasFragment : Fragment() {
 
         configurarMaisNoticias(view.context, valoresNoticias.noticias,view)
 
+        onClick(view)
+
         return view
     }
 
@@ -34,6 +38,17 @@ class MaisNoticiasFragment : Fragment() {
         val adapterConfigMaisNoticias = MaisNoticiasAdapter(contextView,noticias)
         view.recyclerViewMaisNoticias.layoutManager = layoutManager
         view.recyclerViewMaisNoticias.adapter = adapterConfigMaisNoticias
+
+    }
+
+    private fun onClick(view: View){
+        view.frag_mais_btn_pesquisar.setOnClickListener {
+            Toast.makeText(view.context,"Pesquisar", Toast.LENGTH_SHORT).show()
+        }
+
+        view.frag_mais_btn_voltar.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_maisNoticiasFragment_to_homeFragment)
+        )
 
     }
 
