@@ -20,22 +20,26 @@
             app:srcCompat="@drawable/ic_close_black_24dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:id="@+id/fra_menu_sair_menu" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            android:id="@+id/fra_menu_sair_menu"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="@+id/guideline9"/>
     <ImageView
             app:srcCompat="@drawable/ic_search_black_40dp"
             android:layout_width="40dp"
             android:layout_height="30dp"
             android:id="@+id/fra_menu_pesquisar_menu"
-            app:layout_constraintTop_toTopOf="@+id/guideline9" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline9"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp"/>
     <Button
             android:text="Configurações"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="@dimen/tamanho_40"
             android:background="?android:attr/selectableItemBackground"
-            android:id="@+id/button2" app:layout_constraintEnd_toStartOf="@+id/fra_menu_pesquisar_menu"
+            android:id="@+id/button2"
+            app:layout_constraintEnd_toStartOf="@+id/fra_menu_pesquisar_menu"
             android:layout_marginEnd="8dp"
             app:layout_constraintTop_toTopOf="@+id/fra_menu_pesquisar_menu"
             app:layout_constraintBottom_toBottomOf="@+id/fra_menu_pesquisar_menu"
@@ -60,7 +64,9 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline13" android:id="@+id/recyclerViewMenu_principal"
+            app:layout_constraintTop_toTopOf="@+id/guideline13"
+            android:id="@+id/recyclerViewMenu_principal"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

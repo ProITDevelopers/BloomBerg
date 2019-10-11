@@ -4,22 +4,22 @@
     <item
         android:id="@+id/homeFragment"
         android:title="@string/menu_inicio"
-        android:icon="@drawable/ic_home_black_24dp" />
+        android:icon="@drawable/menu_home" />
 
     <item
         android:id="@+id/mercadoFragment"
         android:title="@string/menu_mercado"
-        android:icon="@drawable/ic_graphic_eq_black_24dp" />
+        android:icon="@drawable/menu_mercado" />
 
     <item
         android:id="@+id/nossosMeiosFragment"
         android:title="@string/menu_nossos_meios"
-        android:icon="@drawable/ic_watchlist_black_24dp" />
+        android:icon="@drawable/menu_nossos_meios" />
 
     <item
         android:id="@+id/audioFragment"
         android:title="@string/menu_media"
-        android:icon="@drawable/ic_live_tv_black_24dp"/>
+        android:icon="@drawable/menu_media"/>
 
     <item
         android:id="@+id/menuFragment"

@@ -42,9 +42,9 @@ class MaisNoticiasFragment : Fragment() {
     }
 
     private fun onClick(view: View){
-        view.frag_mais_btn_pesquisar.setOnClickListener {
-            Toast.makeText(view.context,"Pesquisar", Toast.LENGTH_SHORT).show()
-        }
+        view.frag_mais_btn_pesquisar.setOnClickListener (
+            Navigation.createNavigateOnClickListener(R.id.action_maisNoticiasFragment_to_pesquisaNoticiaFragment)
+        )
 
         view.frag_mais_btn_voltar.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_maisNoticiasFragment_to_homeFragment)

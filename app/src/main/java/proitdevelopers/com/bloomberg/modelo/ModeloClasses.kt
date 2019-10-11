@@ -10,18 +10,16 @@ data class Noticia(var titulo: String, var descricao:String,var conteudo:String,
 
 data class ItemMenu(var itemMenu: String)
 
-data class Site(var site:String, var tab_nome:String)
-
 data class Menu(var img:Int,var tituloMenu:String,var itemMeu: List<ItemMenu>)
 
 object valoresMenu{
     val valoresMenu = mutableListOf(
-        Menu(R.drawable.ic_home_black_24dp,"Inicio",valoresHome.itensMenuHome),
-        Menu(R.drawable.ic_home_black_24dp,"Mercados Financeiros",valoresHome.itensMenuMercadosFinanceiros),
-        Menu(R.drawable.ic_home_black_24dp,"Nossos Meios",valoresHome.itensMenuNossosMeios),
-        Menu(R.drawable.ic_home_black_24dp,"Media",valoresHome.itensMenuMedia),
-        Menu(R.drawable.ic_home_black_24dp,"Redes Sociais",valoresHome.itensRedesSociais),
-        Menu(R.drawable.ic_home_black_24dp,"Perfil",valoresHome.itensPerfil)
+        Menu(R.drawable.menu_home,"Inicio",valoresHome.itensMenuHome),
+        Menu(R.drawable.menu_mercado,"Mercados Financeiros",valoresHome.itensMenuMercadosFinanceiros),
+        Menu(R.drawable.menu_nossos_meios,"Nossos Meios",valoresHome.itensMenuNossosMeios),
+        Menu(R.drawable.menu_media,"Media",valoresHome.itensMenuMedia),
+        Menu(R.drawable.ic_quizz_24dp,"Redes Sociais",valoresHome.itensRedesSociais),
+        Menu(R.drawable.ic_perfil_black_24dp,"Perfil",valoresHome.itensPerfil)
     )
 }
 

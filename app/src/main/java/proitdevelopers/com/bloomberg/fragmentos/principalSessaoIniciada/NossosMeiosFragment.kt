@@ -24,9 +24,9 @@ class NossosMeiosFragment : Fragment() {
     private fun viewPagesSites(view: View) {
 
         val adapter = NossosMeiosAdapter(childFragmentManager)
-        adapter.addFragment(SiteRumoFragment(),"Rumo")
         adapter.addFragment(SiteVanguardaFragment(),"Vanguarda")
         adapter.addFragment(SiteMercadoFragment(),"Mercado")
+        adapter.addFragment(SiteRumoFragment(),"Rumo")
         view.view_pager_sites.adapter = adapter
         view.tabs.setupWithViewPager(view.view_pager_sites)
 

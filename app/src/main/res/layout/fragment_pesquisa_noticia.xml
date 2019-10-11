@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".fragmentos.PesquisaNoticiaFragment">
+
+
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                android:id="@+id/guidelineTop"
+                                                app:layout_constraintGuide_begin="@dimen/tamanho_25"
+                                                android:orientation="horizontal"/>
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                android:id="@+id/guidelineEsquerda"
+                                                app:layout_constraintGuide_begin="20dp"
+                                                android:orientation="vertical"/>
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                android:id="@+id/guidelineDireita"
+                                                android:orientation="vertical" app:layout_constraintGuide_end="10dp"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:drawableStart="@drawable/ic_search_black_24_iinput_dp"
+            android:ems="10"
+            android:id="@+id/editText"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTop"
+            app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+            app:layout_constraintEnd_toStartOf="@+id/button4" android:background="#468F8B8B" android:padding="4dp"
+            android:hint="Pesquisar por notícias"/>
+    <Button
+            android:text="@string/txt_cancelar"
+            android:layout_width="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_height="30dp"
+            android:id="@+id/button4" app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+            app:layout_constraintTop_toTopOf="@+id/editText" android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/editText"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+    <TextView
+            android:text="EXPLORE TÓPICOS"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/tamanho_25"
+            android:id="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/editText" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp" android:background="#468F8B8B"
+            android:gravity="start|center_horizontal|center_vertical" android:paddingLeft="20dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

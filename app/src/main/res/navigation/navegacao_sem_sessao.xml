@@ -9,9 +9,6 @@
         <action android:id="@+id/action_iniciarSessaoFragment_to_registarSeFragment"
                 app:destination="@id/registarSeFragment"
                 app:popUpToInclusive="false"/>
-        <action android:id="@+id/action_iniciarSessaoFragment_to_homeFragment_sem_sessaoTosessao"
-                app:destination="@id/homeFragment_sem_sessaoTosessao" app:popUpToInclusive="false"
-        />
         <action android:id="@+id/action_iniciarSessaoFragment_to_entrarFragment" app:destination="@id/entrarFragment"/>
     </fragment>
 
@@ -35,9 +32,12 @@
     <fragment android:id="@+id/entrarFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.principalSemSessaoIniciada.EntrarFragment"
               android:label="fragment_entrar" tools:layout="@layout/fragment_entrar">
         <action android:id="@+id/action_entrarFragment_to_homeFragment_sem_sessaoTosessao"
-                app:destination="@id/homeFragment_sem_sessaoTosessao"/>
-        <action android:id="@+id/action_entrarFragment_to_iniciarSessaoFragment"
-                app:destination="@id/iniciarSessaoFragment"/>
+                app:destination="@id/homeFragment_sem_sessaoTosessao" app:popUpToInclusive="true"
+                app:popUpTo="@+id/navegacao_sem_sessao"/>
+
+        <action android:id="@+id/action_entrarFragment_to_iniciarSessaoFragment2"
+                app:destination="@id/iniciarSessaoFragment" app:popUpToInclusive="true"
+                app:popUpTo="@+id/navegacao_sem_sessao"/>
     </fragment>
     <fragment android:id="@+id/splashFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.principalSemSessaoIniciada.SplashFragment"
               android:label="fragment_splash" tools:layout="@layout/fragment_splash">

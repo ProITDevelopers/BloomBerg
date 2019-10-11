@@ -22,7 +22,6 @@ class MenuFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_menu, container, false)
 
-
         configurarSessoesMenu(valoresMenu.valoresMenu,view.context,view)
 
         onClick(view)
@@ -47,9 +46,8 @@ class MenuFragment : Fragment() {
             Navigation.createNavigateOnClickListener(R.id.action_menuFragment_to_homeFragment)
         )
 
-        view.fra_menu_pesquisar_menu.setOnClickListener {
-            Toast.makeText(view.context,"Pesquisar",Toast.LENGTH_SHORT).show()
-        }
+        view.fra_menu_pesquisar_menu.setOnClickListener (
+            Navigation.createNavigateOnClickListener(R.id.action_menuFragment_to_pesquisaNoticiaFragment)
+        )
     }
-
 }

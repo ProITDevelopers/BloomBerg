@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_entrar.*
 import kotlinx.android.synthetic.main.fragment_entrar.view.*
 import kotlinx.android.synthetic.main.fragment_entrar.view.btnIniciarSessao
@@ -22,13 +23,14 @@ class EntrarFragment : Fragment() {
     }
 
     private fun onClick(view: View){
-        view.frg_entar_fechar.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_entrarFragment_to_iniciarSessaoFragment)
-        )
 
-        view.btnIniciarSessao.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_entrarFragment_to_homeFragment_sem_sessaoTosessao)
-        )
+        view.btnIniciarSessao.setOnClickListener{
+            findNavController().navigate(EntrarFragmentDirections.actionEntrarFragmentToHomeFragmentSemSessaoTosessao())
+        }
+
+        view.frg_entar_fechar.setOnClickListener {
+            findNavController().navigate(EntrarFragmentDirections.actionEntrarFragmentToIniciarSessaoFragment2())
+        }
     }
 
 }

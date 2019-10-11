@@ -50,9 +50,9 @@ class HomeFragment : Fragment() {
             Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_detalheNoticiaFragment)
         )
 
-        frag_home_btn_proc_noticia.setOnClickListener {
-            Toast.makeText(view.context,"Tela pesquisa noticia",Toast.LENGTH_SHORT).show()
-        }
+        frag_home_btn_proc_noticia.setOnClickListener (
+            Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_pesquisaNoticiaFragment)
+        )
 
         destaque_partilhar_ic.setOnClickListener {
             Toast.makeText(view.context,"Partilha",Toast.LENGTH_SHORT).show()

@@ -51,7 +51,7 @@ class IniciarSessaoFragment : Fragment(), GoogleApiClient.OnConnectionFailedList
         FacebookSdk.sdkInitialize(view.context)
         AppEventsLogger.activateApp(view.context,view.context.resources.getString(R.string.facebook_app_id))
 
-        view.frag_reg_btnEntrar.setOnClickListener(
+        view.frag_reg_btnEntrar.setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.action_iniciarSessaoFragment_to_entrarFragment)
         )
 
