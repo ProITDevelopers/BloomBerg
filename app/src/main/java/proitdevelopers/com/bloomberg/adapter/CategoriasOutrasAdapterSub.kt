@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_lista_top_news.view.*
 import proitdevelopers.com.bloomberg.R
+import proitdevelopers.com.bloomberg.communs.partilharNoticia
 import proitdevelopers.com.bloomberg.modelo.Noticia
 
 class CategoriasOutrasAdapterSub(
@@ -51,11 +52,7 @@ class CategoriasOutrasAdapterSub(
             itemView.item_tendencias_titulo.text = noticia.titulo
             itemView.item_tendencias_data_pub.text = noticia.data
             itemView.item_sub_not_ic_partilha.setOnClickListener {
-                Toast.makeText(
-                    context,
-                    "Partilhar",
-                    Toast.LENGTH_SHORT
-                ).show()
+                context.partilharNoticia(noticia.titulo,noticia.descricao,noticia.conteudo)
             }
             itemView.item_sub_not_ic_favorito.setOnClickListener {
                 Toast.makeText(

@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.item_mais_noticias.view.*
 import kotlinx.android.synthetic.main.item_noticias_lado_a_lado.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.adapter.CategoriasOutrasAdapterSub
+import proitdevelopers.com.bloomberg.communs.partilharNoticia
 import proitdevelopers.com.bloomberg.modelo.Noticia
 
 class MaisNoticiasAdapter(val context: Context, val noticias: List<Noticia>) :
@@ -41,7 +42,9 @@ class MaisNoticiasAdapter(val context: Context, val noticias: List<Noticia>) :
                     .into(itemView.mais_not_img_dest)
                 itemView.mais_not_titulo_dest.text = noticias[0].titulo
                 itemView.mais_not_data_dest.text = noticias[0].data
-                itemView.mais_not_partilha_dest.setOnClickListener { Toast.makeText(context, "Partilhar", Toast.LENGTH_SHORT).show() }
+                itemView.mais_not_partilha_dest.setOnClickListener {
+                    context.partilharNoticia(noticias[0].titulo,noticias[0].descricao,noticias[0].conteudo)
+                }
                 itemView.mais_not_favorito_dest.setOnClickListener { Toast.makeText(context, "Favoritos", Toast.LENGTH_SHORT).show() }
             }
             OqueAssisirItemSubTercQuartAdapet(noticias as MutableList<Noticia>,itemView.recyclerViewMaisNoticia,noticias.size)

@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_oque_assistir_item_sub.view.*
 import proitdevelopers.com.bloomberg.R
+import proitdevelopers.com.bloomberg.communs.partilharNoticia
 import proitdevelopers.com.bloomberg.modelo.Noticia
 
 class OqueAssisirItemSubTercQuartAdapeter(
@@ -38,19 +39,19 @@ class OqueAssisirItemSubTercQuartAdapeter(
     }
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
-        fun mudarDados(noticias: Noticia?/*,posicao:Int*/) {
-            itemView.txt_duracao_video.text = noticias?.duracao
+        fun mudarDados(noticia: Noticia?/*,posicao:Int*/) {
+            itemView.txt_duracao_video.text = noticia?.duracao
             Glide.with(context)
-                .load(noticias?.foto)
+                .load(noticia?.foto)
                 .into(itemView.img_noticia_video)
-            itemView.txt_titulo.text = noticias?.titulo
-            itemView.txt_data_video.text = noticias?.data
-            onClickListner()
+            itemView.txt_titulo.text = noticia?.titulo
+            itemView.txt_data_video.text = noticia?.data
+            onClickListner(noticia!!)
         }
 
-        fun onClickListner(){
+        fun onClickListner(noticia: Noticia){
             itemView.ic_item_oque_assist_partilha.setOnClickListener {
-                Toast.makeText(context,"Partilha", Toast.LENGTH_SHORT).show()
+                context.partilharNoticia(noticia.titulo,noticia.descricao,noticia.video)
             }
 
             itemView.ic_item_oque_assist_favorito.setOnClickListener {

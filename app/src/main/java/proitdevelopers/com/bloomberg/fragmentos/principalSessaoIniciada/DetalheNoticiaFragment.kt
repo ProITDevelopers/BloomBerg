@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.fragment_detalhe_noticia.*
 import kotlinx.android.synthetic.main.fragment_detalhe_noticia.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.adapter.swipeNoticiasViewPager.NavegacaoNoticiasAdapter
+import proitdevelopers.com.bloomberg.communs.partilharNoticia
 import proitdevelopers.com.bloomberg.modelo.Noticia
 import proitdevelopers.com.bloomberg.modelo.valoresNoticias
 
@@ -23,8 +24,6 @@ class DetalheNoticiaFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.fragment_detalhe_noticia, container, false)
-
-        onClick(view)
 
         return view
     }
@@ -39,18 +38,24 @@ class DetalheNoticiaFragment : Fragment() {
         val adapter = NavegacaoNoticiasAdapter(context, noticias)
         viewPagerNoticias.adapter = adapter
         viewPagerNoticias.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+        viewPagerNoticias.registerOnPageChangeCallback(object:ViewPager2.OnPageChangeCallback(){
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                onClick(noticias[position])
+            }
+        })
     }
 
-    private fun onClick(view: View) {
-        view.frag_detalhe_btn_fav.setOnClickListener {
-            Toast.makeText(view.context, "Favorito", Toast.LENGTH_SHORT).show()
+    private fun onClick(noticia: Noticia) {
+        frag_detalhe_btn_fav.setOnClickListener {
+            Toast.makeText(context, "Favorito", Toast.LENGTH_SHORT).show()
         }
 
-        view.frag_detalhe_btn_part.setOnClickListener {
-            Toast.makeText(view.context, "Partilha", Toast.LENGTH_SHORT).show()
+        frag_detalhe_btn_part.setOnClickListener {
+            context!!.partilharNoticia(noticia.titulo,noticia.descricao,noticia.conteudo)
         }
 
-        view.frag_detalhe_btn_voltar.setOnClickListener {
+        frag_detalhe_btn_voltar.setOnClickListener {
             findNavController().navigate(DetalheNoticiaFragmentDirections.actionDetalheNoticiaFragmentToHomeFragment())
         }
     }

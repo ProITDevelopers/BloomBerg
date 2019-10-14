@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_oque_assistir.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.activitys.ReproducaoVideoActivity
+import proitdevelopers.com.bloomberg.communs.partilharNoticia
 import proitdevelopers.com.bloomberg.communs.trocarActivityComNoticia
 import proitdevelopers.com.bloomberg.modelo.Noticia
 
@@ -51,16 +52,16 @@ class OqueAssisirAdapeter(private val context:Context, private val noticias:List
             itemView.txtCategoria.text = noticia?.categoria
             itemView.txtData.text = noticia?.data
             oqueAssisirItemSubAdapeter(noticias,itemView.recyclerViewItensAssistir)
-            onClickItem()
+            onClickItem(noticia!!)
         }
 
-        fun onClickItem(){
+        fun onClickItem(noticia:Noticia){
             itemView.ic_partilha_gosto.setOnClickListener {
                 Toast.makeText(context,"Gosto",Toast.LENGTH_SHORT).show()
             }
 
             itemView.ic_partilha_destaque.setOnClickListener {
-                Toast.makeText(context,"Favorito", Toast.LENGTH_SHORT).show()
+                context.partilharNoticia(noticia.titulo,noticia.descricao,noticia.video)
             }
         }
 

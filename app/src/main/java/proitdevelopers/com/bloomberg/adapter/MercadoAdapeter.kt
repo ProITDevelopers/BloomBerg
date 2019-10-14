@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.item_lista_top_news.view.imgSeparador
 import kotlinx.android.synthetic.main.item_lista_trading.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.communs.esconderSeparador
+import proitdevelopers.com.bloomberg.communs.partilharNoticia
 import proitdevelopers.com.bloomberg.modelo.Noticia
 
 class MercadoAdapeter(val context:Context, val noticiasL:List<Noticia >) : RecyclerView.Adapter<MercadoAdapeter.MyViewHolder>(){
@@ -30,16 +31,19 @@ class MercadoAdapeter(val context:Context, val noticiasL:List<Noticia >) : Recyc
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, posicao: Int) {
-        val noticias = noticiasL[posicao]
-        holder.mudarDados(noticias,posicao)
+        val noticia = noticiasL[posicao]
+        holder.mudarDados(noticia,posicao)
     }
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        fun mudarDados(noticias:Noticia?,posicao:Int){
-            itemView.item_tendencias_categoria.text = noticias!!.categoria
-            itemView.item_tendencias_titulo.text = noticias.titulo
+        fun mudarDados(noticia:Noticia?, posicao:Int){
+            itemView.item_tendencias_categoria.text = noticia!!.categoria
+            itemView.item_tendencias_titulo.text = noticia.titulo
             itemView.trading_lugar_tv.text = (posicao+1).toString()
-            itemView.item_tendencias_data_pub.text = noticias.data
+            itemView.item_tendencias_data_pub.text = noticia.data
+            itemView.item_sub_not_ic_partilha.setOnClickListener {
+                context.partilharNoticia(noticia.titulo,noticia.descricao,noticia.conteudo)
+            }
             esconderSeparador(itemView.imgSeparador,posicao,limite)
 
         }

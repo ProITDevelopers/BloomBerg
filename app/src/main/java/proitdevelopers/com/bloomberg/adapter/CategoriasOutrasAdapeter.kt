@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_categorias_conteudo.view.*
 import proitdevelopers.com.bloomberg.R
+import proitdevelopers.com.bloomberg.communs.partilharNoticia
 import proitdevelopers.com.bloomberg.modelo.Noticia
 
 class CategoriasOutrasAdapeter(private val context:Context,
@@ -86,7 +87,6 @@ class CategoriasOutrasAdapeter(private val context:Context,
                     substituirDadosUI(noticias,indexLista)
                 }
             }
-            clickMaisNoticias()
             OqueAssisirItemSubTercQuartAdapet(noticias,itemView.recyclerViewItensNoticias,qtdRetornados)
         }
 
@@ -106,18 +106,28 @@ class CategoriasOutrasAdapeter(private val context:Context,
                 itemView.cat_cont_cat_2.text = noticias[indexList+2].categoria
                 itemView.cat_cont_titulo_2.text = noticias[indexList+2].titulo
                 itemView.cat_cont_font_2.text = noticias[indexList+2].data
+
+                clickMaisNoticias(noticias,indexList)
+            }else{
+                //Esconder cars media Rumo Noticia
             }
         }
 
-        fun clickMaisNoticias(){
+        fun clickMaisNoticias(noticias: MutableList<Noticia>,indexList:Int){
             itemView.btnMaisNoticias.setOnClickListener(
                     Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_maisNoticiasFragment)
             )
             itemView.setOnClickListener ( Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_detalheNoticiaFragment) )
-            itemView.ic_partilhar_noticia.setOnClickListener { Toast.makeText(context, "Partilhar", Toast.LENGTH_SHORT).show() }
+            itemView.ic_partilhar_noticia.setOnClickListener {
+                context.partilharNoticia(noticias[0].titulo,noticias[0].descricao,noticias[0].conteudo)
+            }
             itemView.ic_favoritas_noticia.setOnClickListener { Toast.makeText(context, "Favoritos", Toast.LENGTH_SHORT).show() }
-            itemView.ic_partilha_no_card_1.setOnClickListener { Toast.makeText(context, "Partilhar", Toast.LENGTH_SHORT).show() }
-            itemView.ic_partilha_no_card_2.setOnClickListener { Toast.makeText(context, "Partilhar", Toast.LENGTH_SHORT).show() }
+            itemView.ic_partilha_no_card_1.setOnClickListener {
+                context.partilharNoticia(noticias[1].titulo,noticias[1].descricao,noticias[1].conteudo)
+            }
+            itemView.ic_partilha_no_card_2.setOnClickListener {
+                context.partilharNoticia(noticias[2].titulo,noticias[2].descricao,noticias[2].conteudo)
+            }
             itemView.ic_fav_no_card_1.setOnClickListener { Toast.makeText(context, "Favoritos", Toast.LENGTH_SHORT).show() }
             itemView.ic_fav_no_card_2.setOnClickListener { Toast.makeText(context, "Favoritos", Toast.LENGTH_SHORT).show() }
         }

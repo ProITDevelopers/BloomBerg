@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.item_oque_assistir_item_sub_back_up.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.communs.logDebug
+import proitdevelopers.com.bloomberg.communs.partilharNoticia
 import proitdevelopers.com.bloomberg.modelo.Noticia
 
 class OqueAssisirItemSubTercAdapeter(
@@ -46,12 +47,12 @@ class OqueAssisirItemSubTercAdapeter(
                     itemView.tv_descricao_dec,
                     itemView.txt_data_video_noticia,
                     videoView)
-            onClick()
+            onClick(noticia!!)
         }
 
-        fun onClick(){
+        fun onClick(noticia: Noticia){
             itemView.item_oque_assistir_partilhar.setOnClickListener {
-                Toast.makeText(context,"Partilhar",Toast.LENGTH_SHORT).show()
+                context.partilharNoticia(noticia.titulo,noticia.descricao,noticia.video)
             }
 
             itemView.item_oque_assistir_gosto.setOnClickListener {

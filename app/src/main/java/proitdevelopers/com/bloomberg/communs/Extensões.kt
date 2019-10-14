@@ -12,6 +12,17 @@ fun esconderSeparador(imgSeparador:ImageView,posicao:Int,limite:Int){
         imgSeparador.visibility = GONE
 }
 
+fun Context.partilharNoticia(titulo:String,descricao:String,conteudo:String){
+    val noticia = titulo.plus("\n\n").plus(descricao).plus("\n\n").plus(conteudo)
+        .plus("\n\n")
+        .plus("MEDIA RUMO")
+    val intent = Intent()
+    intent.action = Intent.ACTION_SEND
+    intent.putExtra(Intent.EXTRA_TEXT,noticia)
+    intent.type = "text/plain"
+    startActivity(Intent.createChooser(intent,"Partilhar para:"))
+}
+
 fun logDebug(TAG:String, mensagem:String){
     Log.i(TAG,mensagem)
 }
