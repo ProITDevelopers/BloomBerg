@@ -8,11 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import kotlinx.android.synthetic.main.fragment_detalhe_noticia.*
-import kotlinx.android.synthetic.main.fragment_detalhe_noticia.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.adapter.swipeNoticiasViewPager.NavegacaoNoticiasAdapter
 import proitdevelopers.com.bloomberg.communs.partilharNoticia
