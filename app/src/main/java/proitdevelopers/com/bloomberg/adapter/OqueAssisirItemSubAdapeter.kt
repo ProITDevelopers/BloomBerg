@@ -6,14 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.constraintlayout.widget.Group
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_oque_assistir_item_sub.view.*
-import kotlinx.android.synthetic.main.item_oque_assistir_item_sub.view.img_noticia_video
-import kotlinx.android.synthetic.main.item_oque_assistir_item_sub.view.txt_data_video
-import kotlinx.android.synthetic.main.item_oque_assistir_item_sub.view.txt_duracao_video
-import kotlinx.android.synthetic.main.item_oque_assistir_item_sub.view.txt_titulo
-import kotlinx.android.synthetic.main.item_oque_assistir_item_sub_.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.modelo.Noticia
 
@@ -49,17 +43,26 @@ class OqueAssisirItemSubAdapeter(
 
     override fun onBindViewHolder(holder: MyViewHolder, posicao: Int) {
         val noticias = noticias[posicao]
-        holder.mudarDados(noticias/*,posicao*/)
+        holder.mudarDados(noticias)
     }
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
-        fun mudarDados(noticias: Noticia?/*,posicao:Int*/) {
+        fun mudarDados(noticias: Noticia?) {
             itemView.txt_duracao_video.text = noticias?.duracao
             Glide.with(context)
                 .load(noticias?.foto)
                 .into(itemView.img_noticia_video)
             itemView.txt_titulo.text = noticias?.titulo
             itemView.txt_data_video.text = noticias?.data
+
+            itemView.ic_item_oque_assist_partilha.setOnClickListener {
+                Toast.makeText(context,"Partilha",Toast.LENGTH_SHORT).show()
+            }
+
+            itemView.ic_item_oque_assist_favorito.setOnClickListener {
+                Toast.makeText(context,"Favorito",Toast.LENGTH_SHORT).show()
+            }
+
         }
 
         override fun onClick(v: View) {

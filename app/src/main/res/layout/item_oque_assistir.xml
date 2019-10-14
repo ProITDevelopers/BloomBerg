@@ -49,23 +49,23 @@
     <ImageView
             android:layout_width="@dimen/tamanho_16"
             android:layout_height="@dimen/tamanho_20" app:srcCompat="@drawable/ic_favorite_para_fundo_preto"
-            android:id="@+id/ic_gosto"
+            android:id="@+id/ic_partilha_gosto"
             app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
             style="@style/icone_estilo_partilha_favorito" app:layout_constraintTop_toTopOf="@+id/txtData"
             android:contentDescription="@string/img_favoritos"/>
     <ImageView
             android:layout_width="@dimen/tamanho_16"
             android:layout_height="@dimen/tamanho_20" app:srcCompat="@drawable/ic_partilha_fundo_preto"
-            android:id="@+id/ic_partilha"
-            app:layout_constraintEnd_toStartOf="@+id/ic_gosto" android:layout_marginEnd="16dp"
-            app:layout_constraintTop_toTopOf="@+id/ic_gosto" style="@style/icone_estilo_partilha_favorito"
+            android:id="@+id/ic_partilha_destaque"
+            app:layout_constraintEnd_toStartOf="@+id/ic_partilha_gosto" android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="@+id/ic_partilha_gosto" style="@style/icone_estilo_partilha_favorito"
             android:contentDescription="@string/img_partilha"/>
     <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos_branco"
             android:id="@+id/imageView5"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ic_gosto" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/ic_partilha_gosto" android:layout_marginTop="8dp"
             android:contentDescription="@string/txt_separador"/>
     <TextView
             android:layout_width="@dimen/tamanho_50"

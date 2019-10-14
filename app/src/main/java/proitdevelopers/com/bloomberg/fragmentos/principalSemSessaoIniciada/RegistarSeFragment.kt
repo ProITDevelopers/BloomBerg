@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_registar.view.*
 import proitdevelopers.com.bloomberg.R
@@ -23,13 +22,14 @@ class RegistarSeFragment : Fragment() {
 
     private fun onClick(view: View){
         //btn voltar
-        view.frag_reg_btn_voltar.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_registarSeFragment_to_iniciarSessaoFragment)
-        )
+        view.frag_reg_btn_voltar.setOnClickListener{
+            findNavController().navigate(RegistarSeFragmentDirections.actionRegistarSeFragmentToIniciarSessaoFragment())
+        }
 
-        view.frag_reg_btnEntrar.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_registarSeFragment_to_homeFragment_sem_sessaoTosessao)
-        )
+        view.frag_reg_btnEntrar.setOnClickListener{
+            findNavController().navigate(RegistarSeFragmentDirections.actionRegistarSeFragmentToHomeFragmentSemSessaoTosessao())
+        }
+
     }
 
 }

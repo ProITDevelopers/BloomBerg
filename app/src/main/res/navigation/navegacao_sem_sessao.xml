@@ -18,10 +18,11 @@
                 app:destination="@id/homeFragment_sem_sessaoTosessao" app:enterAnim="@anim/nav_default_enter_anim"
                 app:exitAnim="@anim/nav_default_exit_anim" app:popEnterAnim="@anim/nav_default_pop_enter_anim"
                 app:popExitAnim="@anim/nav_default_pop_exit_anim"
-                app:popUpToInclusive="true" app:popUpTo="@+id/registarSeFragment"
+                app:popUpToInclusive="true" app:popUpTo="@+id/navegacao_sem_sessao"
         />
         <action android:id="@+id/action_registarSeFragment_to_iniciarSessaoFragment"
-                app:destination="@id/iniciarSessaoFragment"/>
+                app:destination="@id/iniciarSessaoFragment" app:popUpToInclusive="true"
+                app:popUpTo="@+id/navegacao_sem_sessao"/>
     </fragment>
 
     <fragment android:id="@+id/homeFragment_sem_sessaoTosessao"
@@ -31,6 +32,7 @@
 
     <fragment android:id="@+id/entrarFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.principalSemSessaoIniciada.EntrarFragment"
               android:label="fragment_entrar" tools:layout="@layout/fragment_entrar">
+
         <action android:id="@+id/action_entrarFragment_to_homeFragment_sem_sessaoTosessao"
                 app:destination="@id/homeFragment_sem_sessaoTosessao" app:popUpToInclusive="true"
                 app:popUpTo="@+id/navegacao_sem_sessao"/>

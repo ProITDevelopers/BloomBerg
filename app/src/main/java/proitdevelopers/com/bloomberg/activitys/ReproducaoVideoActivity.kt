@@ -22,7 +22,6 @@ import proitdevelopers.com.bloomberg.modelo.valoresNoticias.noticias
 class ReproducaoVideoActivity : AppCompatActivity(){
 
     private var plaayBackPosition = 0
-    private val dashUrl = "https://www.radiantmediaplayer.com/media/bbb-360p.mp4"
     private val dashUrlTest = "https://firebasestorage.googleapis.com/v0/b/jogo-hoje.appspot.com/o/Basic%20Flamenco%20Techniques.mp4?alt=media&token=75d02dee-3614-4b86-a7b2-8972dcfb3899"
     private lateinit var mediaController: MediaController
 

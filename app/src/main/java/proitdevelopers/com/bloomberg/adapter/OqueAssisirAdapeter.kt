@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_oque_assistir.view.*
 import proitdevelopers.com.bloomberg.R
@@ -50,6 +51,17 @@ class OqueAssisirAdapeter(private val context:Context, private val noticias:List
             itemView.txtCategoria.text = noticia?.categoria
             itemView.txtData.text = noticia?.data
             oqueAssisirItemSubAdapeter(noticias,itemView.recyclerViewItensAssistir)
+            onClickItem()
+        }
+
+        fun onClickItem(){
+            itemView.ic_partilha_gosto.setOnClickListener {
+                Toast.makeText(context,"Gosto",Toast.LENGTH_SHORT).show()
+            }
+
+            itemView.ic_partilha_destaque.setOnClickListener {
+                Toast.makeText(context,"Favorito", Toast.LENGTH_SHORT).show()
+            }
         }
 
         override fun onClick(view: View?) {

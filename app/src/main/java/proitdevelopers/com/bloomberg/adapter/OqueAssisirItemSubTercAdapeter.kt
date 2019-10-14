@@ -46,6 +46,17 @@ class OqueAssisirItemSubTercAdapeter(
                     itemView.tv_descricao_dec,
                     itemView.txt_data_video_noticia,
                     videoView)
+            onClick()
+        }
+
+        fun onClick(){
+            itemView.item_oque_assistir_partilhar.setOnClickListener {
+                Toast.makeText(context,"Partilhar",Toast.LENGTH_SHORT).show()
+            }
+
+            itemView.item_oque_assistir_gosto.setOnClickListener {
+                Toast.makeText(context,"Gosto",Toast.LENGTH_SHORT).show()
+            }
         }
 
     }

@@ -5,11 +5,9 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.item_oque_assistir_item_sub.view.img_noticia_video
-import kotlinx.android.synthetic.main.item_oque_assistir_item_sub.view.txt_data_video
-import kotlinx.android.synthetic.main.item_oque_assistir_item_sub.view.txt_duracao_video
-import kotlinx.android.synthetic.main.item_oque_assistir_item_sub.view.txt_titulo
+import kotlinx.android.synthetic.main.item_oque_assistir_item_sub.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.modelo.Noticia
 
@@ -47,6 +45,17 @@ class OqueAssisirItemSubTercQuartAdapeter(
                 .into(itemView.img_noticia_video)
             itemView.txt_titulo.text = noticias?.titulo
             itemView.txt_data_video.text = noticias?.data
+            onClickListner()
+        }
+
+        fun onClickListner(){
+            itemView.ic_item_oque_assist_partilha.setOnClickListener {
+                Toast.makeText(context,"Partilha", Toast.LENGTH_SHORT).show()
+            }
+
+            itemView.ic_item_oque_assist_favorito.setOnClickListener {
+                Toast.makeText(context,"Favorito",Toast.LENGTH_SHORT).show()
+            }
         }
 
         override fun onClick(v: View) {
