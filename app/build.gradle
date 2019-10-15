@@ -44,6 +44,13 @@ dependencies {
     //GOOGLE AUTH
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
 
+    //RETROFIT
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
+    //Logging
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+
     //PONTINHOS
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:3.0.3'
     testImplementation 'junit:junit:4.12'

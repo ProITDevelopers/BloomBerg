@@ -1,7 +1,6 @@
 package proitdevelopers.com.bloomberg.adapter
 
 import android.content.Context
-import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -34,6 +33,7 @@ class CategoriasOutrasAdapeter(private val context:Context,
             3 -> return 1
             4 -> return 1
             5 -> return 1
+            6 -> return 1
             else ->{
                 return 0
             }
@@ -51,6 +51,10 @@ class CategoriasOutrasAdapeter(private val context:Context,
             holder.mudarDados(3,posicao)
         else if (identificador == 4)
             holder.mudarDados(4,posicao)
+        else if (identificador == 5)
+            holder.mudarDados(5,posicao)
+        else if (identificador == 6)
+            holder.mudarDados(6,posicao)
         else
             holder.mudarDados(posicao,posicao)
     }
@@ -59,31 +63,31 @@ class CategoriasOutrasAdapeter(private val context:Context,
         fun mudarDados(posicao:Int,indexLista:Int){
             when(posicao){
                 0 ->{
-                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_destaque)
+                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_atualidade)
                     substituirDadosUI(noticias,indexLista)
                 }
                 1 ->{
-                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_internacional)
+                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_nossos_meios_mercado)
                     substituirDadosUI(noticias,indexLista)
                 }
                 2 ->{
-                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_politica)
+                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_para_si)
                     substituirDadosUI(noticias,indexLista)
                 }
                 3 ->{
-                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_sociedade)
-                    substituirDadosUI(noticias,indexLista)
-                }
-                4 ->{
                     itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_opniao)
                     substituirDadosUI(noticias,indexLista)
                 }
+                4 ->{
+                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_cultura)
+                    substituirDadosUI(noticias,indexLista)
+                }
                 5 ->{
-                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_categoria_manchete)
+                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_business)
                     substituirDadosUI(noticias,indexLista)
                 }
                 6 ->{
-                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_renda_fixa)
+                    itemView.cat_cont_categoria_txt.text = context.getString(R.string.txt_bolsa)
                     substituirDadosUI(noticias,indexLista)
                 }
             }

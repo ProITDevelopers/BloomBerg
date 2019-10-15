@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -42,7 +41,7 @@ class MaisNoticiasFragment : Fragment() {
     }
 
     private fun onClick(view: View){
-        view.frag_mais_btn_pesquisar.setOnClickListener (
+        view.frag_mais_btn_pesquisar_mediap.setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.action_maisNoticiasFragment_to_pesquisaNoticiaFragment)
         )
 

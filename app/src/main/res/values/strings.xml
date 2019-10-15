@@ -18,9 +18,15 @@
     <string name="fb_login_protocol_scheme">fb2335117853474777</string>
     <!--TXTS Textos-->
     <string name="txt_categoria_destaque">Destaques</string>
+    <string name="txt_categoria_atualidade">Atualidade</string>
     <string name="txt_categoria_manchete">Manchetes</string>
+    <string name="txt_categoria_tecnologia">Tecnologia</string>
+    <string name="txt_categoria_cultura">Cultura</string>
+    <string name="txt_business">BUSINESS</string>
+    <string name="txt_bolsa">Bolsa</string>
     <string name="txt_categoria_internacional">Internacional</string>
     <string name="txt_categoria_politica">Politica</string>
+    <string name="txt_categoria_para_si">Para Sí</string>
     <string name="txt_categoria_sociedade">Sociedade</string>
     <string name="txt_categoria_opniao">Opnião</string>
     <string name="txt_separador">Separador</string>
@@ -49,7 +55,6 @@
     <string name="txt_radio_media_rumo">Media Rumo Rádio</string>
     <string name="txt_ver_video_audio">VER TODOS VIDEOS E AUDIOS</string>
     <string name="txt_ver_renda_fixa">VER TODAS RENDAS FIXAS</string>
-    <string name="txt_renda_fixa">RENDA FIXA</string>
     <string name="txt_valor_bolsa">S&amp;P 500</string>
     <string name="txt_valor_bolsa_">2,847.60</string>
     <string name="txt_valor_bolsa_porcento">+0.25%</string>

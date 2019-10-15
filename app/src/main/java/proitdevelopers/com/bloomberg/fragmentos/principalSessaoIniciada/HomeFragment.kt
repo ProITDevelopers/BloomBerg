@@ -9,10 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 import proitdevelopers.com.bloomberg.R
@@ -36,8 +33,10 @@ class HomeFragment : Fragment() {
         configurarMercado(valoresNoticias.noticias,view.context,view)
         configurarCategInternacional(valoresNoticias.noticias,view.context,view)
         configurarCategPolitica(valoresNoticias.noticias,view.context,view)
-        configurarCategAoVivo(valoresNoticias.noticias,view.context,view)
         configurarCategOpniao(valoresNoticias.noticias,view.context,view)
+        configurarCatCultura(valoresNoticias.noticias,view.context,view)
+        configurarCatBusiness(valoresNoticias.noticias,view.context,view)
+        configurarCatBolsa(valoresNoticias.noticias,view.context,view)
         configurarCategOQueAssistir(valoresNoticias.noticias,view.context,view)
 
         return view
@@ -125,7 +124,7 @@ class HomeFragment : Fragment() {
         view.recyclerViewPolitica.adapter = adapterConfPolitica
     }
 
-    private fun configurarCategAoVivo(
+    private fun configurarCategOpniao(
         noticias: MutableList<Noticia>,
         context: Context,
         view: View
@@ -135,11 +134,11 @@ class HomeFragment : Fragment() {
         //val adapterConfAoVivo = AoVivoAdapeter(context, noticias)
         val adapterConfSociedade = CategoriasOutrasAdapeter(context,
             noticias,3,gerarNumRand(0,noticias.size))
-        view.recyclerViewSociedade.layoutManager = layoutManager
-        view.recyclerViewSociedade.adapter = adapterConfSociedade
+        view.recyclerViewOpniao.layoutManager = layoutManager
+        view.recyclerViewOpniao.adapter = adapterConfSociedade
     }
 
-    private fun configurarCategOpniao(
+    private fun configurarCatCultura(
         noticias: MutableList<Noticia>,
         context: Context,
         view: View
@@ -148,8 +147,35 @@ class HomeFragment : Fragment() {
         layoutManager.orientation = RecyclerView.VERTICAL
         val adapterConfCrypto = CategoriasOutrasAdapeter(context,
             noticias,4,gerarNumRand(0,noticias.size))
-        view.recyclerViewOpniao.layoutManager = layoutManager
-        view.recyclerViewOpniao.adapter = adapterConfCrypto
+        view.recyclerViewCultura.layoutManager = layoutManager
+        view.recyclerViewCultura.adapter = adapterConfCrypto
+    }
+
+     private fun configurarCatBusiness(
+        noticias: MutableList<Noticia>,
+        context: Context,
+        view: View
+    ) {
+        val layoutManager = LinearLayoutManager(context)
+        layoutManager.orientation = RecyclerView.VERTICAL
+        val adapterConfCrypto = CategoriasOutrasAdapeter(context,
+            noticias,5,gerarNumRand(0,noticias.size))
+        view.recyclerViewBusiness.layoutManager = layoutManager
+        view.recyclerViewBusiness.adapter = adapterConfCrypto
+    }
+
+
+    private fun configurarCatBolsa(
+        noticias: MutableList<Noticia>,
+        context: Context,
+        view: View
+    ) {
+        val layoutManager = LinearLayoutManager(context)
+        layoutManager.orientation = RecyclerView.VERTICAL
+        val adapterConfCrypto = CategoriasOutrasAdapeter(context,
+            noticias,6,gerarNumRand(0,noticias.size))
+        view.recyclerViewBolsa.layoutManager = layoutManager
+        view.recyclerViewBolsa.adapter = adapterConfCrypto
     }
 
     private fun configurarCategOQueAssistir(

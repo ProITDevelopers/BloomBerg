@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navegacao"
-            app:startDestination="@id/homeFragment">
+            app:startDestination="@id/mediaPlayerFragment">
 
     <fragment android:id="@+id/homeFragment"
               android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.HomeFragment"
@@ -14,7 +14,7 @@
         <action android:id="@+id/action_homeFragment_to_pesquisaNoticiaFragment"
                 app:destination="@id/pesquisaNoticiaFragment"/>
     </fragment>
-    <fragment android:id="@+id/audioFragment"
+    <fragment android:id="@+id/fragment_media_player"
               android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.AudioFragment"
               android:label="fragment_audio" tools:layout="@layout/fragment_audio"/>
     <fragment android:id="@+id/detalheNoticiaFragment"
@@ -60,4 +60,10 @@
     <fragment android:id="@+id/pesquisaNoticiaFragment"
               android:name="proitdevelopers.com.bloomberg.fragmentos.PesquisaNoticiaFragment"
               android:label="fragment_pesquisa_noticia" tools:layout="@layout/fragment_pesquisa_noticia"/>
+    <fragment android:id="@+id/mediaPlayerFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.media.MediaPlayerFragment"
+              android:label="fragment_media_player" tools:layout="@layout/fragment_media_player"/>
+    <fragment android:id="@+id/mediaVideoFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.media.MediaVideoFragment"
+              android:label="fragment_media_video" tools:layout="@layout/fragment_media_video"/>
+    <fragment android:id="@+id/mediaAudioFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.media.MediaAudioFragment"
+              android:label="fragment_media_audio" tools:layout="@layout/fragment_media_audio"/>
 </navigation>

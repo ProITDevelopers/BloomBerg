@@ -17,7 +17,7 @@
         android:icon="@drawable/menu_nossos_meios" />
 
     <item
-        android:id="@+id/audioFragment"
+        android:id="@+id/mediaPlayerFragment"
         android:title="@string/menu_media"
         android:icon="@drawable/menu_media"/>
 
