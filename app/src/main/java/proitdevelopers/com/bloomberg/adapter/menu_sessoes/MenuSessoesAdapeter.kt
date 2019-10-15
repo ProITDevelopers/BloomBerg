@@ -1,7 +1,6 @@
 package proitdevelopers.com.bloomberg.adapter.menu_sessoes
 
 import android.content.Context
-import android.content.res.Resources
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +10,6 @@ import kotlinx.android.synthetic.main.item_recycler_view_menu.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.modelo.ItemMenu
 import proitdevelopers.com.bloomberg.modelo.Menu
-import proitdevelopers.com.bloomberg.modelo.Noticia
 
 class MenuSessoesAdapeter(private val context:Context, private val menus:List<Menu >) :
     RecyclerView.Adapter<MenuSessoesAdapeter.MyViewHolder>(){

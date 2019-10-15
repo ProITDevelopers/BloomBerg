@@ -6,12 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.item_recycler_view_menu_sub.view.*
 import proitdevelopers.com.bloomberg.R
-import proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.HomeFragmentDirections
-import proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.MenuFragment
-import proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.MenuFragmentDirections
 import proitdevelopers.com.bloomberg.modelo.ItemMenu
 
 class MenuSessoesSubAdapeter(

@@ -1,7 +1,6 @@
 package proitdevelopers.com.bloomberg.adapter.maisNoticias
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,9 +9,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.item_lista_top_news.view.*
 import kotlinx.android.synthetic.main.item_mais_noticias.view.*
-import kotlinx.android.synthetic.main.item_noticias_lado_a_lado.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.adapter.CategoriasOutrasAdapterSub
 import proitdevelopers.com.bloomberg.communs.partilharNoticia
