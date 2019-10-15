@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navegacao"
-            app:startDestination="@id/mediaPlayerFragment">
+            app:startDestination="@id/homeFragment">
 
     <fragment android:id="@+id/homeFragment"
               android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.HomeFragment"
@@ -50,6 +50,8 @@
                 app:popUpToInclusive="true" app:popUpTo="@+id/menuFragment"/>
         <action android:id="@+id/action_menuFragment_to_pesquisaNoticiaFragment"
                 app:destination="@id/pesquisaNoticiaFragment"/>
+        <action android:id="@+id/action_menuFragment_to_maisNoticiasFragment"
+                app:destination="@id/maisNoticiasFragment"/>
     </fragment>
     <fragment android:id="@+id/siteRumoFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.SiteRumoFragment"
               android:label="fragment_site_rumo" tools:layout="@layout/fragment_site_rumo"/>

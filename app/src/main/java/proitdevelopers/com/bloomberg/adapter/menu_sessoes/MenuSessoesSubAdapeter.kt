@@ -6,15 +6,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.item_recycler_view_menu_sub.view.*
 import proitdevelopers.com.bloomberg.R
+import proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.HomeFragmentDirections
+import proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.MenuFragment
+import proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.MenuFragmentDirections
 import proitdevelopers.com.bloomberg.modelo.ItemMenu
 
-class MenuSessoesSubAdapeter(private val context:Context, private val menus:List<ItemMenu>,private val menu_img:Int) :
-    RecyclerView.Adapter<MenuSessoesSubAdapeter.MyViewHolder>(){
+class MenuSessoesSubAdapeter(
+    private val context: Context,
+    private val menus: List<ItemMenu>,
+    private val menu_img: Int
+) :
+    RecyclerView.Adapter<MenuSessoesSubAdapeter.MyViewHolder>() {
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): MyViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_recycler_view_menu_sub,p0,false)
+        val view = LayoutInflater.from(context).inflate(R.layout.item_recycler_view_menu_sub, p0, false)
         return MyViewHolder(view)
     }
 
@@ -22,29 +30,30 @@ class MenuSessoesSubAdapeter(private val context:Context, private val menus:List
 
     override fun onBindViewHolder(holder: MyViewHolder, posicao: Int) {
         val menu = menus[posicao]
-        holder.mudarDados(menu,posicao)
+        holder.mudarDados(menu, posicao)
 
     }
 
-    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        fun mudarDados(itemMenu: ItemMenu,posicao: Int){
+    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun mudarDados(itemMenu: ItemMenu, posicao: Int) {
             itemView.item_menu_recycler.text = itemMenu.itemMenu
             itemView.item_menu_img.setImageResource(menu_img)
 
             if (posicao != 0)
                 itemView.item_menu_img.visibility = View.INVISIBLE
 
-            if (posicao == menus.size-1){
+            if (posicao == menus.size - 1) {
                 itemView.item_re_separador.visibility = View.GONE
             }
 
             onClickItens(itemMenu)
         }
 
-        fun onClickItens(itemMenu: ItemMenu){
+        fun onClickItens(itemMenu: ItemMenu) {
             itemView.setOnClickListener {
-                Toast.makeText(context,"Clicou ${itemMenu.itemMenu}",Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, " ${itemMenu.itemMenu}", Toast.LENGTH_SHORT).show()
             }
         }
     }
+
 }
