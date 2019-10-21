@@ -11,13 +11,20 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_categorias_conteudo.view.*
 import proitdevelopers.com.bloomberg.R
+import proitdevelopers.com.bloomberg.basededados.entitys.Noticia
+import proitdevelopers.com.bloomberg.communs.carregarFoto
+import proitdevelopers.com.bloomberg.communs.guardarNoticiaOffiline
 import proitdevelopers.com.bloomberg.communs.partilharNoticia
-import proitdevelopers.com.bloomberg.modelo.Noticia
+import proitdevelopers.com.bloomberg.viewModel.NoticiaViewModel
+import java.util.*
 
-class CategoriasOutrasAdapeter(private val context:Context,
-                               private val noticias:MutableList<Noticia>,
-                               private val identificador:Int,
-                               private val qtdRetornados:Int) :
+class CategoriasOutrasAdapeter(
+    private val context: Context,
+    private var noticias: MutableList<Noticia>,
+    private val identificador: Int,
+    private val qtdRetornados: Int,
+    private val noticiaViewModel: NoticiaViewModel
+) :
     RecyclerView.Adapter<CategoriasOutrasAdapeter.MyViewHolder>(){
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): MyViewHolder {
@@ -94,13 +101,11 @@ class CategoriasOutrasAdapeter(private val context:Context,
             OqueAssisirItemSubTercQuartAdapet(noticias,itemView.recyclerViewItensNoticias,qtdRetornados)
         }
 
-        fun substituirDadosUI(noticias: MutableList<Noticia>,indexList:Int){
+        fun substituirDadosUI(noticias: MutableList<Noticia>, indexList:Int){
             if (noticias.size >2){
-                Glide.with(context)
-                    .load(noticias[indexList].foto)
-                    .into(itemView.cat_cont_imagem_noticia)
+                context.carregarFoto(noticias[indexList].foto,itemView.cat_cont_imagem_noticia)
                 itemView.cat_cont_categoria_sub.text = noticias[indexList].categoria
-                itemView.cat_cont_noticia_sub.text = noticias[indexList].titulo
+                itemView.cat_cont_noticia_sub.text =noticias[indexList].titulo
                 itemView.cat_cont_data_pub.text = noticias[indexList].data
 
                 itemView.cat_cont_cat_1.text = noticias[indexList+1].categoria
@@ -113,11 +118,11 @@ class CategoriasOutrasAdapeter(private val context:Context,
 
                 clickMaisNoticias(noticias,indexList)
             }else{
-                //Esconder cars media Rumo Noticia
+                //Esconder cars media Rumo `proitdevelopers.com.bloomberg.basededados.entitys.Noticia`
             }
         }
 
-        fun clickMaisNoticias(noticias: MutableList<Noticia>,indexList:Int){
+        fun clickMaisNoticias(noticias: MutableList<Noticia>, indexList:Int){
             itemView.btnMaisNoticias.setOnClickListener(
                     Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_maisNoticiasFragment)
             )
@@ -125,15 +130,21 @@ class CategoriasOutrasAdapeter(private val context:Context,
             itemView.ic_partilhar_noticia.setOnClickListener {
                 context.partilharNoticia(noticias[0].titulo,noticias[0].descricao,noticias[0].conteudo)
             }
-            itemView.ic_favoritas_noticia.setOnClickListener { Toast.makeText(context, "Favoritos", Toast.LENGTH_SHORT).show() }
+            itemView.ic_favoritas_noticia.setOnClickListener {
+                context.guardarNoticiaOffiline(noticias[0])
+            }
             itemView.ic_partilha_no_card_1.setOnClickListener {
                 context.partilharNoticia(noticias[1].titulo,noticias[1].descricao,noticias[1].conteudo)
             }
             itemView.ic_partilha_no_card_2.setOnClickListener {
                 context.partilharNoticia(noticias[2].titulo,noticias[2].descricao,noticias[2].conteudo)
             }
-            itemView.ic_fav_no_card_1.setOnClickListener { Toast.makeText(context, "Favoritos", Toast.LENGTH_SHORT).show() }
-            itemView.ic_fav_no_card_2.setOnClickListener { Toast.makeText(context, "Favoritos", Toast.LENGTH_SHORT).show() }
+            itemView.ic_fav_no_card_1.setOnClickListener {
+                context.guardarNoticiaOffiline(noticias[1])
+            }
+            itemView.ic_fav_no_card_2.setOnClickListener {
+                context.guardarNoticiaOffiline(noticias[2])
+            }
         }
     }
 
@@ -144,7 +155,7 @@ class CategoriasOutrasAdapeter(private val context:Context,
     ) {
         val layoutManager = LinearLayoutManager(context)
         layoutManager.orientation = RecyclerView.VERTICAL
-        val adapterConfQueAssistir = CategoriasOutrasAdapterSub(context,noticias,qtdRetornados,1)
+        val adapterConfQueAssistir = CategoriasOutrasAdapterSub(context, noticias, qtdRetornados, 1, noticiaViewModel)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapterConfQueAssistir
     }

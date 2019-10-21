@@ -11,7 +11,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/item_not_s_cat"
             style="@style/txt_categoria"
-            app:layout_constraintTop_toTopOf="@+id/item_sub_not_img" app:layout_constraintStart_toEndOf="@+id/item_sub_not_img"
+            app:layout_constraintTop_toTopOf="@+id/item_sub_not_img"
+            app:layout_constraintStart_toEndOf="@+id/item_sub_not_img"
             android:layout_marginStart="8dp"/>
     <TextView
             android:layout_width="0dp"
@@ -19,15 +20,17 @@
             android:id="@+id/item_not_titulo"
             android:text="@string/txt_noticia_2"
             android:textColor="#000000"
-            style="@style/txt_noticia_titulo_sub" app:layout_constraintEnd_toEndOf="parent"
+            style="@style/txt_noticia_titulo_sub"
             app:layout_constraintStart_toEndOf="@+id/item_sub_not_img" android:layout_marginStart="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/item_sub_not_img"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toBottomOf="@+id/item_not_s_cat" app:layout_constraintVertical_bias="0.0"/>
+            app:layout_constraintTop_toBottomOf="@+id/item_not_s_cat" app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"/>
     <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
                                                 android:id="@+id/guideline4"
                                                 android:orientation="horizontal" app:layout_constraintGuide_end="712dp"
-                                                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                android:layout_marginTop="16dp"
                                                 app:layout_constraintStart_toStartOf="parent"
                                                 app:layout_constraintEnd_toEndOf="parent"
                                                 app:layout_constraintGuide_begin="@dimen/tamanho_16"/>
@@ -36,30 +39,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/item_not_s_data"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
             app:layout_constraintHorizontal_chainStyle="packed" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/item_not_titulo" style="@style/txt_data"
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="1.0"/>
     <ImageView
             android:layout_width="@dimen/tamanho_16"
-            android:layout_height="@dimen/tamanho_20" app:srcCompat="@drawable/bloomberg_favoritos"
+            android:layout_height="@dimen/tamanho_20" app:srcCompat="@drawable/ic_delete_black_24dp"
             android:id="@+id/item_not_s_icone_favorito"
             android:contentDescription="@string/img_favoritos" style="@style/icone_estilo_partilha_favorito"
             app:layout_constraintTop_toBottomOf="@+id/item_sub_not_img" android:layout_marginTop="12dp"
-            app:layout_constraintEnd_toEndOf="parent"/>
-    <ImageView
-            android:layout_width="@dimen/tamanho_16"
-            android:layout_height="@dimen/tamanho_20" app:srcCompat="@drawable/bloomberg_partilhar"
-            android:id="@+id/item_sub_not_ic_partilha"
-            app:layout_constraintEnd_toStartOf="@+id/item_not_s_icone_favorito" android:layout_marginEnd="32dp"
-            android:contentDescription="@string/img_partilha" style="@style/icone_estilo_partilha_favorito"
-            app:layout_constraintTop_toTopOf="@+id/item_not_s_icone_favorito"/>
+            app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"/>
     <ImageView
             android:layout_width="@dimen/tamanho_125"
             android:layout_height="@dimen/tamanho_70" app:srcCompat="@drawable/noticia_img"
             android:id="@+id/item_sub_not_img"
-            style="@style/img_noticia" app:layout_constraintStart_toStartOf="parent"
+            style="@style/img_noticia" app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
             app:layout_constraintTop_toTopOf="@+id/guideline4" android:contentDescription="@string/img_noticia"/>
     <ImageView
             android:layout_width="0dp"
@@ -69,4 +65,10 @@
             app:layout_constraintTop_toBottomOf="@+id/item_not_s_icone_favorito"
             android:layout_marginTop="8dp" android:contentDescription="@string/txt_separador"
             app:layout_constraintBottom_toBottomOf="parent"/>
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                android:id="@+id/guidelineEsquerda" app:layout_constraintGuide_begin="20dp"
+                                                android:orientation="vertical"/>
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                android:id="@+id/guidelineDireita"
+                                                android:orientation="vertical" app:layout_constraintGuide_end="20dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

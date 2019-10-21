@@ -12,10 +12,16 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_mais_noticias.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.adapter.CategoriasOutrasAdapterSub
+import proitdevelopers.com.bloomberg.basededados.entitys.Noticia
 import proitdevelopers.com.bloomberg.communs.partilharNoticia
-import proitdevelopers.com.bloomberg.modelo.Noticia
+import proitdevelopers.com.bloomberg.viewModel.NoticiaViewModel
+import java.util.*
 
-class MaisNoticiasAdapter(val context: Context, val noticias: List<Noticia>) :
+class MaisNoticiasAdapter(
+    val context: Context,
+    val noticias: List<Noticia>,
+    val noticiaViewModel: NoticiaViewModel
+) :
     RecyclerView.Adapter<MaisNoticiasAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -42,9 +48,13 @@ class MaisNoticiasAdapter(val context: Context, val noticias: List<Noticia>) :
                 itemView.mais_not_partilha_dest.setOnClickListener {
                     context.partilharNoticia(noticias[0].titulo,noticias[0].descricao,noticias[0].conteudo)
                 }
-                itemView.mais_not_favorito_dest.setOnClickListener { Toast.makeText(context, "Favoritos", Toast.LENGTH_SHORT).show() }
+                itemView.mais_not_favorito_dest.setOnClickListener {
+                    noticias[0].id = UUID.randomUUID().toString()
+                    noticiaViewModel.insertNoticiasFavoritas(noticias[0])
+                    Toast.makeText(context, "Noticia guardada nos favoritos", Toast.LENGTH_SHORT).show()
+                }
             }
-            OqueAssisirItemSubTercQuartAdapet(noticias as MutableList<Noticia>,itemView.recyclerViewMaisNoticia,noticias.size)
+            OqueAssisirItemSubTercQuartAdapet(noticias as MutableList<Noticia>,itemView.recyclerViewMaisNoticia,noticias.size,noticiaViewModel)
         }
 
         fun click(){
@@ -57,11 +67,12 @@ class MaisNoticiasAdapter(val context: Context, val noticias: List<Noticia>) :
     private fun OqueAssisirItemSubTercQuartAdapet(
         noticias: MutableList<Noticia>,
         recyclerView: RecyclerView,
-        qtdRetornados: Int
+        qtdRetornados: Int,
+        noticiaViewModel: NoticiaViewModel
     ) {
         val layoutManager = LinearLayoutManager(context)
         layoutManager.orientation = RecyclerView.VERTICAL
-        val adapterConfQueAssistir = CategoriasOutrasAdapterSub(context,noticias,qtdRetornados,0)
+        val adapterConfQueAssistir = CategoriasOutrasAdapterSub(context,noticias,qtdRetornados,0,noticiaViewModel)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapterConfQueAssistir
     }

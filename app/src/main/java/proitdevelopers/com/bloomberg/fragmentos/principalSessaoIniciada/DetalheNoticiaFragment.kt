@@ -8,20 +8,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import kotlinx.android.synthetic.main.fragment_detalhe_noticia.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.adapter.swipeNoticiasViewPager.NavegacaoNoticiasAdapter
+import proitdevelopers.com.bloomberg.basededados.entitys.Noticia
+import proitdevelopers.com.bloomberg.communs.noticiaViewModel
 import proitdevelopers.com.bloomberg.communs.partilharNoticia
-import proitdevelopers.com.bloomberg.modelo.Noticia
 import proitdevelopers.com.bloomberg.modelo.valoresNoticias
+import proitdevelopers.com.bloomberg.viewModel.NoticiaViewModel
+import java.util.*
 
 class DetalheNoticiaFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.fragment_detalhe_noticia, container, false)
+        noticiaViewModel = ViewModelProviders.of(this).get(NoticiaViewModel::class.java)
 
         return view
     }
@@ -44,9 +49,11 @@ class DetalheNoticiaFragment : Fragment() {
         })
     }
 
-    private fun onClick(noticia: Noticia) {
+    private fun onClick(noticia:Noticia) {
         frag_detalhe_btn_fav.setOnClickListener {
-            Toast.makeText(context, "Favorito", Toast.LENGTH_SHORT).show()
+            noticia.id = UUID.randomUUID().toString()
+            noticiaViewModel.insertNoticiasFavoritas(noticia)
+            Toast.makeText(context, "Noticia guardada nos favoritos", Toast.LENGTH_SHORT).show()
         }
 
         frag_detalhe_btn_part.setOnClickListener {

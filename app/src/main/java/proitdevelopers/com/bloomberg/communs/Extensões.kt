@@ -6,6 +6,12 @@ import android.content.Intent
 import android.util.Log
 import android.view.View.GONE
 import android.widget.ImageView
+import android.widget.Toast
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import proitdevelopers.com.bloomberg.R
+import proitdevelopers.com.bloomberg.basededados.entitys.Noticia
+import java.util.*
 
 fun esconderSeparador(imgSeparador:ImageView,posicao:Int,limite:Int){
     if (posicao==limite-1)
@@ -51,4 +57,17 @@ fun gerarNumRand(comecaEm:Int,terminaEm:Int):Int{
     if (retorno>5)
         return (comecaEm..3).random()
     else return retorno
+}
+
+fun Context.guardarNoticiaOffiline(noticia: Noticia){
+    noticia.id = UUID.randomUUID().toString()
+    noticiaViewModel.insertNoticiasFavoritas(noticia)
+    Toast.makeText(this, "Noticia guardada nos favoritos", Toast.LENGTH_SHORT).show()
+}
+
+fun Context.carregarFoto(url:String,imageView: ImageView){
+    Glide.with(this)
+        .load(url)
+        .apply(RequestOptions.placeholderOf(R.drawable.media_rumo_default).error(R.drawable.media_rumo_default))
+        .into(imageView)
 }

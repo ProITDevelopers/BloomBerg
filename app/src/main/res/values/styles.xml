@@ -146,7 +146,7 @@
 
     <style name="noticiaTitulo">
         <item name="android:textColor">@color/colorTxtPreta</item>
-        <item name="android:textSize">18dp</item>
+        <item name="android:textSize">18sp</item>
     </style>
 
     <style name="txt_noticia_descricao">

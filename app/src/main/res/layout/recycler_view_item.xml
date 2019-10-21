@@ -10,6 +10,7 @@
       android:id="@+id/frag_reg_btn_voltar"
       android:layout_width="50dp"
       android:layout_height="50dp"
+      android:contentDescription="@string/img_voltar_ic"
       tools:src="@tools:sample/avatars"
       app:layout_constraintStart_toStartOf="parent"
       android:layout_marginStart="8dp"

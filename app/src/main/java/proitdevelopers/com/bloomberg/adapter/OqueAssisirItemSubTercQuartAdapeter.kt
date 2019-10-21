@@ -9,12 +9,13 @@ import android.widget.Toast
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_oque_assistir_item_sub.view.*
 import proitdevelopers.com.bloomberg.R
+import proitdevelopers.com.bloomberg.basededados.entitys.Noticia
+import proitdevelopers.com.bloomberg.communs.carregarFoto
 import proitdevelopers.com.bloomberg.communs.partilharNoticia
-import proitdevelopers.com.bloomberg.modelo.Noticia
 
 class OqueAssisirItemSubTercQuartAdapeter(
     private val context: Context,
-    private var noticias: MutableList<Noticia>) :
+    private var  noticias: MutableList<Noticia>) :
     RecyclerView.Adapter<OqueAssisirItemSubTercQuartAdapeter.MyViewHolder>() {
 
     lateinit var mClickListener: ClickListener
@@ -39,17 +40,15 @@ class OqueAssisirItemSubTercQuartAdapeter(
     }
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
-        fun mudarDados(noticia: Noticia?/*,posicao:Int*/) {
-            itemView.txt_duracao_video.text = noticia?.duracao
-            Glide.with(context)
-                .load(noticia?.foto)
-                .into(itemView.img_noticia_video)
-            itemView.txt_titulo.text = noticia?.titulo
-            itemView.txt_data_video.text = noticia?.data
-            onClickListner(noticia!!)
+        fun mudarDados(noticia:Noticia/*,posicao:Int*/) {
+            itemView.txt_duracao_video.text = noticia.duracao
+            context.carregarFoto(noticia.foto,itemView.img_noticia_video)
+            itemView.txt_titulo.text = noticia.titulo
+            itemView.txt_data_video.text = noticia.data
+            onClickListner(noticia)
         }
 
-        fun onClickListner(noticia: Noticia){
+        fun onClickListner(noticia:Noticia){
             itemView.ic_item_oque_assist_partilha.setOnClickListener {
                 context.partilharNoticia(noticia.titulo,noticia.descricao,noticia.video)
             }
@@ -61,8 +60,8 @@ class OqueAssisirItemSubTercQuartAdapeter(
 
         override fun onClick(v: View) {
             mClickListener.onClick(adapterPosition, v)
-            val itemRemovido = noticias.get(adapterPosition)
-            noticias.removeAt(adapterPosition)
+            val itemRemovido =  noticias.get(adapterPosition)
+             noticias.removeAt(adapterPosition)
             noticias.add(itemRemovido)
             notifyDataSetChanged()
         }

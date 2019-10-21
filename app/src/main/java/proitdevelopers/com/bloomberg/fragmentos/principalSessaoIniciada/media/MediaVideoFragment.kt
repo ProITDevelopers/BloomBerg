@@ -18,8 +18,7 @@ import kotlinx.android.synthetic.main.activity_reproducao_video.*
 import kotlinx.android.synthetic.main.fragment_media_video.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.adapter.OqueAssisirItemSubTercAdapeter
-import proitdevelopers.com.bloomberg.communs.TAG
-import proitdevelopers.com.bloomberg.modelo.Noticia
+import proitdevelopers.com.bloomberg.basededados.entitys.Noticia
 import proitdevelopers.com.bloomberg.modelo.valoresNoticias
 
 class MediaVideoFragment : Fragment() {

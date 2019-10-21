@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,11 +17,22 @@ import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.adapter.menu_sessoes.MenuSessoesAdapeter
 import proitdevelopers.com.bloomberg.modelo.Menu
 import proitdevelopers.com.bloomberg.modelo.valoresMenu
+import proitdevelopers.com.bloomberg.viewModel.NoticiaViewModel
 
 class MenuFragment : Fragment() {
 
+    private lateinit var noticiaViewModel: NoticiaViewModel
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_menu, container, false)
+
+        noticiaViewModel = ViewModelProviders.of(this).get(NoticiaViewModel::class.java)
+
+        noticiaViewModel.todasNoticiasFavoritas.observe(this, Observer {noticias ->
+            noticias?.let {
+                view.frag_menu_qtd_noticias.text = noticias.size.toString()
+            }
+        })
 
         configurarSessoesMenu(valoresMenu.valoresMenu,view.context,view)
 
@@ -47,6 +60,10 @@ class MenuFragment : Fragment() {
 
         view.fra_menu_pesquisar_menu.setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.action_menuFragment_to_pesquisaNoticiaFragment)
+        )
+
+        view.frag_menu_noticias_salvas.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_menuFragment_to_noticiasSalvasFragment)
         )
     }
 }

@@ -4,20 +4,23 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_lista_top_news.view.*
 import proitdevelopers.com.bloomberg.R
+import proitdevelopers.com.bloomberg.basededados.entitys.Noticia
+import proitdevelopers.com.bloomberg.communs.carregarFoto
+import proitdevelopers.com.bloomberg.communs.guardarNoticiaOffiline
 import proitdevelopers.com.bloomberg.communs.partilharNoticia
-import proitdevelopers.com.bloomberg.modelo.Noticia
+import proitdevelopers.com.bloomberg.viewModel.NoticiaViewModel
 
 class CategoriasOutrasAdapterSub(
     private val context: Context,
     private val noticias: MutableList<Noticia>,
     private val qtdRetornados: Int,
-    private val verMaisId: Int
+    private val verMaisId: Int,
+    private val noticiaViewModel: NoticiaViewModel
 ) : RecyclerView.Adapter
 <CategoriasOutrasAdapterSub.MyVilHolder>() {
 
@@ -45,21 +48,15 @@ class CategoriasOutrasAdapterSub(
     inner class MyVilHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun mudarDados(noticia: Noticia) {
-            Glide.with(context)
-                .load(noticia.foto)
-                .into(itemView.item_sub_not_img)
-            itemView.item_tendencias_categoria.text = noticia.categoria
-            itemView.item_tendencias_titulo.text = noticia.titulo
-            itemView.item_tendencias_data_pub.text = noticia.data
+            context.carregarFoto(noticia.foto,itemView.item_sub_not_img)
+            itemView.item_not_s_cat.text = noticia.categoria
+            itemView.item_not_titulo.text = noticia.titulo
+            itemView.item_not_s_data.text = noticia.data
             itemView.item_sub_not_ic_partilha.setOnClickListener {
                 context.partilharNoticia(noticia.titulo,noticia.descricao,noticia.conteudo)
             }
-            itemView.item_sub_not_ic_favorito.setOnClickListener {
-                Toast.makeText(
-                    context,
-                    "Favoritos",
-                    Toast.LENGTH_SHORT
-                ).show()
+            itemView.item_not_s_icone_favorito.setOnClickListener {
+                context.guardarNoticiaOffiline(noticia)
             }
             click()
         }

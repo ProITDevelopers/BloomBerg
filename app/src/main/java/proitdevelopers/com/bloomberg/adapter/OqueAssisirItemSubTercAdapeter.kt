@@ -11,9 +11,9 @@ import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.item_oque_assistir_item_sub_back_up.view.*
 import proitdevelopers.com.bloomberg.R
+import proitdevelopers.com.bloomberg.basededados.entitys.Noticia
 import proitdevelopers.com.bloomberg.communs.logDebug
 import proitdevelopers.com.bloomberg.communs.partilharNoticia
-import proitdevelopers.com.bloomberg.modelo.Noticia
 
 class OqueAssisirItemSubTercAdapeter(
     private val context: Context,
@@ -34,11 +34,11 @@ class OqueAssisirItemSubTercAdapeter(
     override fun getItemCount(): Int = 1
 
     override fun onBindViewHolder(holder: MyViewHolder, posicao: Int) {
-        holder.mudarDados(noticia/*,posicao*/)
+        holder.mudarDados(noticia)
     }
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) /* , View.OnClickListener*/ {
-        fun mudarDados(noticia: Noticia?/*,posicao:Int*/) {
+        fun mudarDados(noticia:Noticia?/*,posicao:Int*/) {
             itemView.txt_data_video_noticia.text = noticia?.data
             itemView.txvTitulo_video.text = noticia?.titulo
             itemView.tv_descricao_dec.text = noticia?.descricao
@@ -50,7 +50,7 @@ class OqueAssisirItemSubTercAdapeter(
             onClick(noticia!!)
         }
 
-        fun onClick(noticia: Noticia){
+        fun onClick(noticia:Noticia){
             itemView.item_oque_assistir_partilhar.setOnClickListener {
                 context.partilharNoticia(noticia.titulo,noticia.descricao,noticia.video)
             }

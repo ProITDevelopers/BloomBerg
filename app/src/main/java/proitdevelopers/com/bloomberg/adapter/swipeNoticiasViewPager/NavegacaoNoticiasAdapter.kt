@@ -8,25 +8,25 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_view_pager_noticias.view.*
 import proitdevelopers.com.bloomberg.R
-import proitdevelopers.com.bloomberg.modelo.Noticia
+import proitdevelopers.com.bloomberg.basededados.entitys.Noticia
 
-class NavegacaoNoticiasAdapter(val context: Context,val listaNoticias:List<Noticia>):RecyclerView.Adapter<NavegacaoNoticiasAdapter.MyViewHolder>() {
+class NavegacaoNoticiasAdapter(val context: Context,val Noticias:List<Noticia>):RecyclerView.Adapter<NavegacaoNoticiasAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_view_pager_noticias,parent,false)
         return MyViewHolder(view)
     }
 
-    override fun getItemCount(): Int = listaNoticias.size
+    override fun getItemCount(): Int = Noticias.size
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val noticia = listaNoticias[position]
+        val noticia = Noticias[position]
         holder.mudarUiConteudo(noticia)
     }
 
 
     inner class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
 
-        fun mudarUiConteudo(noticia: Noticia) {
+        fun mudarUiConteudo(noticia:Noticia) {
 
             itemView.view_pager_titulo.text = noticia.titulo
             itemView.view_pager_fonte.text = noticia.fonte
@@ -35,7 +35,7 @@ class NavegacaoNoticiasAdapter(val context: Context,val listaNoticias:List<Notic
             itemView.view_pager_conteudo.text = noticia.conteudo
 
             Glide.with(context)
-                .load(noticia.foto)
+                .load(noticia             .foto)
                 .into(itemView.view_pager_img)
 
         }

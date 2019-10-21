@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navegacao"
-            app:startDestination="@id/homeFragment">
+            app:startDestination="@id/menuFragment">
 
     <fragment android:id="@+id/homeFragment"
               android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.HomeFragment"
@@ -52,6 +52,8 @@
                 app:destination="@id/pesquisaNoticiaFragment"/>
         <action android:id="@+id/action_menuFragment_to_maisNoticiasFragment"
                 app:destination="@id/maisNoticiasFragment"/>
+        <action android:id="@+id/action_menuFragment_to_noticiasSalvasFragment"
+                app:destination="@id/noticiasSalvasFragment"/>
     </fragment>
     <fragment android:id="@+id/siteRumoFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.SiteRumoFragment"
               android:label="fragment_site_rumo" tools:layout="@layout/fragment_site_rumo"/>
@@ -68,4 +70,7 @@
               android:label="fragment_media_video" tools:layout="@layout/fragment_media_video"/>
     <fragment android:id="@+id/mediaAudioFragment" android:name="proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.media.MediaAudioFragment"
               android:label="fragment_media_audio" tools:layout="@layout/fragment_media_audio"/>
+    <fragment android:id="@+id/noticiasSalvasFragment"
+              android:name="proitdevelopers.com.bloomberg.NoticiasSalvasFragment"
+              android:label="fragment_noticias_salvas" tools:layout="@layout/fragment_noticias_salvas"/>
 </navigation>

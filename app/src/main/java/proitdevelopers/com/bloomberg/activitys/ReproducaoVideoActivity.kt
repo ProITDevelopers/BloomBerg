@@ -14,9 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_reproducao_video.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.adapter.OqueAssisirItemSubTercAdapeter
-import proitdevelopers.com.bloomberg.adapter.OqueAssisirItemSubTercQuartAdapeter
+import proitdevelopers.com.bloomberg.basededados.entitys.Noticia
 import proitdevelopers.com.bloomberg.communs.*
-import proitdevelopers.com.bloomberg.modelo.Noticia
 import proitdevelopers.com.bloomberg.modelo.valoresNoticias.noticias
 
 class ReproducaoVideoActivity : AppCompatActivity(){
@@ -57,6 +56,7 @@ class ReproducaoVideoActivity : AppCompatActivity(){
         val noticia_duracao= bundle.getString(DURACAO)
 
         val noticia = Noticia(
+            "1",
             noticia_titulo!!.toString(),
             noticia_descricao!!.toString(),
             noticia_conteudo!!.toString(),

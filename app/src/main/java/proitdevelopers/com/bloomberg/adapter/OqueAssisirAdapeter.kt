@@ -8,14 +8,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.item_oque_assistir.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.activitys.ReproducaoVideoActivity
+import proitdevelopers.com.bloomberg.basededados.entitys.Noticia
+import proitdevelopers.com.bloomberg.communs.carregarFoto
 import proitdevelopers.com.bloomberg.communs.partilharNoticia
 import proitdevelopers.com.bloomberg.communs.trocarActivityComNoticia
-import proitdevelopers.com.bloomberg.modelo.Noticia
 
-class OqueAssisirAdapeter(private val context:Context, private val noticias:List<Noticia >) :
+class OqueAssisirAdapeter(private val context:Context, private val noticias:List<Noticia>) :
     RecyclerView.Adapter<OqueAssisirAdapeter.MyViewHolder>(){
 
     lateinit var mClickListener: ClickListener
@@ -44,9 +46,7 @@ class OqueAssisirAdapeter(private val context:Context, private val noticias:List
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),View.OnClickListener{
         fun mudarDados(noticia:Noticia?/*,posicao:Int*/){
-            Glide.with(context)
-                .load(noticia?.foto)
-                .into(itemView.img_video)
+            context.carregarFoto(noticia!!.foto,itemView.img_video)
             itemView.txt_video_duracao.text = noticia?.duracao
             itemView.txt_noticia.text = noticia?.titulo
             itemView.txtCategoria.text = noticia?.categoria
@@ -56,9 +56,12 @@ class OqueAssisirAdapeter(private val context:Context, private val noticias:List
         }
 
         fun onClickItem(noticia:Noticia){
-            itemView.ic_partilha_gosto.setOnClickListener {
+
+            itemView.ic_partilha_gosto.visibility = View.INVISIBLE
+
+            /*itemView.ic_partilha_gosto.setOnClickListener {
                 Toast.makeText(context,"Gosto",Toast.LENGTH_SHORT).show()
-            }
+            }*/
 
             itemView.ic_partilha_destaque.setOnClickListener {
                 context.partilharNoticia(noticia.titulo,noticia.descricao,noticia.video)
@@ -75,7 +78,7 @@ class OqueAssisirAdapeter(private val context:Context, private val noticias:List
 
     }
 
-    private fun oqueAssisirItemSubAdapeter(noticias: List<Noticia>,recyclerView: RecyclerView) {
+    private fun oqueAssisirItemSubAdapeter(noticias: List<Noticia>, recyclerView: RecyclerView) {
         val layoutManager = LinearLayoutManager(context)
         layoutManager.orientation = RecyclerView.VERTICAL
         val adapterConfQueAssistir = OqueAssisirItemSubAdapeter(context, noticias,2,noticias[0])
