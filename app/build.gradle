@@ -21,6 +21,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -35,6 +36,11 @@ android {
 
     androidExtensions {
         experimental = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
 }
@@ -91,13 +97,11 @@ dependencies {
     //MPAndroidChart
     implementation 'com.github.Philjay:MPAndroidChart:v3.0.3'
 
-    //Exoplayer Library (Player for Video/Audio)
-    implementation 'com.google.android.exoplayer:exoplayer:2.8.4'
-    implementation 'com.google.android.exoplayer:exoplayer-ui:2.8.4'
-    implementation 'com.google.android.exoplayer:exoplayer-core:2.8.4'
-    implementation 'com.google.android.exoplayer:exoplayer-dash:2.8.4'
-    implementation 'com.google.android.exoplayer:exoplayer-hls:2.8.4'
-    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.8.4'
+    //Libraries (coverflow,RingProgressBar,avi,multidex)
+    implementation 'com.github.moondroid.coverflow:library:1.0'
+    implementation 'com.github.HotBitmapGG:RingProgressBar:V1.2.3'
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'com.android.support:multidex:1.0.3'
 
     //SDK FACE
     implementation 'com.facebook.android:facebook-android-sdk:5.0.0'

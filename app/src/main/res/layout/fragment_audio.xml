@@ -26,16 +26,44 @@
                 android:layout_marginEnd="20dp" app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 style="@style/icone_estilo_partilha_favorito"/>
-        <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="220dp"
-                app:srcCompat="@drawable/audio_player_bg"
+
+        <FrameLayout
                 android:id="@+id/img_destaque"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_200"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:scaleType="fitXY"
-                android:contentDescription="@string/img_noticia"/>
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp">
+
+            <VideoView
+                    android:id="@+id/video_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"/>
+            <ProgressBar
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_gravity="center"
+                    android:id="@+id/progressBar"
+
+                    />
+        </FrameLayout>
+<!--        <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="220dp"-->
+<!--                app:srcCompat="@drawable/audio_player_bg"-->
+<!--                android:id="@+id/img_destaque"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                android:scaleType="fitXY"-->
+<!--                android:contentDescription="@string/img_noticia"/>-->
 
         <ImageView
                 android:layout_width="wrap_content"

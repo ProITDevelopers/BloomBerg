@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
 import com.squareup.picasso.Picasso;
-import proitdevelopers.com.bloomberg.audio_video.MediaPlayerActivity;
 import proitdevelopers.com.bloomberg.interfaces.ItemClickListener;
 import proitdevelopers.com.bloomberg.R;
 import proitdevelopers.com.bloomberg.modelo.VideoModel;

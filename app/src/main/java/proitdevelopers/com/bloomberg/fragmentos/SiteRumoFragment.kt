@@ -16,7 +16,7 @@ class SiteRumoFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_site_rumo, container, false)
 
-        view.web_view_rumo.loadUrl("http://www.rumo.co.ao/")
+        view.web_view_rumo.loadUrl("https://mediarumo.com/")
         view.web_view_rumo.settings.javaScriptEnabled = true
         view.web_view_rumo.webViewClient = WebViewClient()
 

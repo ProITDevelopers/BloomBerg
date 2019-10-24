@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragmentos.OverViewFragment" android:background="@android:color/white">
+
+        <android.support.constraint.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline_esquerda" app:layout_constraintGuide_begin="20dp"
+                android:orientation="vertical" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp" app:layout_constraintTop_toTopOf="parent"/>
+        <android.support.constraint.Guideline
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/guideline_direita"
+                android:orientation="vertical" app:layout_constraintGuide_end="20dp"
+                android:layout_marginEnd="20dp" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/icone_estilo_partilha_favorito"/>
+
+        <!-- MERCADO -->
+        <!-- MERCADO -->
+        <TextView
+                android:text="MERCADOS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textMercado"
+                app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent" style="@style/txt_titulo_categorias"/>
+        <android.support.v7.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textMercado" android:id="@+id/recyclerMercado">
+        </android.support.v7.widget.RecyclerView>
+
+
+
+        <TextView
+                android:text="VER TODAS NOTÍCIAS DO MERCADO"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textVerMercado" style="@style/txt_ver"
+                app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerMercado"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewArrow1" app:layout_constraintHorizontal_bias="0.0"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                android:id="@+id/imageViewArrow1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
+                app:layout_constraintTop_toTopOf="@+id/textVerMercado" android:contentDescription="@string/img_voltar_ic"/>
+
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos"
+                android:id="@+id/imageViewSep1"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewArrow1"
+                android:contentDescription="@string/txt_separador" android:layout_marginTop="8dp"/>
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos"
+                android:id="@+id/imageViewSep2"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewSep1" android:contentDescription="@string/txt_separador"/>
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos"
+                android:id="@+id/imageViewSep3"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.518"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewSep2" android:contentDescription="@string/txt_separador"/>
+
+
+        <android.support.constraint.Group android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/groupMercado" tools:layout_editor_absoluteY="56dp"
+                tools:layout_editor_absoluteX="20dp"
+                app:constraint_referenced_ids="textVerMercado,recyclerMercado"
+                android:visibility="visible" tools:visibility="visible"/>
+                                <!-- MERCADO FINAL-->
+
+                                <!-- INDICES -->
+
+
+
+        <TextView
+                android:text="ÍNDICES"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textIndice"
+                app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewSep3" style="@style/txt_titulo_categorias"/>
+
+
+        <android.support.v7.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/recyclerViewIndice"
+                app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textIndice"/>
+
+        <TextView
+                android:text="VER TODOS ÍNDICES"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textVerIndice" style="@style/txt_ver"
+                app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerViewIndice"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewArrow2" app:layout_constraintHorizontal_bias="0.0"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                android:id="@+id/imageViewArrow2"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
+                app:layout_constraintTop_toTopOf="@+id/textVerIndice" android:contentDescription="@string/img_voltar_ic"/>
+
+
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos"
+                android:id="@+id/imageViewSep4"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewArrow2"
+                android:contentDescription="@string/txt_separador" android:layout_marginTop="8dp"/>
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos"
+                android:id="@+id/imageViewSep5"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewSep4" android:contentDescription="@string/txt_separador"/>
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos"
+                android:id="@+id/imageViewSep6"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.518"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewSep5" android:contentDescription="@string/txt_separador"/>
+
+        <android.support.constraint.Group android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/groupIndice"
+                app:constraint_referenced_ids="textIndice,recyclerViewIndice,textVerIndice,imageViewArrow2"
+                android:visibility="visible" tools:visibility="visible"/>
+
+        <!-- INDICE FINAL-->
+
+
+        <!-- COMMODITIES -->
+
+        <TextView
+                android:text="Commodities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textCommodities"
+                app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewSep6" style="@style/txt_titulo_categorias"/>
+
+        <android.support.v7.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textCommodities"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:id="@+id/recyclerViewCommodities"
+                tools:visibility="visible" android:visibility="visible"/>
+
+        <TextView
+                android:text="VER TODOS COMMODITIES"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textVerCommodities" style="@style/txt_ver"
+                app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerViewCommodities"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewArrow3" app:layout_constraintHorizontal_bias="0.0"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                android:id="@+id/imageViewArrow3"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
+                app:layout_constraintTop_toTopOf="@+id/textVerCommodities" android:contentDescription="@string/img_voltar_ic"/>
+
+
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos"
+                android:id="@+id/imageViewSep7"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewArrow3"
+                android:contentDescription="@string/txt_separador" android:layout_marginTop="8dp"/>
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos"
+                android:id="@+id/imageViewSep8"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewSep7" android:contentDescription="@string/txt_separador"/>
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos"
+                android:id="@+id/imageViewSep9"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.518"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewSep8" android:contentDescription="@string/txt_separador"/>
+
+
+        <android.support.constraint.Group android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/groupCommodities"
+                app:constraint_referenced_ids="textCommodities,recyclerViewCommodities"
+                android:visibility="visible" tools:visibility="visible"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>
+
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        xmlns:tools="http://schemas.android.com/tools"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:context=".fragmentos.OverViewFragment">-->
+
+<!--    &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
+<!--    <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="@string/hello_blank_fragment" />-->
+
+<!--</FrameLayout>-->

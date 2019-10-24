@@ -2,6 +2,7 @@ package proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada;
 
 import android.os.Bundle;
 import android.view.*;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 import proitdevelopers.com.bloomberg.R;
@@ -24,6 +26,8 @@ public class MediaFragment extends Fragment {
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private View v;
+
+    RelativeLayout relativeLayout;
 
     public MediaFragment() {
         // Required empty public constructor
@@ -66,20 +70,24 @@ public class MediaFragment extends Fragment {
         }
 
         // Set up the ViewPager with the sections adapter.
-        viewPager = (ViewPager) v.findViewById(R.id.viewPager);
+//        viewPager = (ViewPager) v.findViewById(R.id.viewPager);
+//        relativeLayout = (RelativeLayout) v.findViewById(R.id.viewPager);
         tabLayout = (TabLayout) v.findViewById(R.id.tabs);
-        tabLayout.addTab(tabLayout.newTab().setText("Video"));
+        tabLayout.addTab(tabLayout.newTab().setText("Video"),0);
         tabLayout.addTab(tabLayout.newTab().setText("Audio"));
 
-        viewPager.setAdapter(new PagerAdapter(getFragmentManager(), tabLayout.getTabCount()));
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        tabLayout.setupWithViewPager(viewPager);
-//        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+//        viewPager.setAdapter(new PagerAdapter(getFragmentManager(), tabLayout.getTabCount()));
+//        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+//        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setTabMode(TabLayout.MODE_FIXED);
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
+//                viewPager.setCurrentItem(tab.getPosition());
+
+               setCurrentTabFragment(tab.getPosition());
+
             }
 
             @Override
@@ -95,6 +103,8 @@ public class MediaFragment extends Fragment {
 
         return v;
     }
+
+
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
@@ -115,6 +125,28 @@ public class MediaFragment extends Fragment {
         return true;
 
     }
+
+    private void setCurrentTabFragment(int tabPosition)
+    {
+        switch (tabPosition)
+        {
+            case 0 :
+                replaceFragment(new VideoFragment());
+                break;
+            case 1 :
+                replaceFragment(new AudioFragment());
+                break;
+        }
+    }
+
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.replace(R.id.where_the_tab_contents_go, fragment);
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        ft.commit();
+    }
+
 
 
 

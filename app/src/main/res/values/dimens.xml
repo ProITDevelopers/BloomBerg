@@ -32,4 +32,13 @@
     <dimen name="tamanho_150">150dp</dimen>
     <dimen name="tamanho_200">200dp</dimen>
     <dimen name="tamanho_300">300dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="cover_height">110dp</dimen>
+    <dimen name="cover_width">80dp</dimen>
+
+    <dimen name="cover_height_big">170dp</dimen>
+    <dimen name="cover_width_big">120dp</dimen>
+
+    <dimen name="dimen_30">30dp</dimen>
 </resources>
