@@ -1,11 +1,20 @@
 package proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada;
 
+import android.media.MediaMetadataRetriever;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.MediaController;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.VideoView;
+
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,6 +23,7 @@ import proitdevelopers.com.bloomberg.interfaces.ItemClickListener;
 import proitdevelopers.com.bloomberg.R;
 import proitdevelopers.com.bloomberg.adapter.AudioAdapterRecycler;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -31,13 +41,19 @@ public class AudioFragment extends Fragment {
 
     AudioAdapterRecycler adapter;
 
-    ImageView img;
+//    ImageView img;
 
     TextView title;
 
     int position;
 
     private View v;
+
+    MediaController mediaController;
+    FrameLayout video_content;
+    ProgressBar progressBar;
+    VideoView video_view;
+    private int plaayBackPosition = 0;
 
     public AudioFragment() {
         // Required empty public constructor
@@ -58,7 +74,13 @@ public class AudioFragment extends Fragment {
         v = inflater.inflate(R.layout.fragment_audio, container, false);
 
 
-        img = (ImageView) v.findViewById(R.id.frag_mais_btn_voltar);
+//        img = (ImageView) v.findViewById(R.id.frag_mais_btn_voltar);
+
+        mediaController = new MediaController(getContext());
+        video_view = v.findViewById(R.id.video_view);
+        video_content =  v.findViewById(R.id.img_destaque);
+        progressBar = v.findViewById(R.id.progressBar);
+
         title = (TextView) v.findViewById(R.id.destaque_noticia_tv);
         recyclerView = v.findViewById(R.id.recyclerTendencias);
         loadNews();
@@ -67,9 +89,66 @@ public class AudioFragment extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
 
+        video_view.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                mediaController.setAnchorView(video_content);
+                video_view.setMediaController(mediaController);
+                video_view.seekTo(plaayBackPosition);
+                video_view.start();
+
+
+            }
+        });
+
+        video_view.setOnInfoListener(new MediaPlayer.OnInfoListener() {
+            @Override
+            public boolean onInfo(MediaPlayer mediaPlayer, int what, int extras) {
+                if(what == MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START)
+                    progressBar.setVisibility(View.INVISIBLE);
+                return true;
+            }
+        });
+
+
 
         return v;
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        progressBar.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Uri uri = Uri.parse(audioUri);
+        video_view.setVideoURI(uri);
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        if (video_view.isPlaying()){
+            video_view.pause();
+            plaayBackPosition = video_view.getCurrentPosition();
+        }
+
+
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        video_view.stopPlayback();
+    }
+
+
 
     private void loadNews() {
         audioModelList = new ArrayList<>();
@@ -114,6 +193,10 @@ public class AudioFragment extends Fragment {
     private void setRandomNews(int position){
 
         title.setText(audioModelList.get(position).getTitle());
+        audioUri = audioModelList.get(position).getFileLink();
+        Uri uri = Uri.parse(audioUri);
+        video_view.setVideoURI(uri);
+
 
 
     }

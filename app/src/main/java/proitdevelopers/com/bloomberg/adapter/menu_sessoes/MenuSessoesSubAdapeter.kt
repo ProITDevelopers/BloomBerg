@@ -1,6 +1,7 @@
 package proitdevelopers.com.bloomberg.adapter.menu_sessoes
 
 import android.content.Context
+import android.content.Intent
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import kotlinx.android.synthetic.main.item_recycler_view_menu_sub.view.*
 import proitdevelopers.com.bloomberg.R
+import proitdevelopers.com.bloomberg.activitys.quiosque.QuiosqueActivity
 import proitdevelopers.com.bloomberg.modelo.ItemMenu
 
 class MenuSessoesSubAdapeter(
@@ -48,7 +50,14 @@ class MenuSessoesSubAdapeter(
         fun onClickItens(itemMenu: ItemMenu) {
             itemView.setOnClickListener {
                 Toast.makeText(context, " ${itemMenu.itemMenu}", Toast.LENGTH_SHORT).show()
+
+                if (itemMenu.itemMenu.equals("Quiosque")){
+                    val intent = Intent(context, QuiosqueActivity::class.java)
+                    context.startActivity(intent)
+                }
             }
+
+
         }
     }
 

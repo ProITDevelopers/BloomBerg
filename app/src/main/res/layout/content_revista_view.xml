@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <WebView
+                android:id="@+id/webViewPdf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+        </WebView>
+
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:id="@+id/linearProgresso"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+            <io.netopen.hotbitmapgg.library.view.RingProgressBar
+                    android:id="@+id/progressbar_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:max="100"
+                    app:ringColor="@color/corlorMostarda"
+                    app:ringProgressColor="@android:color/white"
+                    app:textColor="@android:color/white"
+                    app:ringWidth="5dp"
+                    style="FILL"
+                    app:textSize="20dp"/>
+
+
+
+            <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/progress"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    app:indicatorColor="@color/colormedia"
+                    app:indicatorName="BallPulseIndicator" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/activity_sem_internet" />
+
+
+
+
+</RelativeLayout>
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--        xmlns:tools="http://schemas.android.com/tools"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+<!--        tools:context=".activitys.quiosque.RevistaViewActivity"-->
+<!--        tools:showIn="@layout/activity_revista_view">-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

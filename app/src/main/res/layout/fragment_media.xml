@@ -41,13 +41,19 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <FrameLayout
+            android:id="@+id/where_the_tab_contents_go"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewPager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
-    </androidx.viewpager.widget.ViewPager>
+</FrameLayout>
+
+<!--    <androidx.viewpager.widget.ViewPager-->
+<!--            android:id="@+id/viewPager"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+<!--    </androidx.viewpager.widget.ViewPager>-->
 
 
 </LinearLayout>

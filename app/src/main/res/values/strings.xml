@@ -137,5 +137,11 @@
 
     <string name="txt_perfil_">Sobre Nós</string>
 
+    <string name="ocorreuErro">Ocorreu um erro de conexão</string>
+    <string name="txtProblemaMsg">Algum problema aconteceu.Relata o problema.</string>
+    <string name="txtTimeout">O tempo de comunicação excedeu. Possivelvente a internet está lenta.</string>
+    <string name="txtMsg">A rede 3G ou WI-FI não possui tranferência de dados.</string>
+    <string name="title_activity_revista_view">RevistaViewActivity</string>
+
 
 </resources>
