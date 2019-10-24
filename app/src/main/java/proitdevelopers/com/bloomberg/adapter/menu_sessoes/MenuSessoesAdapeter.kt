@@ -5,13 +5,18 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.item_recycler_view_menu.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.modelo.ItemMenu
 import proitdevelopers.com.bloomberg.modelo.Menu
 
-class MenuSessoesAdapeter(private val context:Context, private val menus:List<Menu >) :
+class MenuSessoesAdapeter(
+    private val context: Context,
+    private val menus: List<Menu>,
+    private val activity: FragmentActivity?
+) :
     RecyclerView.Adapter<MenuSessoesAdapeter.MyViewHolder>(){
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): MyViewHolder {
@@ -29,18 +34,19 @@ class MenuSessoesAdapeter(private val context:Context, private val menus:List<Me
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun mudarDados(menu: Menu){
             itemView.menu_sec_titulo.text = menu.tituloMenu
-            OqueAssisirItemSubTercQuartAdapet(menu.itemMeu,menu.img, itemView.recycler_view_menu)
+            OqueAssisirItemSubTercQuartAdapet(menu.itemMeu,menu.img, itemView.recycler_view_menu,activity)
         }
     }
 
     private fun OqueAssisirItemSubTercQuartAdapet(
         menus: List<ItemMenu>,
         menu_img: Int,
-        recyclerView: RecyclerView
+        recyclerView: RecyclerView,
+        activity: FragmentActivity?
     ) {
         val layoutManager = LinearLayoutManager(context)
         layoutManager.orientation = RecyclerView.VERTICAL
-        val adapterConfQueAssistir =  MenuSessoesSubAdapeter(context,menus,menu_img)
+        val adapterConfQueAssistir =  MenuSessoesSubAdapeter(context,menus,menu_img,activity)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapterConfQueAssistir
     }

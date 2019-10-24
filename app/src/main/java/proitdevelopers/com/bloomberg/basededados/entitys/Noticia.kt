@@ -5,9 +5,8 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "noticiaFavorita")
 class Noticia (
-
     @field:PrimaryKey
-    var id: String,
+    var id: String ,
     val titulo:String,
     val descricao: String,
     val conteudo: String,

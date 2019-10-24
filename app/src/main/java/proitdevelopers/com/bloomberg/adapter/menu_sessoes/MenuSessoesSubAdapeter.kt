@@ -6,14 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.FragmentActivity
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.item_recycler_view_menu_sub.view.*
 import proitdevelopers.com.bloomberg.R
+import proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.HomeFragmentDirections
+import proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.MenuFragmentDirections
 import proitdevelopers.com.bloomberg.modelo.ItemMenu
 
 class MenuSessoesSubAdapeter(
     private val context: Context,
     private val menus: List<ItemMenu>,
-    private val menu_img: Int
+    private val menu_img: Int,
+    private val activity: FragmentActivity?
 ) :
     RecyclerView.Adapter<MenuSessoesSubAdapeter.MyViewHolder>() {
 
@@ -47,7 +53,9 @@ class MenuSessoesSubAdapeter(
 
         fun onClickItens(itemMenu: ItemMenu) {
             itemView.setOnClickListener {
-                Toast.makeText(context, " ${itemMenu.itemMenu}", Toast.LENGTH_SHORT).show()
+                activity?.findNavController(R.id.fragmentConteinerSessao_)?.navigate(MenuFragmentDirections
+                    .actionMenuFragmentToMaisNoticiasFragment(itemMenu.itemMenu))
+                //Toast.makeText(context, " ${itemMenu.itemMenu}", Toast.LENGTH_SHORT).show()
             }
         }
     }

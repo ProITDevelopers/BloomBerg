@@ -11,7 +11,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toBottomOf="@+id/textView48"
+            app:layout_constraintTop_toBottomOf="@+id/frag_mais_noticia_titulo"
             tools:listitem="@layout/item_mais_noticias" android:id="@+id/recyclerViewMaisNoticias"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"/>
     <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="46dp"
             style="@style/TituloToolbarMaisNoticias"
-            android:id="@+id/textView48"
+            android:id="@+id/frag_mais_noticia_titulo"
             app:layout_constraintTop_toTopOf="@+id/guideline6"
             android:text="@string/txt_categoria_opniao"
             app:layout_constraintStart_toEndOf="@+id/frag_mais_btn_voltar"
@@ -32,9 +32,9 @@
             android:layout_height="30dp"
             android:id="@+id/frag_mais_btn_voltar"
             android:contentDescription="@string/img_voltar_ic"
-            app:layout_constraintTop_toTopOf="@+id/textView48"
+            app:layout_constraintTop_toTopOf="@+id/frag_mais_noticia_titulo"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView48"/>
+            app:layout_constraintBottom_toBottomOf="@+id/frag_mais_noticia_titulo"/>
     <ImageView
             app:srcCompat="@drawable/ic_search_black_40dp"
             android:layout_width="40dp"
@@ -42,5 +42,5 @@
             android:contentDescription="@string/txt_hint_pesquisa"
             android:id="@+id/frag_mais_btn_pesquisar_mediap" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline6"
-            app:layout_constraintBottom_toBottomOf="@+id/textView48" android:layout_marginEnd="8dp"/>
+            app:layout_constraintBottom_toBottomOf="@+id/frag_mais_noticia_titulo" android:layout_marginEnd="8dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

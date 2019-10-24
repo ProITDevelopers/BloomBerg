@@ -140,7 +140,7 @@
     <style name="TituloToolbarMaisNoticias">
         <item name="android:textColor">@color/colorTxtPreta</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">18dp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:gravity">center_vertical</item>
     </style>
 
@@ -173,6 +173,43 @@
         <item name="android:scaleType">fitXY</item>
         <item name="android:width">@dimen/tamanho_16</item>
         <item name="android:height">@dimen/tamanho_20</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="colorControlNormal">#b3b3ad</item>
+        <item name="android:textSize">20sp</item>
+        <item name="colorControlActivated">@color/colorTxtBranco</item>
+        <item name="android:textColorHint">@color/colorTxtBranco</item>
+        <item name="colorControlHighlight">#FFFFFF</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="EditTextStylePreto">
+        <item name="colorControlNormal">@color/colorTxtPreta</item>
+        <item name="android:textSize">14sp</item>
+        <item name="colorControlActivated">@color/colorTxtPreta</item>
+        <item name="android:textColorHint">@color/colorTxtPreta</item>
+        <item name="colorControlHighlight">#000000</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="EditTextStyleBranco">
+        <item name="colorControlNormal">@color/colorTxtBranco</item>
+        <item name="android:textSize">14sp</item>
+        <item name="colorControlActivated">@color/colorTxtBranco</item>
+        <item name="android:textColorHint">@color/colorTxtBranco</item>
+        <item name="colorControlHighlight">#000000</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="EditTextCorBranco" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/colorTxtBranco</item>
+    </style>
+
+    <!--ProgressDialog-->
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/black</item>
     </style>
 
 </resources>

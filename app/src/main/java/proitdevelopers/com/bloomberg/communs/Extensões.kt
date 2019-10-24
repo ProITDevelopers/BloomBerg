@@ -1,16 +1,25 @@
 package proitdevelopers.com.bloomberg.communs
 
 import android.app.Activity
+import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
+import android.os.AsyncTask
+import android.text.TextUtils
 import android.util.Log
+import android.util.Patterns
 import android.view.View.GONE
+import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.basededados.entitys.Noticia
+import java.io.IOException
+import java.net.InetSocketAddress
+import java.net.Socket
 import java.util.*
 
 fun esconderSeparador(imgSeparador:ImageView,posicao:Int,limite:Int){
@@ -70,4 +79,99 @@ fun Context.carregarFoto(url:String,imageView: ImageView){
         .load(url)
         .apply(RequestOptions.placeholderOf(R.drawable.media_rumo_default).error(R.drawable.media_rumo_default))
         .into(imageView)
+}
+
+fun Context.validarEmail(email:String): Boolean {
+    val pattern = Patterns.EMAIL_ADDRESS
+    return pattern.matcher(email).matches()
+}
+
+fun Context.limparErroEditTxt(editexto:EditText){
+    editexto.error = null
+}
+
+fun Context.erroEditText(editexto: EditText,msg:String){
+    editexto.requestFocus()
+    editexto.error = msg
+}
+
+fun Context.mostrarMensagem(mensagem: String){
+    Toast.makeText(this,mensagem,Toast.LENGTH_SHORT).show()
+}
+
+fun Context.senhaFraca(senha:String):Boolean{
+    if (senha.length < 5)
+        return true
+    return false
+}
+
+
+fun Context.campoVazio(campoTxt:String,editText: EditText,mensagem:String = MSG_ERRO_VAZIO_CAMPO):Boolean{
+    if (TextUtils.isEmpty(campoTxt)){
+        erroEditText(editText,mensagem)
+        return true
+    }
+    return false
+}
+
+fun Context.camposDiferentes(valor1:String,valor2:String,editText: EditText):Boolean{
+    if (!valor1.equals(valor2)){
+        erroEditText(editText,MSG_ERRO_CAMPOS_DIFERENTES)
+        return true
+    }
+    return false
+}
+
+fun esconderTeclado(activity: Activity) {
+    try {
+        val view = activity.currentFocus
+        if (view != null) {
+            val inputMethodManager = activity.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+            inputMethodManager.hideSoftInputFromWindow(activity.currentFocus!!.windowToken, 0)
+        }
+    } catch (e: Exception) {
+        Log.i(TAG, "esconder teclado " + e.message)
+    }
+}
+
+fun Context.verificacaoOnFailedApi(erroOnFalidApi: Throwable){
+    InternetCheck(object : InternetCheck.Consumer {
+        override fun accept(internet: Boolean?) {
+            if (internet != true) {
+                if (internet != true) {
+                    mostrarMensagem(msgSemInternet)
+                } else if ("timeout" === erroOnFalidApi.message) {
+                    mostrarMensagem(msgTimeOut)
+                } else {
+                    mostrarMensagem(msgAlgumProblema)
+                }
+            }
+        }
+    })
+}
+
+internal class InternetCheck(private val mConsumer: Consumer) : AsyncTask<Void, Void, Boolean>() {
+    interface Consumer {
+        fun accept(internet: Boolean?)
+    }
+
+    init {
+        execute()
+    }
+
+    override fun doInBackground(vararg voids: Void): Boolean? {
+        try {
+            val sock = Socket()
+            sock.connect(InetSocketAddress("8.8.8.8", 53), 1500)
+            sock.close()
+            return true
+        } catch (e: IOException) {
+            return false
+        }
+
+    }
+
+    override fun onPostExecute(internet: Boolean?) {
+        mConsumer.accept(internet)
+    }
 }

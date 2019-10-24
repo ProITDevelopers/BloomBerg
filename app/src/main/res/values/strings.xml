@@ -18,7 +18,7 @@
     <string name="fb_login_protocol_scheme">fb2335117853474777</string>
     <!--TXTS Textos-->
     <string name="txt_categoria_destaque">Destaques</string>
-    <string name="txt_categoria_atualidade">Atualidade</string>
+    <string name="txt_categoria_atualidade">Actualidade</string>
     <string name="txt_categoria_manchete">Manchetes</string>
     <string name="txt_categoria_tecnologia">Tecnologia</string>
     <string name="txt_categoria_cultura">Cultura</string>
@@ -29,7 +29,7 @@
     <string name="txt_categoria_politica">Politica</string>
     <string name="txt_categoria_para_si">Para Sí</string>
     <string name="txt_categoria_sociedade">Sociedade</string>
-    <string name="txt_categoria_opniao">Opnião</string>
+    <string name="txt_categoria_opniao">Opinião</string>
     <string name="txt_separador">Separador</string>
     <string name="txt_noticia_1">IMF Warnz Zimbabwe Contra Play Boost como Viver Standards Bater</string>
     <string name="txt_noticia_2">Novo curremcy tem erodido poder de gastos dos trabalhadores do governo</string>
@@ -83,7 +83,7 @@
     <string name="txt_pol_3">e</string>
     <string name="txt_pol_4">Politica de privacidade</string>
     <string name="txt_rep_senha">Repita a senha</string>
-    <string name="txt_usuario">Usuário ou E-mail</string>
+    <string name="txt_usuario">E-mail</string>
     <string name="txt_mostrar_senha">Mostrar Senha</string>
     <string name="menu_inicio">Inicio</string>
     <string name="menu_mercado_financeiro">Mercados Financeiros</string>
@@ -95,6 +95,7 @@
     <string name="menu_media">Media</string>
     <string name="menu_menu">Menu</string>
     <string name="live_tv">Live Tv</string>
+    <string name="txt_meu_perfil">Meu Perfil</string>
 
 
     <!--MENU VALORES-->
@@ -136,6 +137,22 @@
     <string name="txt_subscricao_sorteio">Sorteio Media Rumo</string>
 
     <string name="txt_perfil_">Sobre Nós</string>
+
+    <!--PERFIL-->
+    <string name="txt_perfil_usuario">Usuário</string>
+    <string name="txt_hint_nome">Nome</string>
+    <string name="txt_hint_senha">Senha</string>
+    <string name="txt_hint_email">E-Mail</string>
+    <string name="txt_hint_repita_senha">Repita a senha</string>
+
+
+    <string name="txt_perfil_email">E-mail</string>
+    <string name="txt_perfil_cidade">Cidade</string>
+    <string name="txt_perfil_municipio">Municipio</string>
+    <string name="txt_perfil_telefone">Telefone</string>
+    <string name="txt_perfil_rua">Rua</string>
+    <string name="txt_perfil_genero">Gênero</string>
+    <string name="txt_perfil_aniversario">Aniversário</string>
 
 
 </resources>
