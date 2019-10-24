@@ -150,6 +150,20 @@ fun Context.verificacaoOnFailedApi(erroOnFalidApi: Throwable){
     })
 }
 
+fun Context.verificacaoOnFailedApi(){
+    InternetCheck(object : InternetCheck.Consumer {
+        override fun accept(internet: Boolean?) {
+            if (internet != true) {
+                if (internet != true) {
+                    mostrarMensagem(msgSemInternet)
+                } else {
+                    mostrarMensagem(msgAlgumProblema)
+                }
+            }
+        }
+    })
+}
+
 internal class InternetCheck(private val mConsumer: Consumer) : AsyncTask<Void, Void, Boolean>() {
     interface Consumer {
         fun accept(internet: Boolean?)

@@ -29,9 +29,6 @@ data class EmSessao(
     @field:SerializedName("email")
     var email: String? = null,
 
-    @field:SerializedName("role")
-    var role: String? = null,
-
     @field:SerializedName("id")
     var id: String? = null
 )

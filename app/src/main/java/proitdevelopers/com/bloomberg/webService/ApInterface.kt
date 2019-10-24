@@ -17,4 +17,11 @@ interface ApInterface {
         @Field("password") password: String
     ): Call<Data>
 
+    //oauth/facebook
+    @FormUrlEncoded
+    @POST("oauth/facebook")
+    fun autenticarFacebook(
+        @Field("access_token") access_token:String
+    ):Call<Data>
+
 }

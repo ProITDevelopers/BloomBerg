@@ -102,6 +102,7 @@
             android:text="@string/txt_google"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+
             android:id="@+id/btnGoogleEntrar"
             style="@style/MyButtonStyleBranco"
             android:layout_marginTop="8dp"
@@ -113,7 +114,6 @@
             android:text="Sair Facebook"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:visibility="gone"
             android:id="@+id/btnSairFacebook" app:layout_constraintStart_toStartOf="@+id/btnGoogleEntrar"
             app:layout_constraintEnd_toEndOf="@+id/btnGoogleEntrar" android:layout_marginEnd="8dp"
             android:background="#ffffff" android:layout_marginTop="16dp"
