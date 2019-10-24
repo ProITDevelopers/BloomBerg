@@ -42,7 +42,7 @@ class IniciarSessaoFragment : Fragment(), GoogleApiClient.OnConnectionFailedList
 
     lateinit var mGoogleApiClient: GoogleApiClient
 
-    //Facebook
+    //Facebook_
     private var callbackManager: CallbackManager = CallbackManager.Factory.create()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
