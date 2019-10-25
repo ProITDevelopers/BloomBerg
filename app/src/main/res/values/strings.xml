@@ -142,6 +142,9 @@
     <string name="txtTimeout">O tempo de comunicação excedeu. Possivelvente a internet está lenta.</string>
     <string name="txtMsg">A rede 3G ou WI-FI não possui tranferência de dados.</string>
     <string name="title_activity_revista_view">RevistaViewActivity</string>
+    <string name="file_name_mp3">file_name.mp3</string>
+    <string name="_00_00">00:00</string>
+    <string name="audio_live">ÁUDIO LIVE</string>
 
 
 </resources>

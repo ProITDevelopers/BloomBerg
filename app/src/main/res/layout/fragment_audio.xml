@@ -155,7 +155,7 @@
 
 
             <TextView
-                    android:text="@string/radio_ao_vivo"
+                    android:text="@string/audio_live"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
