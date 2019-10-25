@@ -9,173 +9,266 @@
         >
 
     <androidx.constraintlayout.widget.ConstraintLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".fragmentos.principalSessaoIniciada.AudioFragment" >
 
-        <androidx.constraintlayout.widget.Guideline
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/guideline_esquerda" app:layout_constraintGuide_begin="20dp"
-                android:orientation="vertical" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="20dp" app:layout_constraintTop_toTopOf="parent"/>
-        <androidx.constraintlayout.widget.Guideline
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:id="@+id/guideline_direita"
-                android:orientation="vertical" app:layout_constraintGuide_end="20dp"
-                android:layout_marginEnd="20dp" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                style="@style/icone_estilo_partilha_favorito"/>
-
-        <FrameLayout
-                android:id="@+id/img_destaque"
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/tamanho_200"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="16dp">
+                android:layout_height="match_parent"
+                >
 
-            <VideoView
-                    android:id="@+id/video_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="0dp"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="0dp"/>
-            <ProgressBar
-                    style="?android:attr/progressBarStyle"
+            <androidx.constraintlayout.widget.Guideline
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="invisible"
-                    android:layout_gravity="center"
-                    android:id="@+id/progressBar"
+                    android:id="@+id/guideline_esquerda" app:layout_constraintGuide_begin="20dp"
+                    android:orientation="vertical" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="20dp" app:layout_constraintTop_toTopOf="parent"/>
+            <androidx.constraintlayout.widget.Guideline
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:id="@+id/guideline_direita"
+                    android:orientation="vertical" app:layout_constraintGuide_end="20dp"
+                    android:layout_marginEnd="20dp" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/icone_estilo_partilha_favorito"/>
 
-                    />
-        </FrameLayout>
-<!--        <ImageView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="220dp"-->
-<!--                app:srcCompat="@drawable/audio_player_bg"-->
-<!--                android:id="@+id/img_destaque"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                android:scaleType="fitXY"-->
-<!--                android:contentDescription="@string/img_noticia"/>-->
+            <!--        android:layout_height="@dimen/tamanho_200"-->
+            <!--        android:layout_marginTop="16dp"-->
+            <FrameLayout
+                    android:id="@+id/img_destaque"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginBottom="8dp"
+                    >
 
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/tamanho_10"
-                app:srcCompat="@drawable/ic_circulo_vermelho"
-                android:id="@+id/imageView17"
-                app:layout_constraintTop_toBottomOf="@+id/img_destaque"
-                app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
-                android:layout_marginTop="14dp"
-                android:contentDescription="@string/img_cir_vermelho_ic"/>
+                <RelativeLayout
 
+                        android:orientation="vertical"
+                        android:id="@+id/relative"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
 
-        <TextView
-                android:text="LIVE RADIO"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                    <androidx.cardview.widget.CardView
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/mediaplayer_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            card_view:cardElevation="3dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true">
 
-                android:id="@+id/destaque_cat_tv" android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/img_destaque"
-                app:layout_constraintStart_toEndOf="@+id/imageView17"
-                app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
-                app:layout_constraintHorizontal_bias="0.0" style="@style/txt_categoria"/>
-        <TextView
-                android:text="@string/txt_noticia_1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/destaque_noticia_tv"
-                android:textColor="@color/white"
-                app:layout_constraintTop_toBottomOf="@+id/destaque_cat_tv"
-                app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
-                app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
-                app:layout_constraintHorizontal_bias="0.0" style="@style/txt_noticia_corpo"/>
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="7dp"
+                                android:orientation="vertical">
 
-        <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/separador_pontos_branco"
-                android:id="@+id/imageView22"
-                app:layout_constraintTop_toBottomOf="@+id/destaque_noticia_tv"
-                app:layout_constraintEnd_toStartOf="@+id/guideline_esquerda"
-                app:layout_constraintStart_toStartOf="@+id/guideline_direita"
-                android:layout_marginTop="8dp" android:contentDescription="@string/txt_separador"/>
+                            <TextView
+                                    android:id="@+id/file_name_text_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:textColor="@color/black"
+                                    android:layout_marginTop="7dp"
+                                    android:layout_marginBottom="7dp"
+                                    android:text="@string/file_name_mp3"
+                                    android:textSize="18sp"
+                                    android:fontFamily="sans-serif-condensed"/>
 
-        <TextView
-                android:text="@string/txt_ver_video_audio"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView22" style="@style/txt_ver_"
-                android:textColor="@color/white"
-                app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
-                app:layout_constraintEnd_toStartOf="@+id/imageView25"
-                app:layout_constraintHorizontal_bias="0.5"
+                            <SeekBar
+                                    android:id="@+id/seekbar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
 
-                app:layout_constraintHorizontal_chainStyle="spread_inside"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/imageView22"/>
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_keyboard_arrow_branco"
-                android:id="@+id/imageView25"
-                app:layout_constraintTop_toTopOf="@+id/textView22"
-                app:layout_constraintStart_toEndOf="@+id/textView22"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
-                android:contentDescription="@string/img_cir_vermelho_ic"/>
+                            <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.Group android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                                android:id="@+id/groupDestaque"
-                                                app:constraint_referenced_ids="guideline_esquerda,guideline_direita,img_destaque,imageView17,destaque_cat_tv,destaque_noticia_tv,imageView22,textView22,imageView25"
-                                                tools:visibility="visible" android:visibility="visible"/>
+                                <TextView
+                                        android:id="@+id/current_progress_text_view"
+                                        android:text="@string/_00_00"
+                                        android:textColor="@color/black"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_alignParentStart="true" />
 
-        <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos_branco"
-                android:id="@+id/imageView26"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/imageView25" android:contentDescription="@string/txt_separador"/>
-        <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos_branco"
-                android:id="@+id/imageView27"
-                app:layout_constraintTop_toBottomOf="@+id/imageView26" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" android:contentDescription="@string/txt_separador"/>
-        <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos_branco"
-                android:id="@+id/imageView29"
-                app:layout_constraintTop_toBottomOf="@+id/imageView27" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" android:contentDescription="@string/txt_separador"/>
+                                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                        android:id="@+id/fab_play"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_media_play"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginTop="10dp"
+                                        app:backgroundTint="@color/corlorMostarda"
+                                        />
 
 
-        <TextView
-                android:text="@string/txt_tendencias"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView74"
-                android:textColor="@color/white"
-                app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/imageView29" style="@style/txt_titulo_categorias"/>
+                                <TextView
+                                        android:id="@+id/file_length_text_view"
+                                        android:text="@string/_00_00"
+                                        android:textColor="@color/black"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="10dp"
+                                        android:layout_alignParentTop="true"
+
+                                        android:layout_alignParentEnd="true" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
 
 
-        <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toStartOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/textView74" android:id="@+id/recyclerTendencias">
-        </androidx.recyclerview.widget.RecyclerView>
+                <ProgressBar
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_gravity="center"
+                        android:id="@+id/progressBar"
+
+                        />
+            </FrameLayout>
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tamanho_10"
+                    app:srcCompat="@drawable/ic_circulo_vermelho"
+                    android:id="@+id/imageView17"
+                    app:layout_constraintTop_toBottomOf="@+id/img_destaque"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
+                    android:layout_marginTop="14dp"
+                    android:contentDescription="@string/img_cir_vermelho_ic"/>
+
+
+            <TextView
+                    android:text="@string/radio_ao_vivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:id="@+id/destaque_cat_tv" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/img_destaque"
+                    app:layout_constraintStart_toEndOf="@+id/imageView17"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
+                    app:layout_constraintHorizontal_bias="0.0" style="@style/txt_categoria"/>
+            <TextView
+                    android:text="@string/txt_noticia_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/destaque_noticia_tv"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@+id/destaque_cat_tv"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
+                    app:layout_constraintHorizontal_bias="0.0" style="@style/txt_noticia_corpo"/>
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/separador_pontos_branco"
+                    android:id="@+id/imageView22"
+                    app:layout_constraintTop_toBottomOf="@+id/destaque_noticia_tv"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_esquerda"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_direita"
+                    android:layout_marginTop="8dp" android:contentDescription="@string/txt_separador"/>
+
+            <TextView
+                    android:text="@string/txt_ver_video_audio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView22" style="@style/txt_ver_"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView25"
+                    app:layout_constraintHorizontal_bias="0.5"
+
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView22"/>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/ic_keyboard_arrow_branco"
+                    android:id="@+id/imageView25"
+                    app:layout_constraintTop_toTopOf="@+id/textView22"
+                    app:layout_constraintStart_toEndOf="@+id/textView22"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_direita"
+                    android:contentDescription="@string/img_cir_vermelho_ic"/>
+
+            <androidx.constraintlayout.widget.Group android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:id="@+id/groupDestaque"
+                    app:constraint_referenced_ids="guideline_esquerda,guideline_direita,img_destaque,imageView17,destaque_cat_tv,destaque_noticia_tv,imageView22,textView22,imageView25"
+                    tools:visibility="visible" android:visibility="visible"/>
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos_branco"
+                    android:id="@+id/imageView26"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView25" android:contentDescription="@string/txt_separador"/>
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos_branco"
+                    android:id="@+id/imageView27"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView26" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" android:contentDescription="@string/txt_separador"/>
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/separador_pontos_branco"
+                    android:id="@+id/imageView29"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView27" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" android:contentDescription="@string/txt_separador"/>
+
+
+            <TextView
+                    android:text="@string/txt_tendencias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView74"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_esquerda"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView29" style="@style/txt_titulo_categorias"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView74" android:id="@+id/recyclerTendencias">
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/activity_sem_internet" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
 </androidx.core.widget.NestedScrollView>

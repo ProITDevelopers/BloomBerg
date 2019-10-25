@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_media_player.view.*
 import proitdevelopers.com.bloomberg.R
 import proitdevelopers.com.bloomberg.adapter.nossosMeios.NossosMeiosAdapter
+import proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada.AudioFragment
 
 class MediaPlayerFragment : Fragment() {
 
@@ -25,7 +26,8 @@ private fun viewPagesMedia(view: View) {
 
     val adapter = NossosMeiosAdapter(childFragmentManager)
     adapter.addFragment(MediaVideoFragment(),"Video")
-    adapter.addFragment(MediaAudioFragment(),"Audio")
+//    adapter.addFragment(MediaAudioFragment(),"Audio")
+    adapter.addFragment(AudioFragment(),"Audio")
     view.viewPager_media.adapter = adapter
     view.tabs_media.setupWithViewPager(view.viewPager_media)
 

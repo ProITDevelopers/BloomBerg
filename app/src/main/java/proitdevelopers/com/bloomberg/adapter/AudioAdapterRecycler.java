@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import proitdevelopers.com.bloomberg.communs.Common;
 import proitdevelopers.com.bloomberg.modelo.AudioModel;
 import proitdevelopers.com.bloomberg.interfaces.ItemClickListener;
 import proitdevelopers.com.bloomberg.R;
@@ -72,26 +74,10 @@ public class AudioAdapterRecycler extends RecyclerView.Adapter<AudioAdapterRecyc
         AudioModel audioModel = albumList.get(position);
 
 
+        Common.getDurationTime(mContext,audioModel,holder.textView11);
 
         holder.time.setText(audioModel.getTime());
         holder.title.setText(audioModel.getTitle());
-
-
-//        Uri uri = Uri.parse(audioModel.getFileLink());
-//        MediaMetadataRetriever mmr = new MediaMetadataRetriever();
-//        mmr.setDataSource(uri.getPath());
-//
-//
-////        MediaMetadataRetriever mmr = new MediaMetadataRetriever();
-////        mmr.setDataSource(mediaPath);
-//        String duration = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
-//        mmr.release();
-//
-//        long dur = Long.parseLong(duration);
-//        String minutos = String.valueOf(dur / 60000);
-//        String seconds = String.valueOf((dur % 60000) / 1000);
-//        String out = minutos + ":"+seconds;
-//        holder.textView11.setText(out);
 
 
 
