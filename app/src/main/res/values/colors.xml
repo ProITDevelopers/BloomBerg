@@ -24,5 +24,6 @@
     <color name="primary">#e7aa00</color>
     <color name="cor_borda">#6c5642</color>
     <color name="colorExemplo">#beffffff</color>
+    <color name="colormedia">#b48d00</color>
 
 </resources>
