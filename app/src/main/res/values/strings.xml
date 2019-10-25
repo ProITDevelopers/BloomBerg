@@ -54,7 +54,7 @@
     <string name="txt_televisao_mr">MEDIA RUMO TV</string>
     <string name="txt_canal_media_rumo">Media Rumo Mercado: África</string>
     <string name="txt_radio_media_rumo">Media Rumo Rádio</string>
-    <string name="txt_ver_video_audio">OUVIR TODOS OS AUDIOS</string>
+    <string name="txt_ver_video_audio">VER TODOS VIDEOS E AUDIOS</string>
     <string name="txt_ver_renda_fixa">VER TODAS RENDAS FIXAS</string>
     <string name="txt_valor_bolsa">S&amp;P 500</string>
     <string name="txt_valor_bolsa_">2,847.60</string>
@@ -142,9 +142,6 @@
     <string name="txtTimeout">O tempo de comunicação excedeu. Possivelvente a internet está lenta.</string>
     <string name="txtMsg">A rede 3G ou WI-FI não possui tranferência de dados.</string>
     <string name="title_activity_revista_view">RevistaViewActivity</string>
-    <string name="file_name_mp3">file_name.mp3</string>
-    <string name="_00_00">00:00</string>
-    <string name="radio_ao_vivo">RÁDIO AO VIVO</string>
 
 
 </resources>

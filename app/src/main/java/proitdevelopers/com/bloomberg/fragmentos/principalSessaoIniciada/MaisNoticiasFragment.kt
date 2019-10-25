@@ -3,6 +3,7 @@ package proitdevelopers.com.bloomberg.fragmentos.principalSessaoIniciada
 
 import android.content.Context
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -32,6 +33,14 @@ class MaisNoticiasFragment : Fragment() {
         onClick(view)
 
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        //if (!TextUtils.isEmpty(MaisNoticiasFragmentArgs.fromBundle(arguments!!).noticiaId))
+          //  view.frag_mais_noticia_titulo.text =  MaisNoticiasFragmentArgs.fromBundle(arguments!!).noticiaId
+
     }
 
     fun configurarMaisNoticias(

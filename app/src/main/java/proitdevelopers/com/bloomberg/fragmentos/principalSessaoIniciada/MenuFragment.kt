@@ -7,9 +7,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_menu.view.*
@@ -34,8 +36,7 @@ class MenuFragment : Fragment() {
             }
         })
 
-        configurarSessoesMenu(valoresMenu.valoresMenu,view.context,view)
-
+        configurarSessoesMenu(valoresMenu.valoresMenu,view.context,view,activity)
         onClick(view)
 
         return view
@@ -44,11 +45,12 @@ class MenuFragment : Fragment() {
     private fun configurarSessoesMenu(
         sessoes: List<Menu>,
         context: Context,
-        view: View
+        view: View,
+        activity: FragmentActivity?
     ) {
         val layoutManager = LinearLayoutManager(context)
         layoutManager.orientation = RecyclerView.VERTICAL
-        val adapterConfDestaque = MenuSessoesAdapeter(context, sessoes)
+        val adapterConfDestaque = MenuSessoesAdapeter(context, sessoes,activity)
         view.recyclerViewMenu_principal.layoutManager = layoutManager
         view.recyclerViewMenu_principal.adapter = adapterConfDestaque
     }
@@ -59,7 +61,7 @@ class MenuFragment : Fragment() {
         )
 
         view.fra_menu_pesquisar_menu.setOnClickListener (
-            Navigation.createNavigateOnClickListener(R.id.action_menuFragment_to_pesquisaNoticiaFragment)
+           Navigation.createNavigateOnClickListener(R.id.action_menuFragment_to_pesquisaNoticiaFragment)
         )
 
         view.frag_menu_noticias_salvas.setOnClickListener(

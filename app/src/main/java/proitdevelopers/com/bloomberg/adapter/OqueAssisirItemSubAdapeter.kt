@@ -55,13 +55,13 @@ class OqueAssisirItemSubAdapeter(
             itemView.txt_titulo.text = noticia?.titulo
             itemView.txt_data_video.text = noticia?.data
 
+            itemView.ic_item_oque_assist_favorito.visibility = View.GONE
+
             itemView.ic_item_oque_assist_partilha.setOnClickListener {
                 context.partilharNoticia(noticia!!.titulo,noticia!!.descricao,noticia!!.conteudo)
             }
 
-            itemView.ic_item_oque_assist_favorito.setOnClickListener {
-                Toast.makeText(context,"Favorito",Toast.LENGTH_SHORT).show()
-            }
+
 
         }
 

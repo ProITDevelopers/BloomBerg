@@ -12,9 +12,8 @@
     <color name="menu_item_color">#008577</color>
     <color name="corlorMostarda">#e7aa00</color>
     <color name="corlorCinza">#646567</color>
-    <color name="cor_borda">#6c5642</color>
-    <color name="colorExemplo">#beffffff</color>
-    <color name="colormedia">#b48d00</color>
+    <color name="corlorVerdeLeve">#425c5a</color>
+    <color name="corlorVerdeLevissimo">#ffcea2</color>
 
     <!--TESTE DE CORES-->
     <color name="color1">#ee1250</color>
