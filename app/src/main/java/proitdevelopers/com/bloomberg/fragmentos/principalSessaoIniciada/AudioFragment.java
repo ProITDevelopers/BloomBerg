@@ -5,7 +5,6 @@ import android.content.Context;
 import android.graphics.ColorFilter;
 import android.graphics.LightingColorFilter;
 import android.media.AudioManager;
-import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -18,14 +17,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.MediaController;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.VideoView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
@@ -34,18 +30,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import dmax.dialog.SpotsDialog;
-import proitdevelopers.com.bloomberg.communs.Common;
-import proitdevelopers.com.bloomberg.modelo.AudioModel;
-import proitdevelopers.com.bloomberg.interfaces.ItemClickListener;
+import java.io.IOException;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+
 import proitdevelopers.com.bloomberg.R;
 import proitdevelopers.com.bloomberg.adapter.AudioAdapterRecycler;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.concurrent.TimeUnit;
+import proitdevelopers.com.bloomberg.communs.Common;
+import proitdevelopers.com.bloomberg.interfaces.ItemClickListener;
+import proitdevelopers.com.bloomberg.modelo.AudioModel;
 
 import static proitdevelopers.com.bloomberg.communs.Common.mostrarMensagemTextView;
 import static proitdevelopers.com.bloomberg.communs.Common.msgErroTentar;
@@ -240,9 +234,7 @@ public class AudioFragment extends Fragment {
     }
 
     private void startPlaying(AudioModel item) {
-        AlertDialog waitingDialog = new SpotsDialog.Builder().setContext(getContext()).build();
-        waitingDialog.setMessage("Carregando...");
-        waitingDialog.show();
+        progressBar.setVisibility(View.VISIBLE);
         mPlayButton.setImageResource(R.drawable.ic_media_pause);
         mMediaPlayer = new MediaPlayer();
 
@@ -259,7 +251,7 @@ public class AudioFragment extends Fragment {
                 @Override
                 public void onPrepared(MediaPlayer mp) {
                     mMediaPlayer.start();
-                    waitingDialog.dismiss();
+                    progressBar.setVisibility(View.INVISIBLE);
                 }
             });
         } catch (IOException e) {
@@ -370,22 +362,20 @@ public class AudioFragment extends Fragment {
 
     private void verifConecxao() {
 
-        AlertDialog waitingDialog = new SpotsDialog.Builder().setContext(getContext()).build();
-        waitingDialog.setMessage("Carregando...");
-        waitingDialog.show();
+        progressBar.setVisibility(View.VISIBLE);
 
         if (getContext()!=null) {
             ConnectivityManager conMgr =  (ConnectivityManager)getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
             if (conMgr!=null) {
                 NetworkInfo netInfo = conMgr.getActiveNetworkInfo();
                 if (netInfo == null){
-                    waitingDialog.dismiss();
+                    progressBar.setVisibility(View.INVISIBLE);
                     mPlayButton.setEnabled(false);
                     mSeekBar.setEnabled(false);
                     Toast.makeText(getContext(), "Network", Toast.LENGTH_SHORT).show();
                     mostarMsnErro();
                 } else {
-                    carregarAudios(waitingDialog);
+                    carregarAudios();
                 }
             }
 
@@ -393,7 +383,7 @@ public class AudioFragment extends Fragment {
 
     }
 
-    private void carregarAudios(final AlertDialog waitingDialog) {
+    private void carregarAudios() {
 
         mPlayButton.setEnabled(true);
         mSeekBar.setEnabled(true);
@@ -482,7 +472,9 @@ public class AudioFragment extends Fragment {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                waitingDialog.dismiss();
+
+                progressBar.setVisibility(View.INVISIBLE);
+
             }
         }, 3000);
 
